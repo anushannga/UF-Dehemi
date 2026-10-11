@@ -1,0 +1,35 @@
+{
+  "version": "2.420",
+  "tested_commit": "5309778c2297f0f2cb51eda295a88113f3b3f791",
+  "run_url": "https://github.com/anushannga/UF-Dehemi/actions/runs/38117608968",
+  "canonical_release_hashes": {
+    "Regular": "7c4d4c1f7f7174cc720c7c5fff08b5a8c24ec61eb0a11cf816cefab22afa3fc5",
+    "Italic": "293fe776fc0d5e40f6c81b0bfb5a3d4eb4c6642a45aa2867987ad53770cd06c6"
+  },
+  "platforms": {
+    "linux": {
+      "job_status": "success",
+      "canonical_fonts_match_packaged_release": true,
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5450,
+      "fontmake_matching_cases_per_style": 786
+    },
+    "windows": {
+      "job_status": "success",
+      "canonical_fonts_match_packaged_release": true,
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5450,
+      "fontmake_matching_cases_per_style": 786,
+      "uniscribe_cases_per_style": 789
+    },
+    "macos": {
+      "job_status": "success",
+      "canonical_fonts_match_packaged_release": true,
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5450,
+      "fontmake_matching_cases_per_style": 786,
+      "coretext_cases_per_style": 789,
+      "expected_conjunct_cases_per_style": 3
+    }
+  }
+}
