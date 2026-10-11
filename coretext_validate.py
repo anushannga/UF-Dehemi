@@ -352,7 +352,7 @@ def validate_style(api, style):
                 if not marks:
                     raise AssertionError(f"Chandrabindu not shaped in {style}: {text!r}")
                 if any(abs(g["advance"][0]) > 1e-6 for g in marks):
-                    raise AssertionError(f"Chandrabindu has nonzero advance: {style}, {text!r}")
+                    raise AssertionError(f"Chandrabindu has nonzero advance: {style}, {text!r}; geometry={shaped!r}")
                 if text == "ක\u0d81" and not any(abs(g["position"][1]) > 1e-6 for g in marks):
                     raise AssertionError(f"Chandrabindu attachment has no vertical position: {style}")
                 mark_positions[text] = shaped
