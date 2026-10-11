@@ -1,0 +1,22 @@
+name: Build and Sinhala regression checks
+on: [push, pull_request, workflow_dispatch]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: sudo apt-get update && sudo apt-get install -y libfreetype6
+      - run: pip install -r requirements.txt
+      - run: python build.py
+      - run: python validate.py
+      - run: python fontmake-build.py
+      - uses: actions/upload-artifact@v4
+        with:
+          name: UF-Dehemi-build
+          path: |
+            fonts/ttf/ufdehemi/*.ttf
+            build/fontmake/*.ttf
+            qa/validation-2.400.json

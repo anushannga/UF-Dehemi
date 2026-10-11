@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="sinMatraU" format="2">
+  <advance width="0"/>
+  <unicode hex="0DD4"/>
+  <outline>
+    <contour>
+      <point x="-271" y="-224" type="qcurve" smooth="yes"/>
+      <point x="41" y="-224" type="line"/>
+      <point x="38" y="228" type="line"/>
+      <point x="10" y="226" type="line"/>
+      <point x="-12" y="-146" type="line"/>
+      <point x="-83" y="-156"/>
+      <point x="-209" y="-174"/>
+      <point x="-273" y="-173" type="qcurve" smooth="yes"/>
+      <point x="-297" y="-172"/>
+      <point x="-328" y="-144"/>
+      <point x="-342" y="-104"/>
+      <point x="-342" y="-89" type="qcurve" smooth="yes"/>
+      <point x="-345" y="-88"/>
+      <point x="-350" y="-88" type="qcurve" smooth="yes"/>
+      <point x="-367" y="-88"/>
+      <point x="-405" y="-107"/>
+      <point x="-412" y="-115" type="qcurve"/>
+      <point x="-409" y="-137"/>
+      <point x="-379" y="-188"/>
+      <point x="-320" y="-224"/>
+    </contour>
+  </outline>
+</glyph>

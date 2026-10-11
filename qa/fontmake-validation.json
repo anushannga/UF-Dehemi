@@ -1,0 +1,10 @@
+{
+  "Regular": {
+    "matching_shaping_cases": 786,
+    "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
+  },
+  "Italic": {
+    "matching_shaping_cases": 786,
+    "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
+  }
+}

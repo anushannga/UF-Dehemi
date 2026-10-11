@@ -1,48 +1,38 @@
-# UF-Dehemi
+# UF Dehemi
 
-Sinhala Unicode italic font, version 2.351, distributed under SIL Open Font License 1.1. The family name is **UF-Dehemi**. This preparation snapshot preserves the Tight-232 artwork, outlines, metrics, layout and hinting of the current release. It does not change the installed font.
+Sinhala Unicode display family, version 2.400, SIL Open Font License 1.1. Regular and Italic. App-menu family name: **UF Dehemi**.
 
-## Contents
+Italic preserves the original Tight-232 outlines, hinting and Sinhala layout. Regular is a mechanically upright companion from those outlines, with old hinting removed after transformation; human design and platform review remain necessary.
 
-- `fonts/ttf/UF-Dehemi-Italic.ttf`: current release binary.
-- `OFL.txt`: license and attribution.
-- `sources/`: editable reverse exports and historical design/build materials.
-- `qa/`: Fontspector 1.9.0 Google Fonts profile results and prior release validation.
-- `documentation/Preview.png`: specimen of the current design.
+## Release and QA
 
-## Audit status — not ready for Google Fonts submission
+Release fonts are in `fonts/ttf/ufdehemi/`.
 
-Fontspector reports **91 PASS, 23 WARN, 5 FAIL, 84 SKIP and 6 INFO**. Counts are report severity totals; skipped checks are not passes. The Google Fonts glyph coverage check passes. Sinhala U+0D81 is missing. Existing contour, overlap and language shaping warnings still need review; see the complete HTML/JSON reports.
+Fixed: hyphen in family name, duplicate name IDs 16/17, zero-width U+02C9 spacing macron, missing Roman companion and missing U+0D81 chandrabindu. The new ring-and-dot chandrabindu is based on existing artwork. U+0D81 is not the letter ඇ (U+0D87). All assigned Sinhala-block codepoints are mapped.
 
-Blocking failures:
+Fontspector 1.9.0: **175 PASS, 46 WARN, 2 FAIL, 143 SKIP, 9 INFO** across both styles. Both FAILs are the UF abbreviation, once per style. Naming exception remains requested. Existing contour, language shaping, layout classification and metric warnings remain for review. Full reports: `qa/fontspector-2.400.html` and `.json`. No all-pass or acceptance claim is made.
 
-1. Google Fonts family naming rules reject the hyphen and abbreviation in `UF-Dehemi`. The requested name has been retained. A Google Fonts-specific name requires a separate design/branding decision.
-2. The family contains only Italic; the checker requires a Roman counterpart. A real upright design needs author review. Relabeling the italic as Regular would misrepresent it.
-3. U+02C9 spacing macron has zero advance width.
-4. Static RIBBI naming has redundant name IDs 16 and 17.
+788 HarfBuzz shaping cases and 5,435 FreeType renders pass per style. Original italic coordinates and prior Sinhala shaping outputs are preserved. These tests do not certify visual correctness for every string or universal platform support.
 
-Additional onboarding work: all required contributor agreements, review of upstream rights/attribution, reproducible production build, and curator acceptance. This is a public development snapshot for an initial submission and naming exception discussion, not an approved Google Fonts release. No completed CLA or acceptance is claimed. Publication in Google Fonts does not guarantee availability in Google Docs.
-
-## Source and ownership record
-
-This release derives from Maname, including outlines and shaping data. Its upstream copyright attribution remains in OFL.txt. The historical V12 generator transforms Maname outlines; the glyph-path JSON is associated with that workflow. These materials must not be described as wholly independent drawings or exclusive ownership evidence. ANUSHANGA K P is the release preparer's supplied name; it is not independently verified legal certification.
-
-The SFD/UFO files are editable exports of the TTF, not proof of an original source workflow. Their successful export does not establish fontmake rebuild parity. Historical scripts reference local inputs and need conversion into a portable build before submission. Keep the TTF as the authoritative release until rebuild comparison has passed.
-
-AI tooling (OpenAI Codex) assisted with release metadata, source exports, audit documentation, packaging and submission preparation. The historical V12 workflow transforms upstream Maname artwork; no claim is made that AI-assisted packaging establishes independent ownership of those outlines.
-
-## Recheck
-
-Use Fontspector 1.9.0 or a documented later version:
+## Build
 
 ```sh
-fontspector -p googlefonts --json qa/fontspector.json --html qa/fontspector.html fonts/ttf/UF-Dehemi-Italic.ttf
+pip install -r requirements.txt
+python build.py
+python validate.py
+python fontmake-build.py
 ```
 
-Official requirements: https://googlefonts.github.io/gf-guide/requirements.html
+Canonical release: fontTools builds from `sources/Upstream-Tight232.ttx` and `build.py`, retaining upstream layout and italic hinting. Editable SFD/UFO files are reverse exports, not the original design workflow.
 
-Official onboarding: https://googlefonts.github.io/gf-guide/onboarding.html
+The fontmake development target compiles UFO outlines and overlays canonical layout/name tables. FontForge's reverse-export FEA is incompatible with feaLib; it is omitted from this development compilation. This target does not replace the release fonts. A native editable feature workflow and complete source-to-release parity remain migration work. GitHub Actions runs both build targets and regression checks.
 
-Fontspector: https://github.com/fonttools/fontspector
+## Attribution and onboarding
 
-OFL permissions and conditions are in OFL.txt. Font software may be used, modified and redistributed under that license; the font cannot be sold by itself.
+Derived from Maname; see `OFL.txt` for upstream attribution and SIL OFL 1.1. Historical V12 scripts transform Maname outlines. No exclusive or wholly independent ownership is claimed. ANUSHANGA K P is the supplied release preparer name; Pasan Anushanga appears in historical modification attribution.
+
+OpenAI Codex assisted with metadata, technical adjustments, upright transformation, source exports, automation, QA, documentation and submission.
+
+Outstanding: contributor agreements, upstream contributor review, curator design review, naming exception and warning review. Submission: https://github.com/google/fonts/issues/11099 . This is not an approved Google Fonts or Google Docs font.
+
+Official guide: https://googlefonts.github.io/gf-guide/onboarding.html
