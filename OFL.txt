@@ -1,4 +1,4 @@
-Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). UF-Dehemi modifications Copyright 2026 Pasan Anushanga. Release prepared for ANUSHANGA K P.
+Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
 This license is copied below, and is also available with a FAQ at:

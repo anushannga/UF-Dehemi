@@ -2,21 +2,38 @@ name: Build and Sinhala regression checks
 on: [push, pull_request, workflow_dispatch]
 jobs:
   build:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-24.04, windows-latest, macos-latest]
+    runs-on: ${{ matrix.os }}
     steps:
-      - uses: actions/checkout@v4
-      - uses: actions/setup-python@v5
+      - uses: actions/checkout@v7.0.1
+      - uses: actions/setup-python@v7.0.0
         with:
           python-version: '3.12'
       - run: sudo apt-get update && sudo apt-get install -y libfreetype6
+        if: runner.os == 'Linux'
       - run: pip install -r requirements.txt
+      - run: |
+          brew install freetype
+          echo "DYLD_LIBRARY_PATH=$(brew --prefix freetype)/lib" >> "$GITHUB_ENV"
+        if: runner.os == 'macOS'
       - run: python build.py
       - run: python validate.py
+      - run: python windows_validate.py
+        if: runner.os == 'Windows'
+      - run: python coretext_validate.py
+        if: runner.os == 'macOS'
       - run: python fontmake-build.py
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@v7.0.2
+        if: always()
         with:
-          name: UF-Dehemi-build
+          name: Dehemi-build-${{ matrix.os }}
           path: |
-            fonts/ttf/ufdehemi/*.ttf
+            fonts/ttf/dehemi/*.ttf
             build/fontmake/*.ttf
-            qa/validation-2.400.json
+            qa/validation-2.420.json
+            qa/windows-validation-2.420.json
+            qa/coretext-validation-2.420.json
+            qa/fontmake-validation.json

@@ -1,0 +1,2355 @@
+# UF Dehemi editable OpenType layout source, SIL OFL 1.1.
+# Initially exported from Tight-232 with FontForge, then normalized for feaLib.
+# This source is compiled directly; layout tables are not copied from a TTF.
+# Native helper retains the upstream Dutch language aalt exclusion.
+
+# GDEF Mark Attachment Sets
+@MarkSet0=[\uni0308 \uni0307 \gravecomb \acutecomb \uni030B \uni0302 \uni030C \uni0306 
+	\uni030A \tildecomb \uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 ];
+@MarkSet1=[\sinVirama ];
+@MarkSet2=[\uni0308 \uni0307 \gravecomb \acutecomb \uni030B \uni0302 \uni030C \uni0306 
+	\uni030A \tildecomb \uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 
+	\uni031B \dotbelowcomb ];
+
+languagesystem DFLT dflt;
+languagesystem latn AZE ;
+languagesystem latn CAT ;
+languagesystem latn CRT ;
+languagesystem latn dflt;
+languagesystem latn KAZ ;
+languagesystem latn MOL ;
+languagesystem latn NLD ;
+languagesystem latn ROM ;
+languagesystem latn TAT ;
+languagesystem latn TRK ;
+languagesystem sinh dflt;
+
+
+# GSUB 
+
+
+lookup aaltAccessAllAlternateslookup0 {
+  lookupflag 0;
+    sub \sinFa by \sinFa.alt ;
+    sub \sinMatraAu by \sinMatraLs ;
+    sub \sinMatraEe by \sinVirama ;
+    sub \sinMatraO by \sinMatraAa ;
+    sub \sinMatraOo by \sinMatraAa.virama ;
+    sub \sinMatraU by \sinMatraU.sub ;
+    sub \sinMatraUu by \sinMatraUu.sub ;
+    sub \sinF.virama by \sinF.virama.alt ;
+    sub \sinFI by \sinFI.alt ;
+    sub \sinFIi by \sinFIi.alt ;
+    sub \sinFU by \sinFU.alt ;
+    sub \sinFUu by \sinFUu.alt ;
+    sub \sinFRa by \sinFRa.alt ;
+    sub \A by \ordfeminine ;
+    sub \J by \uni004A0301 ;
+    sub \O by \ordmasculine ;
+    sub \Scedilla by \uni0218 ;
+    sub \uni0162 by \uni021A ;
+    sub \a by \ordfeminine ;
+    sub \i by \i.loclTRK ;
+    sub \j by \uni006A0301 ;
+    sub \o by \ordmasculine ;
+    sub \scedilla by \uni0219 ;
+    sub \uni0163 by \uni021B ;
+} aaltAccessAllAlternateslookup0;
+
+lookup aaltAccessAllAlternateslookup1 {
+  lookupflag 0;
+    sub \periodcentered from [\periodcentered.loclCAT \periodcentered.loclCAT.case ];
+} aaltAccessAllAlternateslookup1;
+
+lookup akhnAkhandinSinhalalookup2 {
+  lookupflag 0;
+    sub \sinKa \sinVirama \uni200D \sinSsa  by \sinKSsa;
+    sub \sinKa \sinVirama \uni200D \sinVa  by \sinKVa;
+    sub \sinTa \sinVirama \uni200D \sinVa  by \sinTVa;
+    sub \sinTa \sinVirama \uni200D \sinTha  by \sinTTha;
+    sub \sinNa \sinVirama \uni200D \sinDa  by \sinNDa;
+    sub \sinNa \sinVirama \uni200D \sinDha  by \sinNDha;
+    sub \sinNa \sinVirama \uni200D \sinVa  by \sinNVa;
+    sub \sinNa \sinVirama \uni200D \sinTha  by \sinNTha;
+    sub \sinGa \sinVirama \uni200D \sinDha  by \sinGDha;
+    sub \sinDa \sinVirama \uni200D \sinVa  by \sinDVa;
+    sub \sinDa \sinVirama \uni200D \sinDha  by \sinDDha;
+    sub \sinTta \sinVirama \uni200D \sinTtha  by \sinTtTtha;
+} akhnAkhandinSinhalalookup2;
+
+lookup rphfRephForminSinhalalookup3 {
+  lookupflag 0;
+    sub \sinRa \sinVirama \uni200D  by \sinReph;
+} rphfRephForminSinhalalookup3;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup4 {
+  lookupflag 0;
+    sub \sinMatraAa \sinVirama  by \sinMatraAa.virama;
+    sub \sinKa \sinVirama  by \sinK.virama;
+    sub \sinKha \sinVirama  by \sinKh.virama;
+    sub \sinGa \sinVirama  by \sinG.virama;
+    sub \sinGha \sinVirama  by \sinGh.virama;
+    sub \sinNga \sinVirama  by \sinNg.virama;
+    sub \sinNnga \sinVirama  by \sinNng.virama;
+    sub \sinCa \sinVirama  by \sinC.virama;
+    sub \sinCha \sinVirama  by \sinCh.virama;
+    sub \sinJa \sinVirama  by \sinJ.virama;
+    sub \sinJha \sinVirama  by \sinJh.virama;
+    sub \sinNya \sinVirama  by \sinNy.virama;
+    sub \sinJnya \sinVirama  by \sinJny.virama;
+    sub \sinNyja \sinVirama  by \sinNyj.virama;
+    sub \sinTta \sinVirama  by \sinTt.virama;
+    sub \sinTtha \sinVirama  by \sinTth.virama;
+    sub \sinDda \sinVirama  by \sinDd.virama;
+    sub \sinDdha \sinVirama  by \sinDdh.virama;
+    sub \sinNna \sinVirama  by \sinNn.virama;
+    sub \sinNndda \sinVirama  by \sinNndd.virama;
+    sub \sinTa \sinVirama  by \sinT.virama;
+    sub \sinTha \sinVirama  by \sinTh.virama;
+    sub \sinDa \sinVirama  by \sinD.virama;
+    sub \sinDha \sinVirama  by \sinDh.virama;
+    sub \sinNa \sinVirama  by \sinN.virama;
+    sub \sinNda \sinVirama  by \sinNd.virama;
+    sub \sinPa \sinVirama  by \sinP.virama;
+    sub \sinPha \sinVirama  by \sinPh.virama;
+    sub \sinBa \sinVirama  by \sinB.virama;
+    sub \sinBha \sinVirama  by \sinBh.virama;
+    sub \sinMa \sinVirama  by \sinM.virama;
+    sub \sinMba \sinVirama  by \sinMb.virama;
+    sub \sinYa \sinVirama  by \sinY.virama;
+    sub \sinRa \sinVirama  by \sinR.virama;
+    sub \sinLa \sinVirama  by \sinL.virama;
+    sub \sinVa \sinVirama  by \sinV.virama;
+    sub \sinSha \sinVirama  by \sinSh.virama;
+    sub \sinSsa \sinVirama  by \sinSs.virama;
+    sub \sinSa \sinVirama  by \sinS.virama;
+    sub \sinHa \sinVirama  by \sinH.virama;
+    sub \sinLla \sinVirama  by \sinLl.virama;
+    sub \sinFa \sinVirama  by \sinF.virama;
+    sub \sinKSsa \sinVirama  by \sinKSs.virama;
+    sub \sinKVa \sinVirama  by \sinKV.virama;
+    sub \sinTVa \sinVirama  by \sinTV.virama;
+    sub \sinTTha \sinVirama  by \sinTTh.virama;
+    sub \sinNDa \sinVirama  by \sinND.virama;
+    sub \sinNDha \sinVirama  by \sinNDh.virama;
+    sub \sinNVa \sinVirama  by \sinNV.virama;
+    sub \sinNTha \sinVirama  by \sinNTh.virama;
+    sub \sinDVa \sinVirama  by \sinDV.virama;
+    sub \sinDDha \sinVirama  by \sinDDh.virama;
+    sub \sinTtTtha \sinVirama  by \sinTtTth.virama;
+    sub \sinKhRa \sinVirama  by \sinKhR.virama;
+    sub \sinGRa \sinVirama  by \sinGR.virama;
+    sub \sinGhRa \sinVirama  by \sinGhR.virama;
+    sub \sinCRa \sinVirama  by \sinCR.virama;
+    sub \sinJRa \sinVirama  by \sinJR.virama;
+    sub \sinJhRa \sinVirama  by \sinJhR.virama;
+    sub \sinNyRa \sinVirama  by \sinNyR.virama;
+    sub \sinJnyRa \sinVirama  by \sinJnyR.virama;
+    sub \sinNyjRa \sinVirama  by \sinNyjR.virama;
+    sub \sinTtRa \sinVirama  by \sinTtR.virama;
+    sub \sinDdRa \sinVirama  by \sinDdR.virama;
+    sub \sinTRa \sinVirama  by \sinTR.virama;
+    sub \sinDRa \sinVirama  by \sinDR.virama;
+    sub \sinDhRa \sinVirama  by \sinDhR.virama;
+    sub \sinPRa \sinVirama  by \sinPR.virama;
+    sub \sinBRa \sinVirama  by \sinBR.virama;
+    sub \sinBhRa \sinVirama  by \sinBhR.virama;
+    sub \sinMRa \sinVirama  by \sinMR.virama;
+    sub \sinVRa \sinVirama  by \sinVR.virama;
+    sub \sinShRa \sinVirama  by \sinShR.virama;
+    sub \sinSsRa \sinVirama  by \sinSsR.virama;
+    sub \sinSRa \sinVirama  by \sinSR.virama;
+    sub \sinHRa \sinVirama  by \sinHR.virama;
+    sub \sinFRa \sinVirama  by \sinFR.virama;
+    sub \sinYansaya \sinVirama  by \sinYansaya.virama;
+    sub \sinFRa.alt \sinVirama  by \sinFRa.virama.alt;
+} abvsAboveBaseSubstitutionsinSinhalalookup4;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup5 {
+  lookupflag 0;
+    sub \sinKa \sinMatraI  by \sinKI;
+    sub \sinKha \sinMatraI  by \sinKhI;
+    sub \sinGa \sinMatraI  by \sinGI;
+    sub \sinGha \sinMatraI  by \sinGhI;
+    sub \sinNga \sinMatraI  by \sinNgI;
+    sub \sinNnga \sinMatraI  by \sinNngI;
+    sub \sinCa \sinMatraI  by \sinCI;
+    sub \sinCha \sinMatraI  by \sinChI;
+    sub \sinJa \sinMatraI  by \sinJI;
+    sub \sinJha \sinMatraI  by \sinJhI;
+    sub \sinNya \sinMatraI  by \sinNyI;
+    sub \sinJnya \sinMatraI  by \sinJnyI;
+    sub \sinNyja \sinMatraI  by \sinNyjI;
+    sub \sinTta \sinMatraI  by \sinTtI;
+    sub \sinTtha \sinMatraI  by \sinTthI;
+    sub \sinDda \sinMatraI  by \sinDdI;
+    sub \sinDdha \sinMatraI  by \sinDdhI;
+    sub \sinNna \sinMatraI  by \sinNnI;
+    sub \sinNndda \sinMatraI  by \sinNnddI;
+    sub \sinTa \sinMatraI  by \sinTI;
+    sub \sinTha \sinMatraI  by \sinThI;
+    sub \sinDa \sinMatraI  by \sinDI;
+    sub \sinDha \sinMatraI  by \sinDhI;
+    sub \sinNa \sinMatraI  by \sinNI;
+    sub \sinNda \sinMatraI  by \sinNdI;
+    sub \sinPa \sinMatraI  by \sinPI;
+    sub \sinPha \sinMatraI  by \sinPhI;
+    sub \sinBa \sinMatraI  by \sinBI;
+    sub \sinBha \sinMatraI  by \sinBhI;
+    sub \sinMa \sinMatraI  by \sinMI;
+    sub \sinMba \sinMatraI  by \sinMbI;
+    sub \sinYa \sinMatraI  by \sinYI;
+    sub \sinRa \sinMatraI  by \sinRI;
+    sub \sinLa \sinMatraI  by \sinLI;
+    sub \sinVa \sinMatraI  by \sinVI;
+    sub \sinSha \sinMatraI  by \sinShI;
+    sub \sinSsa \sinMatraI  by \sinSsI;
+    sub \sinSa \sinMatraI  by \sinSI;
+    sub \sinHa \sinMatraI  by \sinHI;
+    sub \sinLla \sinMatraI  by \sinLlI;
+    sub \sinFa \sinMatraI  by \sinFI;
+    sub \sinYansaya \sinMatraI  by \sinYansaya.MatraI;
+} abvsAboveBaseSubstitutionsinSinhalalookup5;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup6 {
+  lookupflag 0;
+    sub \sinKa \sinMatraIi  by \sinKIi;
+    sub \sinKha \sinMatraIi  by \sinKhIi;
+    sub \sinGa \sinMatraIi  by \sinGIi;
+    sub \sinGha \sinMatraIi  by \sinGhIi;
+    sub \sinNga \sinMatraIi  by \sinNgIi;
+    sub \sinNnga \sinMatraIi  by \sinNngIi;
+    sub \sinCa \sinMatraIi  by \sinCIi;
+    sub \sinCha \sinMatraIi  by \sinChIi;
+    sub \sinJa \sinMatraIi  by \sinJIi;
+    sub \sinJha \sinMatraIi  by \sinJhIi;
+    sub \sinNya \sinMatraIi  by \sinNyIi;
+    sub \sinJnya \sinMatraIi  by \sinJnyIi;
+    sub \sinNyja \sinMatraIi  by \sinNyjIi;
+    sub \sinTta \sinMatraIi  by \sinTtIi;
+    sub \sinTtha \sinMatraIi  by \sinTthIi;
+    sub \sinDda \sinMatraIi  by \sinDdIi;
+    sub \sinDdha \sinMatraIi  by \sinDdhIi;
+    sub \sinNna \sinMatraIi  by \sinNnIi;
+    sub \sinNndda \sinMatraIi  by \sinNnddIi;
+    sub \sinTa \sinMatraIi  by \sinTIi;
+    sub \sinTha \sinMatraIi  by \sinThIi;
+    sub \sinDa \sinMatraIi  by \sinDIi;
+    sub \sinDha \sinMatraIi  by \sinDhIi;
+    sub \sinNa \sinMatraIi  by \sinNIi;
+    sub \sinNda \sinMatraIi  by \sinNdIi;
+    sub \sinPa \sinMatraIi  by \sinPIi;
+    sub \sinPha \sinMatraIi  by \sinPhIi;
+    sub \sinBa \sinMatraIi  by \sinBIi;
+    sub \sinBha \sinMatraIi  by \sinBhIi;
+    sub \sinMa \sinMatraIi  by \sinMIi;
+    sub \sinMba \sinMatraIi  by \sinMbIi;
+    sub \sinYa \sinMatraIi  by \sinYIi;
+    sub \sinRa \sinMatraIi  by \sinRIi;
+    sub \sinLa \sinMatraIi  by \sinLIi;
+    sub \sinVa \sinMatraIi  by \sinVIi;
+    sub \sinSha \sinMatraIi  by \sinShIi;
+    sub \sinSsa \sinMatraIi  by \sinSsIi;
+    sub \sinSa \sinMatraIi  by \sinSIi;
+    sub \sinHa \sinMatraIi  by \sinHIi;
+    sub \sinLla \sinMatraIi  by \sinLlIi;
+    sub \sinFa \sinMatraIi  by \sinFIi;
+    sub \sinYansaya \sinMatraIi  by \sinYansaya.MatraIi;
+    sub \sinFa.alt \sinMatraIi  by \sinFIi.alt;
+} abvsAboveBaseSubstitutionsinSinhalalookup6;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup7 {
+  lookupflag 0;
+    sub \sinKRa \sinMatraI  by \sinKRI;
+    sub \sinKhRa \sinMatraI  by \sinKhRI;
+    sub \sinGRa \sinMatraI  by \sinGRI;
+    sub \sinGhRa \sinMatraI  by \sinGhRI;
+    sub \sinCRa \sinMatraI  by \sinCRI;
+    sub \sinJRa \sinMatraI  by \sinJRI;
+    sub \sinJhRa \sinMatraI  by \sinJhRI;
+    sub \sinNyRa \sinMatraI  by \sinNyRI;
+    sub \sinJnyRa \sinMatraI  by \sinJnyRI;
+    sub \sinTtRa \sinMatraI  by \sinTtRI;
+    sub \sinDdRa \sinMatraI  by \sinDdRI;
+    sub \sinTRa \sinMatraI  by \sinTRI;
+    sub \sinDRa \sinMatraI  by \sinDRI;
+    sub \sinDhRa \sinMatraI  by \sinDhRI;
+    sub \sinPRa \sinMatraI  by \sinPRI;
+    sub \sinBRa \sinMatraI  by \sinBRI;
+    sub \sinBhRa \sinMatraI  by \sinBhRI;
+    sub \sinMRa \sinMatraI  by \sinMRI;
+    sub \sinVRa \sinMatraI  by \sinVRI;
+    sub \sinShRa \sinMatraI  by \sinShRI;
+    sub \sinSRa \sinMatraI  by \sinSRI;
+    sub \sinHRa \sinMatraI  by \sinHRI;
+} abvsAboveBaseSubstitutionsinSinhalalookup7;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup8 {
+  lookupflag 0;
+    sub \sinKRa \sinMatraIi  by \sinKRIi;
+    sub \sinKhRa \sinMatraIi  by \sinKhRIi;
+    sub \sinGRa \sinMatraIi  by \sinGRIi;
+    sub \sinGhRa \sinMatraIi  by \sinGhRIi;
+    sub \sinCRa \sinMatraIi  by \sinCRIi;
+    sub \sinJRa \sinMatraIi  by \sinJRIi;
+    sub \sinJhRa \sinMatraIi  by \sinJhRIi;
+    sub \sinNyRa \sinMatraIi  by \sinNyRIi;
+    sub \sinJnyRa \sinMatraIi  by \sinJnyRIi;
+    sub \sinTtRa \sinMatraIi  by \sinTtRIi;
+    sub \sinDdRa \sinMatraIi  by \sinDdRIi;
+    sub \sinTRa \sinMatraIi  by \sinTRIi;
+    sub \sinDRa \sinMatraIi  by \sinDRIi;
+    sub \sinDhRa \sinMatraIi  by \sinDhRIi;
+    sub \sinPRa \sinMatraIi  by \sinPRIi;
+    sub \sinBRa \sinMatraIi  by \sinBRIi;
+    sub \sinBhRa \sinMatraIi  by \sinBhRIi;
+    sub \sinMRa \sinMatraIi  by \sinMRIi;
+    sub \sinVRa \sinMatraIi  by \sinVRIi;
+    sub \sinShRa \sinMatraIi  by \sinShRIi;
+    sub \sinSRa \sinMatraIi  by \sinSRIi;
+    sub \sinHRa \sinMatraIi  by \sinHRIi;
+} abvsAboveBaseSubstitutionsinSinhalalookup8;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup9 {
+  lookupflag 0;
+    sub \sinKSsa \sinMatraI  by \sinKSsI;
+    sub \sinKVa \sinMatraI  by \sinKVI;
+    sub \sinTVa \sinMatraI  by \sinTVI;
+    sub \sinTTha \sinMatraI  by \sinTThI;
+    sub \sinNDa \sinMatraI  by \sinNDI;
+    sub \sinNDha \sinMatraI  by \sinNDhI;
+    sub \sinNVa \sinMatraI  by \sinNVI;
+    sub \sinNTha \sinMatraI  by \sinNThI;
+    sub \sinDVa \sinMatraI  by \sinDVI;
+    sub \sinDDha \sinMatraI  by \sinDDhI;
+    sub \sinTtTtha \sinMatraI  by \sinTtTthI;
+} abvsAboveBaseSubstitutionsinSinhalalookup9;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup10 {
+  lookupflag 0;
+    sub \sinKSsa \sinMatraIi  by \sinKSsIi;
+    sub \sinKVa \sinMatraIi  by \sinKVIi;
+    sub \sinTVa \sinMatraIi  by \sinTVIi;
+    sub \sinTTha \sinMatraIi  by \sinTThIi;
+    sub \sinNDa \sinMatraIi  by \sinNDIi;
+    sub \sinNDha \sinMatraIi  by \sinNDhIi;
+    sub \sinNVa \sinMatraIi  by \sinNVIi;
+    sub \sinNTha \sinMatraIi  by \sinNThIi;
+    sub \sinDVa \sinMatraIi  by \sinDVIi;
+    sub \sinDDha \sinMatraIi  by \sinDDhIi;
+    sub \sinTtTtha \sinMatraIi  by \sinTtTthIi;
+} abvsAboveBaseSubstitutionsinSinhalalookup10;
+
+lookup abvsAboveBaseSubstitutionsinSinhalalookup11 {
+  lookupflag 0;
+    sub \sinKa \sinReph  by \sinKa.reph;
+    sub \sinKha \sinReph  by \sinKha.reph;
+    sub \sinGa \sinReph  by \sinGa.reph;
+    sub \sinGha \sinReph  by \sinGha.reph;
+    sub \sinCa \sinReph  by \sinCa.reph;
+    sub \sinJa \sinReph  by \sinJa.reph;
+    sub \sinJha \sinReph  by \sinJha.reph;
+    sub \sinNya \sinReph  by \sinNya.reph;
+    sub \sinJnya \sinReph  by \sinJnya.reph;
+    sub \sinTta \sinReph  by \sinTta.reph;
+    sub \sinDda \sinReph  by \sinDda.reph;
+    sub \sinNna \sinReph  by \sinNna.reph;
+    sub \sinTa \sinReph  by \sinTa.reph;
+    sub \sinTha \sinReph  by \sinTha.reph;
+    sub \sinDa \sinReph  by \sinDa.reph;
+    sub \sinDha \sinReph  by \sinDha.reph;
+    sub \sinNa \sinReph  by \sinNa.reph;
+    sub \sinPa \sinReph  by \sinPa.reph;
+    sub \sinBa \sinReph  by \sinBa.reph;
+    sub \sinBha \sinReph  by \sinBha.reph;
+    sub \sinMa \sinReph  by \sinMa.reph;
+    sub \sinYa \sinReph  by \sinYa.reph;
+    sub \sinVa \sinReph  by \sinVa.reph;
+    sub \sinSha \sinReph  by \sinSha.reph;
+    sub \sinSsa \sinReph  by \sinSsa.reph;
+    sub \sinSa \sinReph  by \sinSa.reph;
+    sub \sinHa \sinReph  by \sinHa.reph;
+    sub \sinYansaya \sinReph  by \sinYansaya.reph;
+    sub \sinYansaya \sinMatraAa \sinReph  by \sinYansaya_Reph_MatraAa;
+} abvsAboveBaseSubstitutionsinSinhalalookup11;
+
+lookup akhnAkhandinSinhalalookup12 {
+  lookupflag 0;
+    sub \sinKSsa \sinReph  by \sinKSsa.reph;
+    sub \sinKa \sinReph \sinVirama \uni200D \sinSsa  by \sinKSsa.reph;
+    sub \sinKVa \sinReph  by \sinKVa.reph;
+    sub \sinKa \sinReph \sinVirama \uni200D \sinVa  by \sinKVa.reph;
+    sub \sinTVa \sinReph  by \sinTVa.reph;
+    sub \sinTa \sinReph \sinVirama \uni200D \sinVa  by \sinTVa.reph;
+    sub \sinTTha \sinReph  by \sinTTha.reph;
+    sub \sinTa \sinReph \sinVirama \uni200D \sinTha  by \sinTTha.reph;
+    sub \sinNDa \sinReph  by \sinNDa.reph;
+    sub \sinNa \sinReph \sinVirama \uni200D \sinDa  by \sinNDa.reph;
+    sub \sinNDha \sinReph  by \sinNDha.reph;
+    sub \sinNa \sinReph \sinVirama \uni200D \sinDha  by \sinNDha.reph;
+    sub \sinNVa \sinReph  by \sinNVa.reph;
+    sub \sinNa \sinReph \sinVirama \uni200D \sinVa  by \sinNVa.reph;
+    sub \sinNTha \sinReph  by \sinNTha.reph;
+    sub \sinNa \sinReph \sinVirama \uni200D \sinTha  by \sinNTha.reph;
+    sub \sinGDha \sinReph  by \sinGDha.reph;
+    sub \sinGa \sinReph \sinVirama \uni200D \sinDha  by \sinGDha.reph;
+    sub \sinDVa \sinReph  by \sinDVa.reph;
+    sub \sinDa \sinReph \sinVirama \uni200D \sinVa  by \sinDVa.reph;
+    sub \sinDDha \sinReph  by \sinDDha.reph;
+    sub \sinDa \sinReph \sinVirama \uni200D \sinDha  by \sinDDha.reph;
+    sub \sinTtTtha \sinReph  by \sinTtTtha.reph;
+    sub \sinTta \sinReph \sinVirama \uni200D \sinTtha  by \sinTtTtha.reph;
+} akhnAkhandinSinhalalookup12;
+
+lookup blwsBelowBaseSubstitutionsinSinhalalookup13 {
+  lookupflag 0;
+    sub \sinKa \sinMatraU  by \sinKU;
+    sub \sinKha \sinMatraU  by \sinKhU;
+    sub \sinGa \sinMatraU  by \sinGU;
+    sub \sinGha \sinMatraU  by \sinGhU;
+    sub \sinNnga \sinMatraU  by \sinNngU;
+    sub \sinCa \sinMatraU  by \sinCU;
+    sub \sinCha \sinMatraU  by \sinChU;
+    sub \sinJa \sinMatraU  by \sinJU;
+    sub \sinJha \sinMatraU  by \sinJhU;
+    sub \sinNya \sinMatraU  by \sinNyU;
+    sub \sinJnya \sinMatraU  by \sinJnyU;
+    sub \sinNyja \sinMatraU  by \sinNyjU;
+    sub \sinTta \sinMatraU  by \sinTtU;
+    sub \sinTtha \sinMatraU  by \sinTthU;
+    sub \sinDda \sinMatraU  by \sinDdU;
+    sub \sinDdha \sinMatraU  by \sinDdhU;
+    sub \sinNna \sinMatraU  by \sinNnU;
+    sub \sinNndda \sinMatraU  by \sinNnddU;
+    sub \sinTa \sinMatraU  by \sinTU;
+    sub \sinTha \sinMatraU  by \sinThU;
+    sub \sinDa \sinMatraU  by \sinDU;
+    sub \sinDha \sinMatraU  by \sinDhU;
+    sub \sinNa \sinMatraU  by \sinNU;
+    sub \sinNda \sinMatraU  by \sinNdU;
+    sub \sinPa \sinMatraU  by \sinPU;
+    sub \sinPha \sinMatraU  by \sinPhU;
+    sub \sinBa \sinMatraU  by \sinBU;
+    sub \sinBha \sinMatraU  by \sinBhU;
+    sub \sinMa \sinMatraU  by \sinMU;
+    sub \sinMba \sinMatraU  by \sinMbU;
+    sub \sinYa \sinMatraU  by \sinYU;
+    sub \sinRa \sinMatraU  by \sinRU;
+    sub \sinLa \sinMatraU  by \sinLU;
+    sub \sinVa \sinMatraU  by \sinVU;
+    sub \sinSha \sinMatraU  by \sinShU;
+    sub \sinSsa \sinMatraU  by \sinSsU;
+    sub \sinSa \sinMatraU  by \sinSU;
+    sub \sinHa \sinMatraU  by \sinHU;
+    sub \sinLla \sinMatraU  by \sinLlU;
+    sub \sinFa \sinMatraU  by \sinFU;
+    sub \sinFa.alt \sinMatraU  by \sinFU.alt;
+} blwsBelowBaseSubstitutionsinSinhalalookup13;
+
+lookup blwsBelowBaseSubstitutionsinSinhalalookup14 {
+  lookupflag 0;
+    sub \sinKSsa \sinMatraU  by \sinKSsU;
+    sub \sinKVa \sinMatraU  by \sinKVU;
+    sub \sinTVa \sinMatraU  by \sinTVU;
+    sub \sinTTha \sinMatraU  by \sinTThU;
+    sub \sinNDa \sinMatraU  by \sinNDU;
+    sub \sinNDha \sinMatraU  by \sinNDhU;
+    sub \sinNVa \sinMatraU  by \sinNVU;
+    sub \sinNTha \sinMatraU  by \sinNThU;
+    sub \sinDVa \sinMatraU  by \sinDVU;
+    sub \sinDDha \sinMatraU  by \sinDDhU;
+    sub \sinTtTtha \sinMatraU  by \sinTtTthU;
+    sub \sinYansaya \sinMatraU  by \sinYU.post;
+} blwsBelowBaseSubstitutionsinSinhalalookup14;
+
+lookup blwsBelowBaseSubstitutionsinSinhalalookup15 {
+  lookupflag 0;
+    sub \sinKa \sinMatraUu  by \sinKUu;
+    sub \sinKha \sinMatraUu  by \sinKhUu;
+    sub \sinGa \sinMatraUu  by \sinGUu;
+    sub \sinGha \sinMatraUu  by \sinGhUu;
+    sub \sinNnga \sinMatraUu  by \sinNngUu;
+    sub \sinCa \sinMatraUu  by \sinCUu;
+    sub \sinCha \sinMatraUu  by \sinChUu;
+    sub \sinJa \sinMatraUu  by \sinJUu;
+    sub \sinJha \sinMatraUu  by \sinJhUu;
+    sub \sinNya \sinMatraUu  by \sinNyUu;
+    sub \sinJnya \sinMatraUu  by \sinJnyUu;
+    sub \sinNyja \sinMatraUu  by \sinNyjUu;
+    sub \sinTta \sinMatraUu  by \sinTtUu;
+    sub \sinTtha \sinMatraUu  by \sinTthUu;
+    sub \sinDda \sinMatraUu  by \sinDdUu;
+    sub \sinDdha \sinMatraUu  by \sinDdhUu;
+    sub \sinNna \sinMatraUu  by \sinNnUu;
+    sub \sinNndda \sinMatraUu  by \sinNnddUu;
+    sub \sinTa \sinMatraUu  by \sinTUu;
+    sub \sinTha \sinMatraUu  by \sinThUu;
+    sub \sinDa \sinMatraUu  by \sinDUu;
+    sub \sinDha \sinMatraUu  by \sinDhUu;
+    sub \sinNa \sinMatraUu  by \sinNUu;
+    sub \sinNda \sinMatraUu  by \sinNdUu;
+    sub \sinPa \sinMatraUu  by \sinPUu;
+    sub \sinPha \sinMatraUu  by \sinPhUu;
+    sub \sinBa \sinMatraUu  by \sinBUu;
+    sub \sinBha \sinMatraUu  by \sinBhUu;
+    sub \sinMa \sinMatraUu  by \sinMUu;
+    sub \sinMba \sinMatraUu  by \sinMbUu;
+    sub \sinYa \sinMatraUu  by \sinYUu;
+    sub \sinRa \sinMatraUu  by \sinRUu;
+    sub \sinLa \sinMatraUu  by \sinLUu;
+    sub \sinVa \sinMatraUu  by \sinVUu;
+    sub \sinSha \sinMatraUu  by \sinShUu;
+    sub \sinSsa \sinMatraUu  by \sinSsUu;
+    sub \sinSa \sinMatraUu  by \sinSUu;
+    sub \sinHa \sinMatraUu  by \sinHUu;
+    sub \sinLla \sinMatraUu  by \sinLlUu;
+    sub \sinFa \sinMatraUu  by \sinFUu;
+} blwsBelowBaseSubstitutionsinSinhalalookup15;
+
+lookup blwsBelowBaseSubstitutionsinSinhalalookup16 {
+  lookupflag 0;
+    sub \sinKSsa \sinMatraUu  by \sinKSsUu;
+    sub \sinKVa \sinMatraUu  by \sinKVUu;
+    sub \sinTVa \sinMatraUu  by \sinTVUu;
+    sub \sinTTha \sinMatraUu  by \sinTThUu;
+    sub \sinNDa \sinMatraUu  by \sinNDUu;
+    sub \sinNDha \sinMatraUu  by \sinNDhUu;
+    sub \sinNVa \sinMatraUu  by \sinNVUu;
+    sub \sinNTha \sinMatraUu  by \sinNThUu;
+    sub \sinDVa \sinMatraUu  by \sinDVUu;
+    sub \sinDDha \sinMatraUu  by \sinDDhUu;
+    sub \sinTtTtha \sinMatraUu  by \sinTtTthUu;
+    sub \sinYansaya \sinMatraUu  by \sinYUu.post;
+} blwsBelowBaseSubstitutionsinSinhalalookup16;
+
+lookup SingleSubstitutionlookup18 {
+  lookupflag 0;
+    sub \sinMatraU by \sinMatraU.sub ;
+    sub \sinMatraUu by \sinMatraUu.sub ;
+} SingleSubstitutionlookup18;
+
+lookup blwsBelowBaseSubstitutionsinSinhalalookup17 {
+  lookupflag 0;
+    sub [\sinKRa \sinKhRa \sinGRa \sinGhRa \sinCRa \sinJRa \sinJhRa \sinNyRa \sinJnyRa 
+	\sinNyjRa \sinTtRa \sinDdRa \sinTRa \sinDRa \sinDhRa \sinPRa \sinBRa 
+	\sinBhRa \sinMRa \sinVRa \sinShRa \sinSsRa \sinSRa \sinHRa \sinFRa 
+	\sinNDRa ] [\sinMatraU ]'lookup SingleSubstitutionlookup18  ;
+    sub [\sinKRa \sinKhRa \sinGRa \sinGhRa \sinCRa \sinJRa \sinJhRa \sinNyRa \sinJnyRa 
+	\sinNyjRa \sinTtRa \sinDdRa \sinTRa \sinDRa \sinDhRa \sinPRa \sinBRa 
+	\sinBhRa \sinMRa \sinVRa \sinShRa \sinSsRa \sinSRa \sinHRa \sinFRa 
+	\sinNDRa ] [\sinMatraUu ]'lookup SingleSubstitutionlookup18  ;
+} blwsBelowBaseSubstitutionsinSinhalalookup17;
+
+lookup vatuVattuVariantsinSinhalalookup19 {
+  lookupflag 0;
+    sub \sinVirama \uni200D \sinYa  by \sinYansaya;
+} vatuVattuVariantsinSinhalalookup19;
+
+lookup pstsPostBaseSubstitutionsinSinhalalookup20 {
+  lookupflag 0;
+    sub \sinRa \sinMatraAe  by \sinRAe;
+    sub \sinRa \sinMatraAae  by \sinRAae;
+} pstsPostBaseSubstitutionsinSinhalalookup20;
+
+lookup vatuVattuVariantsinSinhalalookup21 {
+  lookupflag 0;
+    sub \sinKa \sinVirama \uni200D \sinRa  by \sinKRa;
+    sub \sinKha \sinVirama \uni200D \sinRa  by \sinKhRa;
+    sub \sinGa \sinVirama \uni200D \sinRa  by \sinGRa;
+    sub \sinGha \sinVirama \uni200D \sinRa  by \sinGhRa;
+    sub \sinCa \sinVirama \uni200D \sinRa  by \sinCRa;
+    sub \sinJa \sinVirama \uni200D \sinRa  by \sinJRa;
+    sub \sinJha \sinVirama \uni200D \sinRa  by \sinJhRa;
+    sub \sinNya \sinVirama \uni200D \sinRa  by \sinNyRa;
+    sub \sinJnya \sinVirama \uni200D \sinRa  by \sinJnyRa;
+    sub \sinNyja \sinVirama \uni200D \sinRa  by \sinNyjRa;
+    sub \sinTta \sinVirama \uni200D \sinRa  by \sinTtRa;
+    sub \sinDda \sinVirama \uni200D \sinRa  by \sinDdRa;
+    sub \sinTa \sinVirama \uni200D \sinRa  by \sinTRa;
+    sub \sinDa \sinVirama \uni200D \sinRa  by \sinDRa;
+    sub \sinDha \sinVirama \uni200D \sinRa  by \sinDhRa;
+    sub \sinPa \sinVirama \uni200D \sinRa  by \sinPRa;
+    sub \sinBa \sinVirama \uni200D \sinRa  by \sinBRa;
+    sub \sinBha \sinVirama \uni200D \sinRa  by \sinBhRa;
+    sub \sinMa \sinVirama \uni200D \sinRa  by \sinMRa;
+    sub \sinVa \sinVirama \uni200D \sinRa  by \sinVRa;
+    sub \sinSha \sinVirama \uni200D \sinRa  by \sinShRa;
+    sub \sinSsa \sinVirama \uni200D \sinRa  by \sinSsRa;
+    sub \sinSa \sinVirama \uni200D \sinRa  by \sinSRa;
+    sub \sinHa \sinVirama \uni200D \sinRa  by \sinHRa;
+    sub \sinFa \sinVirama \uni200D \sinRa  by \sinFRa;
+    sub \sinNDa \sinVirama \uni200D \sinRa  by \sinNDRa;
+} vatuVattuVariantsinSinhalalookup21;
+
+lookup pstfPostBaseFormsinSinhalalookup22 {
+  lookupflag 0;
+    sub \sinMatraAu by \sinMatraLs ;
+    sub \sinMatraEe by \sinVirama ;
+    sub \sinMatraO by \sinMatraAa ;
+    sub \sinMatraOo by \sinMatraAa.virama ;
+} pstfPostBaseFormsinSinhalalookup22;
+
+lookup ss02StyleSet2lookup23 {
+  lookupflag 0;
+    sub \sinFa by \sinFa.alt ;
+    sub \sinF.virama by \sinF.virama.alt ;
+    sub \sinFI by \sinFI.alt ;
+    sub \sinFIi by \sinFIi.alt ;
+    sub \sinFU by \sinFU.alt ;
+    sub \sinFUu by \sinFUu.alt ;
+    sub \sinFRa by \sinFRa.alt ;
+} ss02StyleSet2lookup23;
+
+lookup akhnAkhandinSinhalalookup24 {
+  lookupflag 0;
+    sub \uni200D \sinVirama  by \sinTouch;
+} akhnAkhandinSinhalalookup24;
+
+lookup SingleSubstitutionlookup26 {
+  lookupflag UseMarkFilteringSet @MarkSet0;
+    sub \i by \dotlessi ;
+    sub \j by \uni0237 ;
+} SingleSubstitutionlookup26;
+
+lookup ccmpGlyphCompositionDecompositionlookup25 {
+  lookupflag UseMarkFilteringSet @MarkSet0;
+    sub [\i ]'lookup SingleSubstitutionlookup26  [\uni0308 \uni0307 \gravecomb \acutecomb \uni030B \uni0302 \uni030C \uni0306 
+	\uni030A \tildecomb \uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 ] ;
+    sub [\j ]'lookup SingleSubstitutionlookup26  [\uni0308 \uni0307 \gravecomb \acutecomb \uni030B \uni0302 \uni030C \uni0306 
+	\uni030A \tildecomb \uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 ] ;
+} ccmpGlyphCompositionDecompositionlookup25;
+
+lookup ccmpGlyphCompositionDecompositionlookup27 {
+  lookupflag 0;
+    sub \uni01C4 by \D \Zcaron ;
+    sub \uni01C5 by \D \zcaron ;
+    sub \uni01C7 by \L \J ;
+    sub \Ldot by \L \periodcentered.loclCAT.case ;
+    sub \uni01C8 by \L \j ;
+    sub \uni01CA by \N \J ;
+    sub \uni01CB by \N \j ;
+    sub \uni01C6 by \d \zcaron ;
+    sub \ldot by \l \periodcentered.loclCAT ;
+    sub \uni01C9 by \l \j ;
+    sub \uni01CC by \n \j ;
+    sub \fi by \f \i ;
+    sub \fl by \f \l ;
+} ccmpGlyphCompositionDecompositionlookup27;
+
+lookup loclLocalizedFormsinLatinlookup28 {
+  lookupflag 0;
+    sub \i by \i.loclTRK ;
+} loclLocalizedFormsinLatinlookup28;
+
+lookup loclLocalizedFormsinLatinlookup29 {
+  lookupflag 0;
+    sub \Scedilla by \uni0218 ;
+    sub \uni0162 by \uni021A ;
+    sub \scedilla by \uni0219 ;
+    sub \uni0163 by \uni021B ;
+} loclLocalizedFormsinLatinlookup29;
+
+lookup loclLocalizedFormsinLatinlookup30 {
+  lookupflag 0;
+    sub \l  \periodcentered' \l   by \periodcentered.loclCAT;
+    sub \L  \periodcentered' \L   by \periodcentered.loclCAT.case;
+} loclLocalizedFormsinLatinlookup30;
+
+lookup SingleSubstitutionlookup34 {
+  lookupflag 0;
+    sub \J by \uni004A0301 ;
+    sub \j by \uni006A0301 ;
+} SingleSubstitutionlookup34;
+
+lookup loclLocalizedFormsinLatinlookup33 {
+  lookupflag 0;
+    sub \Iacute  \J'lookup SingleSubstitutionlookup34   ;
+    sub \iacute  \j'lookup SingleSubstitutionlookup34   ;
+} loclLocalizedFormsinLatinlookup33;
+
+lookup ligaStandardLigatureslookup35 {
+  lookupflag 0;
+    sub \f \f  by \f_f;
+    sub \f \f \i  by \f_f_i;
+    sub \f \f \l  by \f_f_l;
+    sub \f \i  by \fi;
+    sub \f \l  by \fl;
+    sub \sinRU \comma  by \sinRU_comma;
+    sub \sinRUu \comma  by \sinRUu_comma;
+    sub \sinRUu \period  by \sinRUu_period;
+} ligaStandardLigatureslookup35;
+
+lookup SingleSubstitutionlookup37 {
+  lookupflag 0;
+    sub \A by \ordfeminine ;
+    sub \O by \ordmasculine ;
+    sub \a by \ordfeminine ;
+    sub \o by \ordmasculine ;
+} SingleSubstitutionlookup37;
+
+lookup ordnOrdinalslookup36 {
+  lookupflag 0;
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\A \a ]'lookup SingleSubstitutionlookup37  ;
+    sub [\zero \one \two \three \four \five \six \seven \eight \nine ] [\O \o ]'lookup SingleSubstitutionlookup37  ;
+} ordnOrdinalslookup36;
+
+lookup caseCaseSensitiveFormslookup38 {
+  lookupflag 0;
+    sub \periodcentered.loclCAT by \periodcentered.loclCAT.case ;
+} caseCaseSensitiveFormslookup38;
+
+feature aalt {
+  lookup aaltAccessAllAlternateslookup0;
+  lookup aaltAccessAllAlternateslookup1;
+  # Narrow combining caron is available explicitly; default shaping is unchanged.
+  sub uni030C from [uni030C.alt];
+} aalt;
+
+feature akhn {
+
+ script sinh;
+     language dflt ;
+      lookup akhnAkhandinSinhalalookup2;
+      lookup akhnAkhandinSinhalalookup12;
+      lookup akhnAkhandinSinhalalookup24;
+} akhn;
+
+feature rphf {
+
+ script sinh;
+     language dflt ;
+      lookup rphfRephForminSinhalalookup3;
+} rphf;
+
+feature abvs {
+
+ script sinh;
+     language dflt ;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup4;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup5;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup6;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup7;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup8;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup9;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup10;
+      lookup abvsAboveBaseSubstitutionsinSinhalalookup11;
+      lookup akhnAkhandinSinhalalookup12;
+} abvs;
+
+feature blws {
+
+ script sinh;
+     language dflt ;
+      lookup blwsBelowBaseSubstitutionsinSinhalalookup13;
+      lookup blwsBelowBaseSubstitutionsinSinhalalookup14;
+      lookup blwsBelowBaseSubstitutionsinSinhalalookup15;
+      lookup blwsBelowBaseSubstitutionsinSinhalalookup16;
+      lookup blwsBelowBaseSubstitutionsinSinhalalookup17;
+} blws;
+
+feature vatu {
+
+ script sinh;
+     language dflt ;
+      lookup vatuVattuVariantsinSinhalalookup19;
+      lookup vatuVattuVariantsinSinhalalookup21;
+} vatu;
+
+feature psts {
+
+ script sinh;
+     language dflt ;
+      lookup pstsPostBaseSubstitutionsinSinhalalookup20;
+} psts;
+
+feature pstf {
+
+ script sinh;
+     language dflt ;
+      lookup pstfPostBaseFormsinSinhalalookup22;
+} pstf;
+
+feature ss02 {
+  featureNames {
+    name 3 1 0x409 "Sinhala historical pa+f combination";
+  };
+
+ script DFLT;
+     language dflt ;
+      lookup ss02StyleSet2lookup23;
+
+ script latn;
+     language dflt ;
+      lookup ss02StyleSet2lookup23;
+     language AZE  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language CAT  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language CRT  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language KAZ  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language MOL  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language ROM  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language TAT  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+     language TRK  exclude_dflt;
+      lookup ss02StyleSet2lookup23;
+
+ script sinh;
+     language dflt ;
+      lookup ss02StyleSet2lookup23;
+} ss02;
+
+feature ccmp {
+
+ script DFLT;
+     language dflt ;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+
+ script latn;
+     language dflt ;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language AZE  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language CAT  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language CRT  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language KAZ  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language MOL  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language ROM  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language TAT  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+     language TRK  exclude_dflt;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+
+ script sinh;
+     language dflt ;
+      lookup ccmpGlyphCompositionDecompositionlookup25;
+      lookup ccmpGlyphCompositionDecompositionlookup27;
+} ccmp;
+
+feature locl {
+
+ script latn;
+     language AZE  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup28;
+     language CAT  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup30;
+     language CRT  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup28;
+     language KAZ  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup28;
+     language MOL  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup29;
+     language NLD  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup33;
+     language ROM  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup29;
+     language TAT  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup28;
+     language TRK  exclude_dflt;
+      lookup loclLocalizedFormsinLatinlookup28;
+} locl;
+
+feature liga {
+
+ script DFLT;
+     language dflt ;
+      lookup ligaStandardLigatureslookup35;
+
+ script latn;
+     language dflt ;
+      lookup ligaStandardLigatureslookup35;
+     language AZE  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language CAT  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language CRT  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language KAZ  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language MOL  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language ROM  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language TAT  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+     language TRK  exclude_dflt;
+      lookup ligaStandardLigatureslookup35;
+
+ script sinh;
+     language dflt ;
+      lookup ligaStandardLigatureslookup35;
+} liga;
+
+feature ordn {
+
+ script DFLT;
+     language dflt ;
+      lookup ordnOrdinalslookup36;
+
+ script latn;
+     language dflt ;
+      lookup ordnOrdinalslookup36;
+     language AZE  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language CAT  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language CRT  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language KAZ  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language MOL  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language ROM  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language TAT  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+     language TRK  exclude_dflt;
+      lookup ordnOrdinalslookup36;
+
+ script sinh;
+     language dflt ;
+      lookup ordnOrdinalslookup36;
+} ordn;
+
+feature case {
+
+ script DFLT;
+     language dflt ;
+      lookup caseCaseSensitiveFormslookup38;
+
+ script latn;
+     language dflt ;
+      lookup caseCaseSensitiveFormslookup38;
+     language AZE  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language CAT  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language CRT  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language KAZ  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language MOL  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language ROM  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language TAT  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+     language TRK  exclude_dflt;
+      lookup caseCaseSensitiveFormslookup38;
+
+ script sinh;
+     language dflt ;
+      lookup caseCaseSensitiveFormslookup38;
+} case;
+
+# GPOS 
+
+
+lookup distDistancelookup0 {
+  lookupflag 0;
+    pos \sinTouch <0 0 -109 0>;
+} distDistancelookup0;
+
+lookup kernHorizontalKerninginLatinlookup1 {
+  lookupflag UseMarkFilteringSet @MarkSet1;
+    pos \A \u -10;
+    pos \A \Z -21;
+    pos \A \Y -42;
+    pos \A \W -31;
+    pos \A \V -31;
+    pos \A \U -31;
+    pos \A \T -42;
+    pos \A \S -25;
+    pos \A \Q -15;
+    pos \A \O -15;
+    pos \A \C -15;
+    pos \B \colon -15;
+    pos \B \comma -21;
+    pos \B \period -21;
+    pos \B \Z -10;
+    pos \B \Y -21;
+    pos \B \X -21;
+    pos \B \W -21;
+    pos \B \V -21;
+    pos \B \T -31;
+    pos \B \S -10;
+    pos \B \J -15;
+    pos \B \A -21;
+    pos \C \o -10;
+    pos \C \g -10;
+    pos \C \e -15;
+    pos \C \Z -21;
+    pos \C \Y -10;
+    pos \C \X -15;
+    pos \C \V -10;
+    pos \C \T -25;
+    pos \C \S -21;
+    pos \C \R -21;
+    pos \C \Q -21;
+    pos \C \K -10;
+    pos \C \J -15;
+    pos \C \G -10;
+    pos \C \C -15;
+    pos \C \A -21;
+    pos \D \comma -21;
+    pos \D \period -21;
+    pos \D \Z -21;
+    pos \D \Y -21;
+    pos \D \X -25;
+    pos \D \W -21;
+    pos \D \V -21;
+    pos \D \T -31;
+    pos \D \M -10;
+    pos \D \J -31;
+    pos \D \A -21;
+    pos \E \g -15;
+    pos \E \e -10;
+    pos \E \d -10;
+    pos \E \a -10;
+    pos \E \Z -21;
+    pos \E \Y -21;
+    pos \E \X -21;
+    pos \E \W -10;
+    pos \E \V -15;
+    pos \E \T -21;
+    pos \E \J -25;
+    pos \E \A -15;
+    pos \F \bracketright -21;
+    pos \F \parenright -21;
+    pos \F \slash -21;
+    pos \F \colon -21;
+    pos \F \comma -62;
+    pos \F \period -62;
+    pos \F \z -20;
+    pos \F \y -15;
+    pos \F \w -15;
+    pos \F \v -15;
+    pos \F \u -20;
+    pos \F \s -15;
+    pos \F \r -15;
+    pos \F \q -15;
+    pos \F \p -15;
+    pos \F \o -15;
+    pos \F \n -18;
+    pos \F \m -15;
+    pos \F \l -7;
+    pos \F \j -10;
+    pos \F \Z -21;
+    pos \F \Y -21;
+    pos \F \X -31;
+    pos \F \W -15;
+    pos \F \V -25;
+    pos \F \U -10;
+    pos \F \S -36;
+    pos \F \R -25;
+    pos \F \Q -10;
+    pos \F \M -25;
+    pos \F \J -42;
+    pos \F \H -10;
+    pos \F \G -31;
+    pos \F \C -10;
+    pos \F \A -57;
+    pos \G \Z -25;
+    pos \G \Y -21;
+    pos \G \X -31;
+    pos \G \W -21;
+    pos \G \V -21;
+    pos \G \T -21;
+    pos \G \S -21;
+    pos \G \J -21;
+    pos \H \Z -21;
+    pos \H \Y -10;
+    pos \H \U 5;
+    pos \H \T -21;
+    pos \H \I 10;
+    pos \I \Z -21;
+    pos \I \Y -15;
+    pos \I \U 5;
+    pos \I \T -15;
+    pos \I \R 10;
+    pos \I \N 5;
+    pos \I \L 10;
+    pos \I \J -21;
+    pos \I \I 10;
+    pos \I \H 10;
+    pos \I \F 10;
+    pos \I \E 10;
+    pos \J \colon -10;
+    pos \J \comma -10;
+    pos \J \Z -21;
+    pos \J \Y -21;
+    pos \J \T -21;
+    pos \J \S -15;
+    pos \J \R 5;
+    pos \J \I 10;
+    pos \J \F 10;
+    pos \J \E 10;
+    pos \K \colon -21;
+    pos \K \u -9;
+    pos \K \o -7;
+    pos \K \g -21;
+    pos \K \f -10;
+    pos \K \Z -18;
+    pos \K \Y -21;
+    pos \K \X -5;
+    pos \K \W -10;
+    pos \K \V -18;
+    pos \K \U -25;
+    pos \K \T -21;
+    pos \K \S -31;
+    pos \K \R -15;
+    pos \K \Q -21;
+    pos \K \P -10;
+    pos \K \O -21;
+    pos \K \M -10;
+    pos \K \I -15;
+    pos \K \G -21;
+    pos \K \C -21;
+    pos \K \A -10;
+    pos \L \bracketright -21;
+    pos \L \parenright -10;
+    pos \L \slash -10;
+    pos \L \w -15;
+    pos \L \v -15;
+    pos \L \u -10;
+    pos \L \t -10;
+    pos \L \o -10;
+    pos \L \g -15;
+    pos \L \e -10;
+    pos \L \d -10;
+    pos \L \Z -10;
+    pos \L \Y -83;
+    pos \L \W -42;
+    pos \L \V -62;
+    pos \L \U -29;
+    pos \L \T -93;
+    pos \L \S -42;
+    pos \L \Q -36;
+    pos \L \O -42;
+    pos \L \M -10;
+    pos \L \K -31;
+    pos \L \I -21;
+    pos \L \G -31;
+    pos \L \C -31;
+    pos \M \Y -15;
+    pos \M \X -15;
+    pos \M \V -15;
+    pos \M \T -31;
+    pos \M \J -10;
+    pos \N \I 5;
+    pos \N \F 5;
+    pos \N \E 5;
+    pos \O \comma -21;
+    pos \O \period -21;
+    pos \O \Z -15;
+    pos \O \Y -21;
+    pos \O \X -21;
+    pos \O \W -10;
+    pos \O \V -10;
+    pos \O \T -42;
+    pos \O \A -15;
+    pos \P \bracketright -15;
+    pos \P \colon -21;
+    pos \P \comma -83;
+    pos \P \period -83;
+    pos \P \u -10;
+    pos \P \s -15;
+    pos \P \r -10;
+    pos \P \q -15;
+    pos \P \o -15;
+    pos \P \k -10;
+    pos \P \g -21;
+    pos \P \e -10;
+    pos \P \d -10;
+    pos \P \c -10;
+    pos \P \a -15;
+    pos \P \Z -21;
+    pos \P \Y -21;
+    pos \P \X -31;
+    pos \P \W -10;
+    pos \P \V -21;
+    pos \P \U -10;
+    pos \P \T -31;
+    pos \P \S -21;
+    pos \P \R -25;
+    pos \P \Q -15;
+    pos \P \O -10;
+    pos \P \M -15;
+    pos \P \L -15;
+    pos \P \J -46;
+    pos \P \H -10;
+    pos \P \G -10;
+    pos \P \C -10;
+    pos \P \A -46;
+    pos \Q \comma -10;
+    pos \Q \period -21;
+    pos \Q \g 173;
+    pos \Q \Z -10;
+    pos \Q \Y -21;
+    pos \Q \X -10;
+    pos \Q \V -18;
+    pos \Q \T -21;
+    pos \Q \A -15;
+    pos \R \colon -21;
+    pos \R \g -15;
+    pos \R \Z -15;
+    pos \R \Y -21;
+    pos \R \X -15;
+    pos \R \W -10;
+    pos \R \V -25;
+    pos \R \U -10;
+    pos \R \T -21;
+    pos \R \S -21;
+    pos \R \Q -10;
+    pos \R \O -10;
+    pos \R \M -10;
+    pos \R \G -10;
+    pos \R \A -15;
+    pos \S \v -8;
+    pos \S \u -10;
+    pos \S \Z -21;
+    pos \S \Y -31;
+    pos \S \X -21;
+    pos \S \W -15;
+    pos \S \V -21;
+    pos \S \T -21;
+    pos \S \J -15;
+    pos \S \A -21;
+    pos \T \colon -62;
+    pos \T \comma -31;
+    pos \T \period -31;
+    pos \T \z -10;
+    pos \T \y -21;
+    pos \T \x -15;
+    pos \T \w -15;
+    pos \T \v -21;
+    pos \T \u -15;
+    pos \T \s -36;
+    pos \T \r -15;
+    pos \T \q -15;
+    pos \T \o -15;
+    pos \T \l -10;
+    pos \T \k -15;
+    pos \T \j -21;
+    pos \T \i -21;
+    pos \T \h -10;
+    pos \T \g -62;
+    pos \T \f -25;
+    pos \T \e -31;
+    pos \T \d -31;
+    pos \T \c -42;
+    pos \T \b -21;
+    pos \T \a -42;
+    pos \T \Z -15;
+    pos \T \Y 0;
+    pos \T \X -10;
+    pos \T \W 0;
+    pos \T \V 0;
+    pos \T \U -15;
+    pos \T \T 21;
+    pos \T \S -21;
+    pos \T \R -21;
+    pos \T \Q -15;
+    pos \T \P -15;
+    pos \T \O -42;
+    pos \T \M -25;
+    pos \T \L -10;
+    pos \T \K -21;
+    pos \T \J -46;
+    pos \T \I -15;
+    pos \T \H -21;
+    pos \T \G -21;
+    pos \T \D -21;
+    pos \T \C -21;
+    pos \T \B -10;
+    pos \T \A -52;
+    pos \U \g -15;
+    pos \U \Z -15;
+    pos \U \Y -15;
+    pos \U \X -15;
+    pos \U \W -10;
+    pos \U \V -15;
+    pos \U \T -15;
+    pos \U \M -10;
+    pos \U \J -10;
+    pos \U \I 5;
+    pos \U \H 5;
+    pos \U \F 5;
+    pos \U \A -31;
+    pos \V \colon -42;
+    pos \V \comma -73;
+    pos \V \period -73;
+    pos \V \z -15;
+    pos \V \y -10;
+    pos \V \u -15;
+    pos \V \o -5;
+    pos \V \i -10;
+    pos \V \g -25;
+    pos \V \e -15;
+    pos \V \d -15;
+    pos \V \c -15;
+    pos \V \a -21;
+    pos \V \Z -21;
+    pos \V \Y -10;
+    pos \V \X -15;
+    pos \V \U -15;
+    pos \V \T 0;
+    pos \V \S -31;
+    pos \V \R -10;
+    pos \V \Q -10;
+    pos \V \O -10;
+    pos \V \M -15;
+    pos \V \K -10;
+    pos \V \J -42;
+    pos \V \G -10;
+    pos \V \C -21;
+    pos \V \A -31;
+    pos \W \colon -31;
+    pos \W \comma -52;
+    pos \W \period -52;
+    pos \W \a -15;
+    pos \W \Z -15;
+    pos \W \X -10;
+    pos \W \U -10;
+    pos \W \T 0;
+    pos \W \S -21;
+    pos \W \Q -15;
+    pos \W \O -15;
+    pos \W \M -5;
+    pos \W \K -10;
+    pos \W \J -25;
+    pos \W \C -15;
+    pos \W \A -31;
+    pos \X \u -10;
+    pos \X \s -10;
+    pos \X \n -21;
+    pos \X \m -15;
+    pos \X \W -5;
+    pos \X \V -15;
+    pos \X \U -10;
+    pos \X \T -15;
+    pos \X \S -15;
+    pos \X \R -15;
+    pos \X \Q -21;
+    pos \X \O -21;
+    pos \X \M -15;
+    pos \X \K -10;
+    pos \X \J -7;
+    pos \X \G -10;
+    pos \X \C -21;
+    pos \Y \colon -42;
+    pos \Y \comma -73;
+    pos \Y \period -73;
+    pos \Y \z -15;
+    pos \Y \y -15;
+    pos \Y \x -15;
+    pos \Y \v -15;
+    pos \Y \u -10;
+    pos \Y \t -10;
+    pos \Y \s -21;
+    pos \Y \r -21;
+    pos \Y \q -10;
+    pos \Y \o -10;
+    pos \Y \g -31;
+    pos \Y \e -10;
+    pos \Y \d -10;
+    pos \Y \c -10;
+    pos \Y \a -21;
+    pos \Y \Z -21;
+    pos \Y \V -10;
+    pos \Y \U -15;
+    pos \Y \T 0;
+    pos \Y \S -31;
+    pos \Y \R -13;
+    pos \Y \Q -21;
+    pos \Y \O -21;
+    pos \Y \N -15;
+    pos \Y \M -15;
+    pos \Y \K -10;
+    pos \Y \J -31;
+    pos \Y \I -15;
+    pos \Y \H -10;
+    pos \Y \G -10;
+    pos \Y \E -10;
+    pos \Y \D -15;
+    pos \Y \C -15;
+    pos \Y \B -15;
+    pos \Y \A -42;
+    pos \Z \v -7;
+    pos \Z \u -10;
+    pos \Z \s -10;
+    pos \Z \o -15;
+    pos \Z \g -15;
+    pos \Z \e -15;
+    pos \Z \d -10;
+    pos \Z \c -10;
+    pos \Z \a -10;
+    pos \Z \Y -10;
+    pos \Z \V -21;
+    pos \Z \U -10;
+    pos \Z \T -10;
+    pos \Z \S -15;
+    pos \Z \R -10;
+    pos \Z \Q -10;
+    pos \Z \O -15;
+    pos \Z \M -25;
+    pos \Z \J -21;
+    pos \Z \H -15;
+    pos \Z \G -21;
+    pos \Z \D -21;
+    pos \Z \C -25;
+    pos \Z \A -21;
+    pos \a \z -21;
+    pos \a \v -5;
+    pos \aogonek \j 67;
+    pos \b \comma -21;
+    pos \b \period -31;
+    pos \c \y 5;
+    pos \c \k -8;
+    pos \dcaron \question 21;
+    pos \f \quotesingle 42;
+    pos \f \quoteright 21;
+    pos \f \bracketright 15;
+    pos \f \braceright 21;
+    pos \f \parenright 21;
+    pos \f \semicolon -21;
+    pos \f \colon -21;
+    pos \f \comma -31;
+    pos \f \period -42;
+    pos \f \y 15;
+    pos \f \s -5;
+    pos \f \q -18;
+    pos \f \o -15;
+    pos \f \j -7;
+    pos \f \g -25;
+    pos \f \e -15;
+    pos \f \d -10;
+    pos \f \c -15;
+    pos \f \a -24;
+    pos \g \z -7;
+    pos \g \y 6;
+    pos \g \u -10;
+    pos \h \v -10;
+    pos \j \braceright 10;
+    pos \k \s -15;
+    pos \k \o -10;
+    pos \k \g -21;
+    pos \k \f -10;
+    pos \k \e -10;
+    pos \k \c -10;
+    pos \k \a -10;
+    pos \o \comma -21;
+    pos \o \period -21;
+    pos \p \comma -21;
+    pos \p \period -15;
+    pos \q \j 5;
+    pos \r \semicolon -21;
+    pos \r \colon -21;
+    pos \r \comma -36;
+    pos \r \period -42;
+    pos \r \y 8;
+    pos \r \x 6;
+    pos \r \s -8;
+    pos \r \q -8;
+    pos \r \o -10;
+    pos \r \g -25;
+    pos \r \e -10;
+    pos \r \d -9;
+    pos \r \c -10;
+    pos \r \a -13;
+    pos \u \v -8;
+    pos \v \semicolon -10;
+    pos \v \colon -10;
+    pos \v \comma -36;
+    pos \v \period -46;
+    pos \v \u -8;
+    pos \v \g -10;
+    pos \v \e -10;
+    pos \v \d -5;
+    pos \v \c -15;
+    pos \v \a -15;
+    pos \w \semicolon -10;
+    pos \w \colon -10;
+    pos \w \comma -36;
+    pos \w \period -46;
+    pos \w \u -10;
+    pos \w \g -5;
+    pos \w \d -5;
+    pos \w \c -10;
+    pos \w \a -10;
+    pos \x \g -15;
+    pos \x \c -10;
+    pos \x \a -5;
+    pos \y \slash 10;
+    pos \y \semicolon -15;
+    pos \y \colon -10;
+    pos \y \comma -57;
+    pos \y \period -46;
+    pos \y \q -10;
+    pos \y \o -10;
+    pos \y \g -21;
+    pos \y \e -10;
+    pos \y \d -10;
+    pos \y \c -7;
+    pos \y \a -17;
+    pos \z \u -7;
+    pos \z \g -13;
+    pos \z \c -21;
+    pos \z \a -36;
+    pos \one \ordmasculine -15;
+    pos \one \ordfeminine -10;
+    pos \four \ordfeminine -10;
+    pos \seven \ordfeminine 21;
+    pos \space \W -21;
+    pos \period \Y -21;
+    pos \exclamdown \j 15;
+    pos \questiondown \y 21;
+    pos \questiondown \j 25;
+    pos \slash \z -21;
+    pos \slash \y -31;
+    pos \slash \w -21;
+    pos \slash \v -31;
+    pos \slash \u -25;
+    pos \slash \q -31;
+    pos \slash \p -10;
+    pos \slash \o -42;
+    pos \slash \h -10;
+    pos \slash \g -42;
+    pos \slash \e -42;
+    pos \slash \d -21;
+    pos \slash \c -31;
+    pos \slash \b -21;
+    pos \slash \a -21;
+    pos \parenleft \y 42;
+    pos \parenleft \j 42;
+    pos \braceleft \y 42;
+    pos \braceleft \j 46;
+    pos \bracketleft \y 36;
+    pos \bracketleft \j 42;
+    pos \bracketleft \e -10;
+    pos \bracketleft \d -10;
+    pos \quoteright \q -21;
+    pos \quoteright \o -21;
+    pos \quoteright \g -73;
+    pos \quoteright \e -21;
+    pos \quoteright \d -73;
+    pos \quoteright \c -21;
+    pos \quoteright \Q -15;
+    pos \quoteright \O -21;
+    pos \quoteright \M -10;
+    pos \quoteright \C -15;
+    pos \quoteright \A -73;
+} kernHorizontalKerninginLatinlookup1;
+
+lookup kernHorizontalKerninginLatinlookup2 {
+  lookupflag UseMarkFilteringSet @MarkSet1;
+    pos \zero \cent 10;
+    pos \zero \endash 21;
+    pos \zero \comma -21;
+    pos \zero \period -21;
+    pos \one \endash 10;
+    pos \two \endash 10;
+    pos \three \quotesingle -10;
+    pos \three \endash 10;
+    pos \four \endash 10;
+    pos \four \seven -15;
+    pos \five \period 10;
+    pos \six \cent 10;
+    pos \six \endash 21;
+    pos \six \comma -21;
+    pos \six \period -10;
+    pos \six \seven -21;
+    pos \six \four -21;
+    pos \seven \comma -46;
+    pos \seven \period -42;
+    pos \seven \four -25;
+    pos \eight \cent 10;
+    pos \eight \endash 21;
+    pos \nine \cent 10;
+    pos \nine \endash 21;
+    pos \period \four 5;
+    pos \comma \seven -21;
+    pos \comma \zero -21;
+    pos \slash \slash -21;
+    pos \slash \colon -21;
+    pos \hyphen \seven -42;
+    pos \endash \nine 21;
+    pos \endash \eight 21;
+    pos \endash \six 21;
+    pos \endash \five 21;
+    pos \endash \two -10;
+    pos \endash \zero 21;
+    pos \quotedblright \space -83;
+    pos \quoteright \space -83;
+    pos \quotesingle \nine -10;
+    pos \quotesingle \six -10;
+    pos \dollar \seven -10;
+    pos \dollar \four -15;
+} kernHorizontalKerninginLatinlookup2;
+
+lookup abvmAboveBaseMarklookup3 {
+  lookupflag 0;
+  markClass [\uni0308 ] <anchor 110 426> @Anchor0;
+  markClass [\uni0307 \gravecomb \uni030B \uni030C ] <anchor 112 426> @Anchor0;
+  markClass [\acutecomb \uni030A ] <anchor 125 478> @Anchor0;
+  markClass [\uni0302 ] <anchor 125 479> @Anchor0;
+  markClass [\uni0306 ] <anchor 116 447> @Anchor0;
+  markClass [\tildecomb \dotbelowcomb ] <anchor 124 478> @Anchor0;
+  markClass [\uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 \uni031B ] <anchor 111 426> @Anchor0;
+  pos base [\sinKa \sinK.virama \sinKI \sinKIi ] <anchor 421 369> mark @Anchor0;
+  pos base [\sinGha \sinGh.virama \sinGhI \sinGhIi \sinGhU \sinGhUu ] <anchor 345 458> mark @Anchor0;
+  pos base [\sinNnga \sinNng.virama \sinNngI \sinNngUu ] <anchor 672 490> mark @Anchor0;
+  pos base [\sinJa \sinPa \sinJ.virama \sinP.virama \sinJI \sinJIi \sinPIi \sinJU \sinJUu \sinPUu ] <anchor 282 460> mark @Anchor0;
+  pos base [\sinNya \sinNy.virama \sinNyI \sinNyIi ] <anchor 857 500> mark @Anchor0;
+  pos base [\sinJnya \sinJny.virama \sinJnyI \sinJnyIi ] <anchor 730 500> mark @Anchor0;
+  pos base [\sinNyja \sinNyj.virama \sinNyjI ] <anchor 381 460> mark @Anchor0;
+  pos base [\sinTa \sinT.virama \sinTI \sinTIi ] <anchor 366 369> mark @Anchor0;
+  pos base [\sinDa \sinD.virama \sinDI \sinDIi ] <anchor 347 500> mark @Anchor0;
+  pos base [\sinNa \sinN.virama \sinNI \sinNIi \sinNU \sinNUu ] <anchor 403 369> mark @Anchor0;
+  pos base [\sinNda \sinNd.virama \sinNdI \sinNdIi ] <anchor 448 500> mark @Anchor0;
+  pos base [\sinBha \sinBh.virama \sinBhI \sinBhIi ] <anchor 633 478> mark @Anchor0;
+  pos base [\sinSsa \sinSs.virama \sinSsI \sinSsIi \sinSsU \sinSsUu ] <anchor 311 475> mark @Anchor0;
+  pos base [\sinSa \sinS.virama \sinSI \sinSIi \sinSU \sinSUu ] <anchor 364 471> mark @Anchor0;
+  pos base [\sinHa \sinH.virama \sinHI \sinHIi \sinHUu ] <anchor 604 492> mark @Anchor0;
+  pos base [\sinPI ] <anchor 274 460> mark @Anchor0;
+  pos base [\sinNyjIi ] <anchor 410 460> mark @Anchor0;
+  pos base [\sinNyjU \sinNyjUu ] <anchor 391 460> mark @Anchor0;
+  pos base [\sinPU ] <anchor 280 451> mark @Anchor0;
+  pos base [\sinHU ] <anchor 613 492> mark @Anchor0;
+} abvmAboveBaseMarklookup3;
+
+lookup abvmAboveBaseMarklookup4 {
+  lookupflag 0;
+  markClass [\sinVirama ] <anchor 111 382> @Anchor1;
+  pos base [\sinSha \sinSh.virama \sinShU \sinShUu ] <anchor 695 423> mark @Anchor1;
+  pos base [\sinSsa \sinSs.virama \sinSsI \sinSsIi \sinSsU \sinSsUu ] <anchor 597 445> mark @Anchor1;
+  pos base [\sinSa \sinS.virama \sinSI \sinSIi \sinSU \sinSUu ] <anchor 669 466> mark @Anchor1;
+  pos base [\sinHa \sinH.virama \sinHI \sinHIi \sinHUu ] <anchor 697 448> mark @Anchor1;
+  pos base [\sinLla \sinLl.virama \sinLlI ] <anchor 607 470> mark @Anchor1;
+  pos base [\sinFa \sinF.virama \sinFI \sinFIi \sinFU \sinFUu ] <anchor 616 418> mark @Anchor1;
+  pos base [\sinLlIi ] <anchor 602 449> mark @Anchor1;
+  pos base [\sinHU ] <anchor 706 448> mark @Anchor1;
+} abvmAboveBaseMarklookup4;
+
+lookup blwmBelowBaseMarklookup5 {
+  lookupflag 0;
+  markClass [\sinMatraUu ] <anchor 94 235> @Anchor2;
+  markClass [\uni0324 \uni0326 \uni0327 ] <anchor 1 4> @Anchor2;
+  markClass [\uni032E ] <anchor 1 -1> @Anchor2;
+  markClass [\uni0331 ] <anchor 0 2> @Anchor2;
+  pos base [\sinKa \sinK.virama \sinKI \sinKIi ] <anchor 834 260> mark @Anchor2;
+  pos base [\sinKha \sinKh.virama \sinKhU \sinKhUu ] <anchor 645 246> mark @Anchor2;
+  pos base [\sinGa \sinG.virama ] <anchor 745 283> mark @Anchor2;
+  pos base [\sinGha \sinGh.virama \sinGhI \sinGhIi \sinGhU \sinGhUu ] <anchor 657 179> mark @Anchor2;
+  pos base [\sinNga \sinNg.virama \sinLlU \sinLlUu ] <anchor 614 189> mark @Anchor2;
+  pos base [\sinNnga \sinNng.virama \sinNngI \sinNngUu ] <anchor 836 283> mark @Anchor2;
+  pos base [\sinCa \sinC.virama \sinCU \sinCUu ] <anchor 648 272> mark @Anchor2;
+  pos base [\sinCha \sinChI \sinChU ] <anchor 578 189> mark @Anchor2;
+  pos base [\sinJa \sinPa \sinJ.virama \sinP.virama \sinJI \sinJIi \sinPIi \sinJU \sinJUu \sinPUu ] <anchor 593 200> mark @Anchor2;
+  pos base [\sinJha \sinJhU \sinJhUu ] <anchor 1064 272> mark @Anchor2;
+  pos base [\sinNyja \sinNyj.virama \sinNyjI ] <anchor 692 200> mark @Anchor2;
+  pos base [\sinTta \sinTt.virama \sinTtU \sinTtUu ] <anchor 582 241> mark @Anchor2;
+  pos base [\sinTtha \sinMa \sinTth.virama \sinM.virama \sinTthI \sinTthIi \sinTthU \sinMU \sinChUu \sinTthUu \sinMUu ] <anchor 587 189> mark @Anchor2;
+  pos base [\sinDda \sinDd.virama \sinDdUu ] <anchor 679 262> mark @Anchor2;
+  pos base [\sinDdha \sinDdh.virama \sinDdhI \sinDdhIi \sinDdhU \sinDdhUu ] <anchor 642 189> mark @Anchor2;
+  pos base [\sinNna \sinNn.virama \sinNnUu ] <anchor 878 189> mark @Anchor2;
+  pos base [\sinNndda ] <anchor 751 189> mark @Anchor2;
+  pos base [\sinTa \sinT.virama \sinTI \sinTIi ] <anchor 791 287> mark @Anchor2;
+  pos base [\sinTha \sinVa \sinTh.virama \sinV.virama \sinThI \sinThIi \sinThU \sinThUu \sinVUu ] <anchor 541 189> mark @Anchor2;
+  pos base [\sinDha \sinDhU \sinDhUu ] <anchor 634 231> mark @Anchor2;
+  pos base [\sinNa \sinN.virama \sinNI \sinNIi \sinNU \sinNUu ] <anchor 760 189> mark @Anchor2;
+  pos base [\sinPha \sinPh.virama \sinPhI \sinPhIi \sinPhU \sinPhUu ] <anchor 551 189> mark @Anchor2;
+  pos base [\sinBa \sinB.virama \sinBUu ] <anchor 664 275> mark @Anchor2;
+  pos base [\sinBha \sinBh.virama \sinBhI \sinBhIi ] <anchor 790 300> mark @Anchor2;
+  pos base [\sinMba \sinMb.virama \sinMbUu ] <anchor 651 189> mark @Anchor2;
+  pos base [\sinYa \sinY.virama \sinYI \sinYU \sinYUu ] <anchor 632 189> mark @Anchor2;
+  pos base [\sinSha \sinSh.virama \sinShU \sinShUu ] <anchor 757 279> mark @Anchor2;
+  pos base [\sinSsa \sinSs.virama \sinSsI \sinSsIi \sinSsU \sinSsUu ] <anchor 593 210> mark @Anchor2;
+  pos base [\sinSa \sinS.virama \sinSI \sinSIi \sinSU \sinSUu ] <anchor 670 189> mark @Anchor2;
+  pos base [\sinHa \sinH.virama \sinHI \sinHIi \sinHUu ] <anchor 742 262> mark @Anchor2;
+  pos base [\sinFa \sinF.virama \sinFI \sinFIi \sinFU \sinFUu ] <anchor 685 274> mark @Anchor2;
+  pos base [\sinNndd.virama \sinNnddUu ] <anchor 798 262> mark @Anchor2;
+  pos base [\sinKhI ] <anchor 620 210> mark @Anchor2;
+  pos base [\sinGI ] <anchor 739 263> mark @Anchor2;
+  pos base [\sinCI ] <anchor 621 246> mark @Anchor2;
+  pos base [\sinJhI ] <anchor 1038 241> mark @Anchor2;
+  pos base [\sinTtI ] <anchor 569 189> mark @Anchor2;
+  pos base [\sinDdI ] <anchor 664 241> mark @Anchor2;
+  pos base [\sinNnI \sinNnIi ] <anchor 912 193> mark @Anchor2;
+  pos base [\sinNnddI ] <anchor 778 241> mark @Anchor2;
+  pos base [\sinDhI ] <anchor 619 241> mark @Anchor2;
+  pos base [\sinPI ] <anchor 585 200> mark @Anchor2;
+  pos base [\sinShI ] <anchor 739 248> mark @Anchor2;
+  pos base [\sinGIi ] <anchor 726 246> mark @Anchor2;
+  pos base [\sinCIi ] <anchor 654 261> mark @Anchor2;
+  pos base [\sinChIi ] <anchor 560 189> mark @Anchor2;
+  pos base [\sinNyjIi ] <anchor 721 200> mark @Anchor2;
+  pos base [\sinBIi ] <anchor 645 261> mark @Anchor2;
+  pos base [\sinNyjU \sinNyjUu ] <anchor 702 200> mark @Anchor2;
+  pos base [\sinDdU ] <anchor 660 262> mark @Anchor2;
+  pos base [\sinNnU ] <anchor 888 189> mark @Anchor2;
+  pos base [\sinNnddU ] <anchor 792 262> mark @Anchor2;
+  pos base [\sinPU ] <anchor 591 191> mark @Anchor2;
+  pos base [\sinBU ] <anchor 671 275> mark @Anchor2;
+  pos base [\sinMbU ] <anchor 664 189> mark @Anchor2;
+  pos base [\sinVU ] <anchor 539 181> mark @Anchor2;
+  pos base [\sinHU ] <anchor 751 262> mark @Anchor2;
+} blwmBelowBaseMarklookup5;
+
+lookup markMarkPositioninglookup6 {
+  lookupflag 0;
+  markClass [\sinMatraUu ] <anchor 94 235> @Anchor3;
+  markClass [\uni0324 \uni0326 \uni0327 ] <anchor 1 4> @Anchor3;
+  markClass [\uni032E ] <anchor 1 -1> @Anchor3;
+  markClass [\uni0331 ] <anchor 0 2> @Anchor3;
+  pos base [\sinKSsa \sinKSsI \sinKSsIi \sinKSsU \sinKSsUu \sinKSsa.reph ] <anchor 1054 210> mark @Anchor3;
+  pos base [\sinKVa \sinKVa.reph ] <anchor 956 189> mark @Anchor3;
+  pos base [\sinTVa \sinNThU \sinTVa.reph ] <anchor 931 189> mark @Anchor3;
+  pos base [\sinNDha \sinNDhUu \sinNDha.reph ] <anchor 989 200> mark @Anchor3;
+  pos base [\sinNVa \sinNThIi \sinNVa.reph ] <anchor 933 189> mark @Anchor3;
+  pos base [\sinNTha \sinNThI \sinNTha.reph ] <anchor 930 189> mark @Anchor3;
+  pos base [\sinDVa \sinDVa.reph ] <anchor 623 201> mark @Anchor3;
+  pos base [\sinDDha \sinDDh.virama \sinDDhU \sinDDhUu \sinDDha.reph ] <anchor 742 189> mark @Anchor3;
+  pos base [\sinKSs.virama ] <anchor 1040 210> mark @Anchor3;
+  pos base [\sinKV.virama ] <anchor 964 189> mark @Anchor3;
+  pos base [\sinTV.virama ] <anchor 983 189> mark @Anchor3;
+  pos base [\sinNV.virama ] <anchor 939 189> mark @Anchor3;
+  pos base [\sinNTh.virama ] <anchor 909 189> mark @Anchor3;
+  pos base [\sinDV.virama ] <anchor 663 189> mark @Anchor3;
+  pos base [\sinKVU ] <anchor 982 181> mark @Anchor3;
+  pos base [\sinTVU ] <anchor 941 181> mark @Anchor3;
+  pos base [\sinNDhU ] <anchor 994 200> mark @Anchor3;
+  pos base [\sinNVU ] <anchor 960 181> mark @Anchor3;
+  pos base [\sinDVU ] <anchor 661 181> mark @Anchor3;
+  pos base [\sinKVUu ] <anchor 987 189> mark @Anchor3;
+  pos base [\sinTVUu ] <anchor 969 189> mark @Anchor3;
+  pos base [\sinNVUu ] <anchor 962 189> mark @Anchor3;
+  pos base [\sinNThUu ] <anchor 948 189> mark @Anchor3;
+  pos base [\sinDVUu ] <anchor 662 189> mark @Anchor3;
+  pos base [\sinKRa \sinKRI \sinKRIi \sinKa.reph ] <anchor 834 260> mark @Anchor3;
+  pos base [\sinKhRa \sinKhR.virama \sinKha.reph ] <anchor 645 246> mark @Anchor3;
+  pos base [\sinGRa \sinGR.virama \sinGa.reph ] <anchor 745 283> mark @Anchor3;
+  pos base [\sinGhRa \sinGhR.virama \sinGhRI \sinGhRIi \sinGha.reph ] <anchor 657 179> mark @Anchor3;
+  pos base [\sinCRa \sinCR.virama \sinCa.reph ] <anchor 648 272> mark @Anchor3;
+  pos base [\sinJRa \sinPRa \sinJRI \sinPRI \sinJRIi \sinJa.reph \sinPa.reph ] <anchor 593 200> mark @Anchor3;
+  pos base [\sinJhRa \sinJha.reph ] <anchor 1064 272> mark @Anchor3;
+  pos base [\sinNyjRa ] <anchor 721 200> mark @Anchor3;
+  pos base [\sinTtRa \sinTtR.virama \sinTta.reph ] <anchor 582 241> mark @Anchor3;
+  pos base [\sinDdRa \sinDdR.virama \sinDda.reph ] <anchor 679 262> mark @Anchor3;
+  pos base [\sinTRa \sinTR.virama \sinTRIi \sinTa.reph ] <anchor 791 287> mark @Anchor3;
+  pos base [\sinDhRa \sinDha.reph ] <anchor 634 231> mark @Anchor3;
+  pos base [\sinBRa \sinBR.virama \sinBa.reph ] <anchor 664 275> mark @Anchor3;
+  pos base [\sinBhRa \sinBhR.virama \sinBhRI \sinBhRIi \sinBha.reph ] <anchor 790 300> mark @Anchor3;
+  pos base [\sinMRa \sinMR.virama \sinMa.reph ] <anchor 587 189> mark @Anchor3;
+  pos base [\sinVRa \sinVR.virama \sinVa.reph ] <anchor 541 189> mark @Anchor3;
+  pos base [\sinShRa \sinShR.virama \sinSha.reph ] <anchor 757 279> mark @Anchor3;
+  pos base [\sinSsRa \sinSsR.virama \sinSsa.reph ] <anchor 593 210> mark @Anchor3;
+  pos base [\sinSRa \sinSR.virama \sinSRI \sinSRIi \sinSa.reph ] <anchor 670 189> mark @Anchor3;
+  pos base [\sinHRa \sinHR.virama \sinHRI \sinHRIi \sinHa.reph ] <anchor 742 262> mark @Anchor3;
+  pos base [\sinFRa \sinFR.virama ] <anchor 685 274> mark @Anchor3;
+  pos base [\sinJR.virama ] <anchor 592 200> mark @Anchor3;
+  pos base [\sinNyjR.virama ] <anchor 720 200> mark @Anchor3;
+  pos base [\sinPR.virama \sinPRIi ] <anchor 595 200> mark @Anchor3;
+  pos base [\sinKhRI ] <anchor 620 210> mark @Anchor3;
+  pos base [\sinGRI ] <anchor 739 263> mark @Anchor3;
+  pos base [\sinCRI ] <anchor 621 246> mark @Anchor3;
+  pos base [\sinJhRI ] <anchor 1038 241> mark @Anchor3;
+  pos base [\sinTtRI ] <anchor 569 189> mark @Anchor3;
+  pos base [\sinDdRI ] <anchor 664 241> mark @Anchor3;
+  pos base [\sinTRI ] <anchor 802 287> mark @Anchor3;
+  pos base [\sinDhRI ] <anchor 619 241> mark @Anchor3;
+  pos base [\sinShRI ] <anchor 739 248> mark @Anchor3;
+  pos base [\sinGRIi ] <anchor 726 246> mark @Anchor3;
+  pos base [\sinCRIi ] <anchor 654 261> mark @Anchor3;
+  pos base [\sinBRIi ] <anchor 645 261> mark @Anchor3;
+  pos base [\sinNna.reph ] <anchor 878 189> mark @Anchor3;
+  pos base [\sinTha.reph \sinYa.reph ] <anchor 632 189> mark @Anchor3;
+  pos base [\sinNa.reph ] <anchor 760 189> mark @Anchor3;
+  pos base [\A \Aacute \Abreve \uni1EAE \uni1EB6 \uni1EB0 \uni1EB2 \uni1EB4 \Acircumflex \uni1EA4 \uni1EAC \uni1EA6 \uni1EA8 \uni1EAA \uni0200 \Adieresis \uni1EA0 \Agrave \uni1EA2 \uni0202 \Amacron \Aogonek \Aring \Aringacute \Atilde \U \Uacute \Ubreve \Ucircumflex \uni0214 \Udieresis \uni1EE4 \Ugrave \uni1EE6 \Uhorn \uni1EE8 \uni1EF0 \uni1EEA \uni1EEC \uni1EEE \Uhungarumlaut \uni0216 \Umacron \Uogonek \Uring \Utilde ] <anchor 281 0> mark @Anchor3;
+  pos base [\AE \AEacute ] <anchor 488 0> mark @Anchor3;
+  pos base [\C \Cacute \Ccaron \Ccedilla \Ccircumflex \Cdotaccent \O \Oacute \Obreve \Ocircumflex \uni1ED0 \uni1ED8 \uni1ED2 \uni1ED4 \uni1ED6 \uni020C \Odieresis \uni022A \uni0230 \uni1ECC \Ograve \uni1ECE \Ohorn \uni1EDA \uni1EE2 \uni1EDC \uni1EDE \uni1EE0 \Ohungarumlaut \uni020E \Omacron \uni01EA \Oslash \Oslashacute \Otilde \uni022C \Q ] <anchor 288 0> mark @Anchor3;
+  pos base [\D \Dcaron \Dcroat \uni1E0C \Eth \E \Eacute \Ebreve \Ecaron \Ecircumflex \uni1EBE \uni1EC6 \uni1EC0 \uni1EC2 \uni1EC4 \uni0204 \Edieresis \Edotaccent \uni1EB8 \Egrave \uni1EBA \uni0206 \Emacron \Eogonek \uni1EBC ] <anchor 242 0> mark @Anchor3;
+  pos base [\G \Gbreve \Gcaron \Gcircumflex \uni0122 \Gdotaccent \uni0123 \n \nacute \ncaron \uni0146 \uni1E45 \uni1E47 \ntilde ] <anchor 297 0> mark @Anchor3;
+  pos base [\H \Hbar \Hcircumflex \K \uni0136 ] <anchor 315 0> mark @Anchor3;
+  pos base [\I \Iacute \Ibreve \Icircumflex \uni0208 \Idieresis \Idotaccent \uni1ECA \Igrave \uni1EC8 \uni020A \Imacron \Iogonek \Itilde \Thorn \i \dotlessi \iacute \ibreve \icircumflex \uni0209 \idieresis \i.loclTRK \uni1ECB \igrave \uni1EC9 \uni020B \imacron \iogonek \itilde ] <anchor 142 0> mark @Anchor3;
+  pos base [\J \uni004A0301 \Jcircumflex ] <anchor 151 0> mark @Anchor3;
+  pos base [\L \Lacute \Lcaron \uni013B \Ldot \uni1E36 \Lslash ] <anchor 269 0> mark @Anchor3;
+  pos base [\M \uni1E42 ] <anchor 397 0> mark @Anchor3;
+  pos base [\N \Nacute \Ncaron \uni0145 \uni1E44 \uni1E46 \Ntilde ] <anchor 333 0> mark @Anchor3;
+  pos base [\R \Racute \Rcaron \uni0156 \uni0210 \uni0212 ] <anchor 272 0> mark @Anchor3;
+  pos base [\S \Sacute \Scaron \Scedilla \Scircumflex \uni0218 ] <anchor 217 0> mark @Anchor3;
+  pos base [\T \Tbar \Tcaron \uni0162 \uni021A \uni1E6C ] <anchor 236 0> mark @Anchor3;
+  pos base [\W \Wacute \Wcircumflex \Wdieresis \Wgrave ] <anchor 436 0> mark @Anchor3;
+  pos base [\Y \Yacute \Ycircumflex \Ydieresis \uni1EF4 \Ygrave \uni1EF6 \uni0232 \uni1EF8 \yen ] <anchor 263 0> mark @Anchor3;
+  pos base [\Z \Zacute \Zcaron \Zdotaccent ] <anchor 254 0> mark @Anchor3;
+  pos base [\a \aacute \abreve \uni1EAF \uni1EB7 \uni1EB1 \uni1EB3 \uni1EB5 \acircumflex \uni1EA5 \uni1EAD \uni1EA7 \uni1EA9 \uni1EAB \uni0201 \adieresis \uni1EA1 \agrave \uni1EA3 \uni0203 \amacron \aogonek \aring \aringacute \atilde \z \zacute \zcaron \zdotaccent \ordfeminine ] <anchor 203 -10> mark @Anchor3;
+  pos base [\ae \aeacute ] <anchor 385 -10> mark @Anchor3;
+  pos base [\c \cacute \ccaron \ccedilla \ccircumflex \cdotaccent ] <anchor 207 5> mark @Anchor3;
+  pos base [\d \dcaron \uni1E0D \o \oacute \obreve \ocircumflex \uni1ED1 \uni1ED9 \uni1ED3 \uni1ED5 \uni1ED7 \uni020D \odieresis \uni022B \uni0231 \uni1ECD \ograve \uni1ECF \ohorn \uni1EDB \uni1EE3 \uni1EDD \uni1EDF \uni1EE1 \ohungarumlaut \uni020F \omacron \uni01EB \oslash \oslashacute \otilde \uni022D \ordmasculine ] <anchor 212 -10> mark @Anchor3;
+  pos base [\e \eacute \ebreve \ecaron \ecircumflex \uni1EBF \uni1EC7 \uni1EC1 \uni1EC3 \uni1EC5 \uni0205 \edieresis \edotaccent \uni1EB9 \egrave \uni1EBB \uni0207 \emacron \eogonek \uni1EBD \u \uacute \ubreve \ucircumflex \uni0215 \udieresis \uni1EE5 \ugrave \uni1EE7 \uhorn \uni1EE9 \uni1EF1 \uni1EEB \uni1EED \uni1EEF \uhungarumlaut \uni0217 \umacron \uogonek \uring \utilde ] <anchor 230 -10> mark @Anchor3;
+  pos base [\g \gbreve \gcaron \gcircumflex \gdotaccent ] <anchor 244 9> mark @Anchor3;
+  pos base [\h \hbar \hcircumflex ] <anchor 285 -10> mark @Anchor3;
+  pos base [\j ] <anchor 139 -10> mark @Anchor3;
+  pos base [\uni0237 \uni006A0301 \jcircumflex ] <anchor 107 -136> mark @Anchor3;
+  pos base [\uni01C9 ] <anchor 419 -10> mark @Anchor3;
+  pos base [\m \uni1E43 ] <anchor 416 5> mark @Anchor3;
+  pos base [\r \racute \rcaron \uni0157 \uni0211 \uni0213 ] <anchor 169 0> mark @Anchor3;
+  pos base [\s \sacute \scaron \scedilla \scircumflex \uni0219 ] <anchor 194 -10> mark @Anchor3;
+  pos base [\t \tcaron \uni0163 \uni021B \uni1E6D ] <anchor 167 -10> mark @Anchor3;
+  pos base [\w \wacute \wcircumflex \wdieresis \wgrave ] <anchor 349 -10> mark @Anchor3;
+  pos base [\y \yacute \ycircumflex \ydieresis \uni1EF5 \ygrave \uni1EF7 \uni0233 \uni1EF9 ] <anchor 221 -10> mark @Anchor3;
+  pos base [\copyright ] <anchor 361 81> mark @Anchor3;
+  pos base [\dollar ] <anchor 227 0> mark @Anchor3;
+  pos base [\uni25CC ] <anchor 258 -10> mark @Anchor3;
+} markMarkPositioninglookup6;
+
+lookup markMarkPositioninglookup7 {
+  lookupflag 0;
+  markClass [\uni0328 ] <anchor 0 1> @Anchor4;
+  pos base [\E \Eacute \Ebreve \Ecaron \Ecircumflex \uni1EBE \uni1EC6 \uni1EC0 \uni1EC2 \uni1EC4 \uni0204 \Edieresis \Edotaccent \uni1EB8 \Egrave \uni1EBA \uni0206 \Emacron \Eogonek \uni1EBC ] <anchor 436 2> mark @Anchor4;
+  pos base [\I \Iacute \Ibreve \Icircumflex \uni0208 \Idieresis \Idotaccent \uni1ECA \Igrave \uni1EC8 \uni020A \Imacron \Iogonek \Itilde \Thorn ] <anchor 262 2> mark @Anchor4;
+  pos base [\O \Oacute \Obreve \Ocircumflex \uni1ED0 \uni1ED8 \uni1ED2 \uni1ED4 \uni1ED6 \uni020C \Odieresis \uni022A \uni0230 \uni1ECC \Ograve \uni1ECE \Ohorn \uni1EDA \uni1EE2 \uni1EDC \uni1EDE \uni1EE0 \Ohungarumlaut \uni020E \Omacron \uni01EA \Oslash \Oslashacute \Otilde \uni022C \Q ] <anchor 445 46> mark @Anchor4;
+  pos base [\U \Uacute \Ubreve \Ucircumflex \uni0214 \Udieresis \uni1EE4 \Ugrave \uni1EE6 \Uhorn \uni1EE8 \uni1EF0 \uni1EEA \uni1EEC \uni1EEE \Uhungarumlaut \uni0216 \Umacron \Uogonek \Uring \Utilde ] <anchor 434 44> mark @Anchor4;
+  pos base [\a \aacute \abreve \uni1EAF \uni1EB7 \uni1EB1 \uni1EB3 \uni1EB5 \acircumflex \uni1EA5 \uni1EAD \uni1EA7 \uni1EA9 \uni1EAB \uni0201 \adieresis \uni1EA1 \agrave \uni1EA3 \uni0203 \amacron \aogonek \aring \aringacute \atilde \ordfeminine ] <anchor 428 12> mark @Anchor4;
+  pos base [\e \eacute \ebreve \ecaron \ecircumflex \uni1EBF \uni1EC7 \uni1EC1 \uni1EC3 \uni1EC5 \uni0205 \edieresis \edotaccent \uni1EB9 \egrave \uni1EBB \uni0207 \emacron \eogonek \uni1EBD ] <anchor 397 61> mark @Anchor4;
+  pos base [\i \dotlessi \iacute \ibreve \icircumflex \uni0209 \idieresis \i.loclTRK \uni1ECB \igrave \uni1EC9 \uni020B \imacron \iogonek \itilde ] <anchor 251 1> mark @Anchor4;
+  pos base [\o \oacute \obreve \ocircumflex \uni1ED1 \uni1ED9 \uni1ED3 \uni1ED5 \uni1ED7 \uni020D \odieresis \uni022B \uni0231 \uni1ECD \ograve \uni1ECF \ohorn \uni1EDB \uni1EE3 \uni1EDD \uni1EDF \uni1EE1 \ohungarumlaut \uni020F \omacron \uni01EB \oslash \oslashacute \otilde \uni022D \ordmasculine ] <anchor 351 30> mark @Anchor4;
+  pos base [\t \tcaron \uni0163 \uni021B \uni1E6D ] <anchor 312 45> mark @Anchor4;
+  pos base [\u \uacute \ubreve \ucircumflex \uni0215 \udieresis \uni1EE5 \ugrave \uni1EE7 \uhorn \uni1EE9 \uni1EF1 \uni1EEB \uni1EED \uni1EEF \uhungarumlaut \uni0217 \umacron \uogonek \uring \utilde ] <anchor 487 0> mark @Anchor4;
+  pos base [\uni25CC ] <anchor 416 2> mark @Anchor4;
+} markMarkPositioninglookup7;
+
+lookup markMarkPositioninglookup8 {
+  lookupflag 0;
+  markClass [\uni0308 ] <anchor 110 426> @Anchor5;
+  markClass [\uni0307 \gravecomb \uni030B \uni030C ] <anchor 112 426> @Anchor5;
+  markClass [\acutecomb \uni030A ] <anchor 125 478> @Anchor5;
+  markClass [\uni0302 ] <anchor 125 479> @Anchor5;
+  markClass [\uni0306 ] <anchor 116 447> @Anchor5;
+  markClass [\tildecomb \dotbelowcomb ] <anchor 124 478> @Anchor5;
+  markClass [\uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 \uni031B ] <anchor 111 426> @Anchor5;
+  pos base [\sinKSsa \sinKSsI \sinKSsIi \sinKSsU \sinKSsUu \sinKSsa.reph ] <anchor 754 454> mark @Anchor5;
+  pos base [\sinNDa \sinND.virama \sinNDI \sinNDIi \sinNDa.reph ] <anchor 741 500> mark @Anchor5;
+  pos base [\sinKSs.virama ] <anchor 740 454> mark @Anchor5;
+  pos base [\sinKRa \sinKRI \sinKRIi \sinKa.reph ] <anchor 421 369> mark @Anchor5;
+  pos base [\sinGhRa \sinGhR.virama \sinGhRI \sinGhRIi \sinGha.reph ] <anchor 345 458> mark @Anchor5;
+  pos base [\sinJRa \sinPRa \sinJRI \sinPRI \sinJRIi \sinJa.reph \sinPa.reph ] <anchor 282 460> mark @Anchor5;
+  pos base [\sinNyRa ] <anchor 896 498> mark @Anchor5;
+  pos base [\sinJnyRa \sinJnyR.virama \sinJnyRI \sinJnyRIi ] <anchor 796 498> mark @Anchor5;
+  pos base [\sinNyjRa ] <anchor 410 460> mark @Anchor5;
+  pos base [\sinTRa \sinTR.virama \sinTRIi \sinTa.reph ] <anchor 366 369> mark @Anchor5;
+  pos base [\sinDRa \sinDR.virama \sinDRI \sinDRIi ] <anchor 338 498> mark @Anchor5;
+  pos base [\sinBhRa \sinBhR.virama \sinBhRI \sinBhRIi \sinBha.reph ] <anchor 633 478> mark @Anchor5;
+  pos base [\sinSsRa \sinSsR.virama \sinSsa.reph ] <anchor 311 475> mark @Anchor5;
+  pos base [\sinSRa \sinSR.virama \sinSRI \sinSRIi \sinSa.reph ] <anchor 364 471> mark @Anchor5;
+  pos base [\sinHRa \sinHR.virama \sinHRI \sinHRIi \sinHa.reph ] <anchor 604 492> mark @Anchor5;
+  pos base [\sinNDRa ] <anchor 751 498> mark @Anchor5;
+  pos base [\sinJR.virama ] <anchor 281 460> mark @Anchor5;
+  pos base [\sinNyR.virama ] <anchor 887 498> mark @Anchor5;
+  pos base [\sinNyjR.virama ] <anchor 409 460> mark @Anchor5;
+  pos base [\sinPR.virama \sinPRIi ] <anchor 284 460> mark @Anchor5;
+  pos base [\sinNyRI ] <anchor 919 498> mark @Anchor5;
+  pos base [\sinTRI ] <anchor 377 369> mark @Anchor5;
+  pos base [\sinNyRIi ] <anchor 912 498> mark @Anchor5;
+  pos base [\sinNya.reph ] <anchor 857 500> mark @Anchor5;
+  pos base [\sinJnya.reph ] <anchor 730 500> mark @Anchor5;
+  pos base [\sinDa.reph ] <anchor 347 500> mark @Anchor5;
+  pos base [\sinNa.reph ] <anchor 403 369> mark @Anchor5;
+  pos base [\A \Aogonek ] <anchor 451 655> mark @Anchor5;
+  pos base [\Aacute \Atilde ] <anchor 493 815> mark @Anchor5;
+  pos base [\Abreve ] <anchor 486 824> mark @Anchor5;
+  pos base [\uni1EAE \uni1EB4 ] <anchor 528 984> mark @Anchor5;
+  pos base [\uni1EB6 ] <anchor 536 1016> mark @Anchor5;
+  pos base [\uni1EB0 ] <anchor 536 1015> mark @Anchor5;
+  pos base [\uni1EB2 ] <anchor 552 1077> mark @Anchor5;
+  pos base [\Acircumflex ] <anchor 502 855> mark @Anchor5;
+  pos base [\uni1EA4 \uni1EAA ] <anchor 544 1015> mark @Anchor5;
+  pos base [\uni1EAC ] <anchor 552 1047> mark @Anchor5;
+  pos base [\uni1EA6 ] <anchor 552 1046> mark @Anchor5;
+  pos base [\uni1EA8 ] <anchor 568 1109> mark @Anchor5;
+  pos base [\uni0200 \Ohungarumlaut \Uhungarumlaut ] <anchor 528 951> mark @Anchor5;
+  pos base [\Adieresis \Amacron \Cacute \Ccaron ] <anchor 496 826> mark @Anchor5;
+  pos base [\uni1EA0 ] <anchor 501 848> mark @Anchor5;
+  pos base [\Agrave \Odieresis \Omacron \Udieresis \Umacron ] <anchor 501 847> mark @Anchor5;
+  pos base [\uni1EA2 ] <anchor 517 909> mark @Anchor5;
+  pos base [\uni0202 ] <anchor 498 834> mark @Anchor5;
+  pos base [\Aring ] <anchor 504 859> mark @Anchor5;
+  pos base [\Aringacute ] <anchor 546 1019> mark @Anchor5;
+  pos base [\AE ] <anchor 657 676> mark @Anchor5;
+  pos base [\AEacute ] <anchor 698 836> mark @Anchor5;
+  pos base [\C \Ccedilla ] <anchor 454 666> mark @Anchor5;
+  pos base [\Ccircumflex ] <anchor 505 865> mark @Anchor5;
+  pos base [\Cdotaccent \Oacute \Oslashacute \Otilde \Uacute \Utilde ] <anchor 498 836> mark @Anchor5;
+  pos base [\D \Dcroat \Eth \E \Eogonek \Z ] <anchor 429 676> mark @Anchor5;
+  pos base [\Dcaron \Eacute \Ecaron \uni1EBC \Zacute \Zcaron ] <anchor 471 836> mark @Anchor5;
+  pos base [\uni1E0C \uni1EB8 ] <anchor 479 868> mark @Anchor5;
+  pos base [\Ebreve ] <anchor 464 844> mark @Anchor5;
+  pos base [\Ecircumflex ] <anchor 480 876> mark @Anchor5;
+  pos base [\uni1EBE \uni1EC4 ] <anchor 522 1036> mark @Anchor5;
+  pos base [\uni1EC6 ] <anchor 530 1068> mark @Anchor5;
+  pos base [\uni1EC0 ] <anchor 530 1067> mark @Anchor5;
+  pos base [\uni1EC2 ] <anchor 546 1129> mark @Anchor5;
+  pos base [\uni0204 ] <anchor 506 971> mark @Anchor5;
+  pos base [\Edieresis \Edotaccent \Emacron \Zdotaccent ] <anchor 474 847> mark @Anchor5;
+  pos base [\Egrave ] <anchor 479 867> mark @Anchor5;
+  pos base [\uni1EBA ] <anchor 495 930> mark @Anchor5;
+  pos base [\uni0206 ] <anchor 476 855> mark @Anchor5;
+  pos base [\G \uni0122 \uni0123 ] <anchor 484 676> mark @Anchor5;
+  pos base [\Gbreve ] <anchor 519 844> mark @Anchor5;
+  pos base [\Gcaron ] <anchor 526 836> mark @Anchor5;
+  pos base [\Gcircumflex ] <anchor 535 876> mark @Anchor5;
+  pos base [\Gdotaccent ] <anchor 528 847> mark @Anchor5;
+  pos base [\H \Hbar ] <anchor 502 676> mark @Anchor5;
+  pos base [\Hcircumflex ] <anchor 553 876> mark @Anchor5;
+  pos base [\I \Iogonek \J \Thorn ] <anchor 317 676> mark @Anchor5;
+  pos base [\Iacute \Itilde \uni004A0301 ] <anchor 359 836> mark @Anchor5;
+  pos base [\Ibreve ] <anchor 352 844> mark @Anchor5;
+  pos base [\Icircumflex \Jcircumflex ] <anchor 368 876> mark @Anchor5;
+  pos base [\uni0208 ] <anchor 394 971> mark @Anchor5;
+  pos base [\Idieresis \Idotaccent \Imacron ] <anchor 362 847> mark @Anchor5;
+  pos base [\uni1ECA ] <anchor 367 868> mark @Anchor5;
+  pos base [\Igrave ] <anchor 367 867> mark @Anchor5;
+  pos base [\uni1EC8 ] <anchor 383 930> mark @Anchor5;
+  pos base [\uni020A ] <anchor 364 855> mark @Anchor5;
+  pos base [\K \uni0136 ] <anchor 490 676> mark @Anchor5;
+  pos base [\L \Lcaron \uni013B \Ldot \Lslash ] <anchor 445 676> mark @Anchor5;
+  pos base [\Lacute ] <anchor 486 836> mark @Anchor5;
+  pos base [\uni1E36 ] <anchor 495 868> mark @Anchor5;
+  pos base [\M ] <anchor 560 655> mark @Anchor5;
+  pos base [\uni1E42 ] <anchor 610 848> mark @Anchor5;
+  pos base [\N \uni0145 ] <anchor 497 655> mark @Anchor5;
+  pos base [\Nacute \Ncaron \Ntilde ] <anchor 538 815> mark @Anchor5;
+  pos base [\uni1E44 ] <anchor 541 826> mark @Anchor5;
+  pos base [\uni1E46 ] <anchor 547 848> mark @Anchor5;
+  pos base [\O \uni01EA \Oslash \Q \U \Uogonek ] <anchor 457 676> mark @Anchor5;
+  pos base [\Obreve \Ubreve ] <anchor 491 844> mark @Anchor5;
+  pos base [\Ocircumflex \Ucircumflex ] <anchor 508 876> mark @Anchor5;
+  pos base [\uni1ED0 \uni1ED6 ] <anchor 549 1036> mark @Anchor5;
+  pos base [\uni1ED8 ] <anchor 558 1068> mark @Anchor5;
+  pos base [\uni1ED2 ] <anchor 557 1067> mark @Anchor5;
+  pos base [\uni1ED4 ] <anchor 574 1129> mark @Anchor5;
+  pos base [\uni020C \uni0214 ] <anchor 533 971> mark @Anchor5;
+  pos base [\uni022A \uni0230 ] <anchor 545 1017> mark @Anchor5;
+  pos base [\uni1ECC \uni1EE4 ] <anchor 507 868> mark @Anchor5;
+  pos base [\Ograve \Ugrave ] <anchor 506 867> mark @Anchor5;
+  pos base [\uni1ECE \uni1EE6 ] <anchor 523 930> mark @Anchor5;
+  pos base [\Ohorn \Uhorn ] <anchor 525 940> mark @Anchor5;
+  pos base [\uni1EDA \uni1EE0 \uni1EE8 \uni1EEE ] <anchor 567 1100> mark @Anchor5;
+  pos base [\uni1EE2 \uni1EF0 ] <anchor 575 1133> mark @Anchor5;
+  pos base [\uni1EDC \uni1EEA ] <anchor 575 1132> mark @Anchor5;
+  pos base [\uni1EDE \uni1EEC ] <anchor 591 1194> mark @Anchor5;
+  pos base [\uni020E \uni0216 ] <anchor 503 855> mark @Anchor5;
+  pos base [\uni022C ] <anchor 543 1007> mark @Anchor5;
+  pos base [\R \uni0156 ] <anchor 441 686> mark @Anchor5;
+  pos base [\Racute \Rcaron \Ydieresis \uni0232 ] <anchor 483 847> mark @Anchor5;
+  pos base [\uni0210 ] <anchor 518 982> mark @Anchor5;
+  pos base [\uni0212 ] <anchor 488 865> mark @Anchor5;
+  pos base [\S \Scedilla \uni0218 ] <anchor 405 686> mark @Anchor5;
+  pos base [\Sacute \Scaron ] <anchor 446 847> mark @Anchor5;
+  pos base [\Scircumflex ] <anchor 456 886> mark @Anchor5;
+  pos base [\T \Tbar \uni0162 \uni021A ] <anchor 415 655> mark @Anchor5;
+  pos base [\Tcaron ] <anchor 456 815> mark @Anchor5;
+  pos base [\uni1E6C ] <anchor 465 848> mark @Anchor5;
+  pos base [\Uring ] <anchor 510 880> mark @Anchor5;
+  pos base [\W ] <anchor 614 686> mark @Anchor5;
+  pos base [\Wacute ] <anchor 656 847> mark @Anchor5;
+  pos base [\Wcircumflex ] <anchor 665 886> mark @Anchor5;
+  pos base [\Wdieresis ] <anchor 658 857> mark @Anchor5;
+  pos base [\Wgrave ] <anchor 664 878> mark @Anchor5;
+  pos base [\Y \yen ] <anchor 438 676> mark @Anchor5;
+  pos base [\Yacute \uni1EF8 ] <anchor 480 836> mark @Anchor5;
+  pos base [\Ycircumflex ] <anchor 489 876> mark @Anchor5;
+  pos base [\uni1EF4 ] <anchor 488 868> mark @Anchor5;
+  pos base [\Ygrave ] <anchor 488 867> mark @Anchor5;
+  pos base [\uni1EF6 ] <anchor 504 930> mark @Anchor5;
+  pos base [\a \aogonek \s \scedilla \uni0219 \ordfeminine ] <anchor 326 489> mark @Anchor5;
+  pos base [\aacute \atilde \sacute \scaron ] <anchor 368 649> mark @Anchor5;
+  pos base [\abreve ] <anchor 361 657> mark @Anchor5;
+  pos base [\uni1EAF \uni1EB5 ] <anchor 402 817> mark @Anchor5;
+  pos base [\uni1EB7 ] <anchor 411 850> mark @Anchor5;
+  pos base [\uni1EB1 ] <anchor 411 849> mark @Anchor5;
+  pos base [\uni1EB3 ] <anchor 427 911> mark @Anchor5;
+  pos base [\acircumflex \scircumflex ] <anchor 377 688> mark @Anchor5;
+  pos base [\uni1EA5 \uni1EAB ] <anchor 419 849> mark @Anchor5;
+  pos base [\uni1EAD ] <anchor 427 881> mark @Anchor5;
+  pos base [\uni1EA7 ] <anchor 427 880> mark @Anchor5;
+  pos base [\uni1EA9 ] <anchor 443 942> mark @Anchor5;
+  pos base [\uni0201 ] <anchor 403 784> mark @Anchor5;
+  pos base [\adieresis \amacron \cacute \ccaron \zacute \zcaron ] <anchor 370 659> mark @Anchor5;
+  pos base [\uni1EA1 ] <anchor 376 681> mark @Anchor5;
+  pos base [\agrave ] <anchor 376 680> mark @Anchor5;
+  pos base [\uni1EA3 ] <anchor 392 743> mark @Anchor5;
+  pos base [\uni0203 ] <anchor 373 668> mark @Anchor5;
+  pos base [\aring ] <anchor 379 693> mark @Anchor5;
+  pos base [\aringacute ] <anchor 421 853> mark @Anchor5;
+  pos base [\ae ] <anchor 508 489> mark @Anchor5;
+  pos base [\aeacute ] <anchor 550 649> mark @Anchor5;
+  pos base [\c \ccedilla \d \dcaron \z ] <anchor 329 499> mark @Anchor5;
+  pos base [\ccircumflex ] <anchor 380 699> mark @Anchor5;
+  pos base [\cdotaccent \zdotaccent ] <anchor 373 670> mark @Anchor5;
+  pos base [\uni1E0D ] <anchor 257 -22> mark @Anchor5;
+  pos base [\e \eogonek ] <anchor 353 489> mark @Anchor5;
+  pos base [\eacute \ecaron \uni1EBD ] <anchor 395 649> mark @Anchor5;
+  pos base [\ebreve ] <anchor 388 657> mark @Anchor5;
+  pos base [\ecircumflex ] <anchor 404 688> mark @Anchor5;
+  pos base [\uni1EBF \uni1EC5 ] <anchor 446 849> mark @Anchor5;
+  pos base [\uni1EC7 ] <anchor 454 881> mark @Anchor5;
+  pos base [\uni1EC1 ] <anchor 454 880> mark @Anchor5;
+  pos base [\uni1EC3 ] <anchor 470 942> mark @Anchor5;
+  pos base [\uni0205 \uni1EE7 ] <anchor 430 784> mark @Anchor5;
+  pos base [\edieresis \edotaccent \emacron ] <anchor 398 659> mark @Anchor5;
+  pos base [\uni1EB9 ] <anchor 403 681> mark @Anchor5;
+  pos base [\egrave ] <anchor 403 680> mark @Anchor5;
+  pos base [\uni1EBB ] <anchor 419 743> mark @Anchor5;
+  pos base [\uni0207 ] <anchor 400 668> mark @Anchor5;
+  pos base [\g ] <anchor 368 509> mark @Anchor5;
+  pos base [\gbreve ] <anchor 402 677> mark @Anchor5;
+  pos base [\gcaron ] <anchor 409 669> mark @Anchor5;
+  pos base [\gcircumflex ] <anchor 419 708> mark @Anchor5;
+  pos base [\gdotaccent ] <anchor 412 679> mark @Anchor5;
+  pos base [\h \hbar ] <anchor 471 520> mark @Anchor5;
+  pos base [\hcircumflex ] <anchor 544 699> mark @Anchor5;
+  pos base [\i \idieresis \i.loclTRK \imacron \iogonek \uni006A0301 ] <anchor 320 711> mark @Anchor5;
+  pos base [\dotlessi ] <anchor 276 541> mark @Anchor5;
+  pos base [\iacute \itilde ] <anchor 318 701> mark @Anchor5;
+  pos base [\ibreve ] <anchor 311 709> mark @Anchor5;
+  pos base [\icircumflex ] <anchor 327 740> mark @Anchor5;
+  pos base [\uni0209 ] <anchor 353 836> mark @Anchor5;
+  pos base [\uni1ECB ] <anchor 370 904> mark @Anchor5;
+  pos base [\igrave ] <anchor 326 732> mark @Anchor5;
+  pos base [\uni1EC9 ] <anchor 342 795> mark @Anchor5;
+  pos base [\uni020B ] <anchor 322 720> mark @Anchor5;
+  pos base [\j ] <anchor 262 489> mark @Anchor5;
+  pos base [\uni0237 ] <anchor 279 551> mark @Anchor5;
+  pos base [\jcircumflex ] <anchor 330 751> mark @Anchor5;
+  pos base [\uni01C9 ] <anchor 542 489> mark @Anchor5;
+  pos base [\m ] <anchor 544 520> mark @Anchor5;
+  pos base [\uni1E43 ] <anchor 594 712> mark @Anchor5;
+  pos base [\n \uni0146 ] <anchor 441 510> mark @Anchor5;
+  pos base [\nacute \ncaron \ntilde ] <anchor 482 670> mark @Anchor5;
+  pos base [\uni1E45 ] <anchor 485 680> mark @Anchor5;
+  pos base [\uni1E47 ] <anchor 491 702> mark @Anchor5;
+  pos base [\o \uni01EB \oslash \otilde \ordmasculine ] <anchor 377 510> mark @Anchor5;
+  pos base [\oacute \oslashacute ] <anchor 419 670> mark @Anchor5;
+  pos base [\obreve ] <anchor 412 678> mark @Anchor5;
+  pos base [\ocircumflex ] <anchor 428 709> mark @Anchor5;
+  pos base [\uni1ED1 \uni1ED7 ] <anchor 470 869> mark @Anchor5;
+  pos base [\uni1ED9 ] <anchor 478 902> mark @Anchor5;
+  pos base [\uni1ED3 ] <anchor 478 901> mark @Anchor5;
+  pos base [\uni1ED5 ] <anchor 494 963> mark @Anchor5;
+  pos base [\uni020D ] <anchor 454 805> mark @Anchor5;
+  pos base [\odieresis \omacron ] <anchor 421 680> mark @Anchor5;
+  pos base [\uni022B \uni0231 ] <anchor 466 851> mark @Anchor5;
+  pos base [\uni1ECD ] <anchor 427 702> mark @Anchor5;
+  pos base [\ograve \ydieresis \uni0233 ] <anchor 427 701> mark @Anchor5;
+  pos base [\uni1ECF ] <anchor 443 763> mark @Anchor5;
+  pos base [\ohorn ] <anchor 446 774> mark @Anchor5;
+  pos base [\uni1EDB \uni1EE1 ] <anchor 487 934> mark @Anchor5;
+  pos base [\uni1EE3 ] <anchor 496 966> mark @Anchor5;
+  pos base [\uni1EDD ] <anchor 495 965> mark @Anchor5;
+  pos base [\uni1EDF ] <anchor 512 1028> mark @Anchor5;
+  pos base [\ohungarumlaut \uni1EF7 ] <anchor 448 784> mark @Anchor5;
+  pos base [\uni020F ] <anchor 424 688> mark @Anchor5;
+  pos base [\uni022D ] <anchor 463 840> mark @Anchor5;
+  pos base [\oe ] <anchor 535 489> mark @Anchor5;
+  pos base [\r \racute \uni0157 ] <anchor 344 489> mark @Anchor5;
+  pos base [\rcaron ] <anchor 386 649> mark @Anchor5;
+  pos base [\uni0211 ] <anchor 421 784> mark @Anchor5;
+  pos base [\uni0213 ] <anchor 391 668> mark @Anchor5;
+  pos base [\t \tcaron \uni0163 \uni021B ] <anchor 306 622> mark @Anchor5;
+  pos base [\uni1E6D ] <anchor 356 814> mark @Anchor5;
+  pos base [\u \uogonek ] <anchor 364 530> mark @Anchor5;
+  pos base [\uacute \utilde ] <anchor 406 691> mark @Anchor5;
+  pos base [\ubreve ] <anchor 399 699> mark @Anchor5;
+  pos base [\ucircumflex ] <anchor 415 730> mark @Anchor5;
+  pos base [\uni0215 ] <anchor 441 826> mark @Anchor5;
+  pos base [\udieresis \umacron ] <anchor 409 701> mark @Anchor5;
+  pos base [\uni1EE5 ] <anchor 414 723> mark @Anchor5;
+  pos base [\ugrave ] <anchor 414 722> mark @Anchor5;
+  pos base [\uhorn ] <anchor 433 795> mark @Anchor5;
+  pos base [\uni1EE9 \uni1EEF ] <anchor 474 955> mark @Anchor5;
+  pos base [\uni1EF1 ] <anchor 483 987> mark @Anchor5;
+  pos base [\uni1EEB ] <anchor 483 986> mark @Anchor5;
+  pos base [\uni1EED ] <anchor 499 1048> mark @Anchor5;
+  pos base [\uhungarumlaut ] <anchor 436 805> mark @Anchor5;
+  pos base [\uni0217 ] <anchor 411 709> mark @Anchor5;
+  pos base [\uring ] <anchor 417 734> mark @Anchor5;
+  pos base [\w ] <anchor 489 520> mark @Anchor5;
+  pos base [\wacute ] <anchor 531 680> mark @Anchor5;
+  pos base [\wcircumflex ] <anchor 540 720> mark @Anchor5;
+  pos base [\wdieresis ] <anchor 533 691> mark @Anchor5;
+  pos base [\wgrave ] <anchor 539 711> mark @Anchor5;
+  pos base [\y ] <anchor 382 530> mark @Anchor5;
+  pos base [\yacute \uni1EF9 ] <anchor 424 691> mark @Anchor5;
+  pos base [\ycircumflex ] <anchor 433 730> mark @Anchor5;
+  pos base [\uni1EF5 ] <anchor 432 723> mark @Anchor5;
+  pos base [\ygrave ] <anchor 432 722> mark @Anchor5;
+  pos base [\copyright ] <anchor 474 538> mark @Anchor5;
+  pos base [\dollar ] <anchor 396 705> mark @Anchor5;
+  pos base [\uni25CC ] <anchor 381 489> mark @Anchor5;
+} markMarkPositioninglookup8;
+
+lookup markMarkPositioninglookup9 {
+  lookupflag 0;
+  markClass [\sinVirama ] <anchor 111 382> @Anchor6;
+  pos base [\sinKSsa \sinKSsI \sinKSsIi \sinKSsU \sinKSsUu \sinKSsa.reph ] <anchor 1023 468> mark @Anchor6;
+  pos base [\sinKSs.virama ] <anchor 1010 468> mark @Anchor6;
+  pos base [\sinShRa \sinShR.virama \sinSha.reph ] <anchor 695 423> mark @Anchor6;
+  pos base [\sinSsRa \sinSsR.virama \sinSsa.reph ] <anchor 597 445> mark @Anchor6;
+  pos base [\sinSRa \sinSR.virama \sinSRI \sinSRIi \sinSa.reph ] <anchor 669 466> mark @Anchor6;
+  pos base [\sinHRa \sinHR.virama \sinHRI \sinHRIi \sinHa.reph ] <anchor 697 448> mark @Anchor6;
+  pos base [\sinFRa \sinFR.virama ] <anchor 616 418> mark @Anchor6;
+} markMarkPositioninglookup9;
+
+lookup mkmkMarktoMarklookup10 {
+  lookupflag UseMarkFilteringSet @MarkSet2;
+  markClass [\uni0308 ] <anchor 110 426> @Anchor7;
+  markClass [\uni0307 \gravecomb \uni030B \uni030C ] <anchor 112 426> @Anchor7;
+  markClass [\acutecomb \uni030A ] <anchor 125 478> @Anchor7;
+  markClass [\uni0302 ] <anchor 125 479> @Anchor7;
+  markClass [\uni0306 ] <anchor 116 447> @Anchor7;
+  markClass [\tildecomb \dotbelowcomb ] <anchor 124 478> @Anchor7;
+  markClass [\uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 \uni031B ] <anchor 111 426> @Anchor7;
+  pos mark [\uni0308 ] <anchor 154 597> mark @Anchor7;
+  pos mark [\uni0307 ] <anchor 156 597> mark @Anchor7;
+  pos mark [\gravecomb ] <anchor 161 618> mark @Anchor7;
+  pos mark [\acutecomb ] <anchor 167 639> mark @Anchor7;
+  pos mark [\uni030B ] <anchor 183 701> mark @Anchor7;
+  pos mark [\uni0302 ] <anchor 176 679> mark @Anchor7;
+  pos mark [\uni030C ] <anchor 153 587> mark @Anchor7;
+  pos mark [\uni0306 ] <anchor 151 616> mark @Anchor7;
+  pos mark [\uni030A ] <anchor 178 682> mark @Anchor7;
+  pos mark [\tildecomb ] <anchor 166 639> mark @Anchor7;
+  pos mark [\uni0304 ] <anchor 155 597> mark @Anchor7;
+  pos mark [\hookabovecomb ] <anchor 177 680> mark @Anchor7;
+  pos mark [\uni030F ] <anchor 187 722> mark @Anchor7;
+  pos mark [\uni0311 ] <anchor 157 605> mark @Anchor7;
+  pos mark [\uni0312 ] <anchor 174 670> mark @Anchor7;
+  pos mark [\uni031B ] <anchor 179 691> mark @Anchor7;
+  pos mark [\dotbelowcomb ] <anchor 174 671> mark @Anchor7;
+} mkmkMarktoMarklookup10;
+
+feature dist {
+
+ script DFLT;
+     language dflt ;
+      lookup distDistancelookup0;
+
+ script latn;
+     language dflt ;
+      lookup distDistancelookup0;
+
+ script sinh;
+     language dflt ;
+      lookup distDistancelookup0;
+} dist;
+
+feature kern {
+
+ script DFLT;
+     language dflt ;
+      lookup kernHorizontalKerninginLatinlookup1;
+      lookup kernHorizontalKerninginLatinlookup2;
+
+ script latn;
+     language dflt ;
+      lookup kernHorizontalKerninginLatinlookup1;
+      lookup kernHorizontalKerninginLatinlookup2;
+} kern;
+
+feature abvm {
+
+ script DFLT;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup3;
+      lookup abvmAboveBaseMarklookup4;
+
+ script latn;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup3;
+      lookup abvmAboveBaseMarklookup4;
+
+ script sinh;
+     language dflt ;
+      lookup abvmAboveBaseMarklookup3;
+      lookup abvmAboveBaseMarklookup4;
+} abvm;
+
+feature blwm {
+
+ script DFLT;
+     language dflt ;
+      lookup blwmBelowBaseMarklookup5;
+
+ script latn;
+     language dflt ;
+      lookup blwmBelowBaseMarklookup5;
+
+ script sinh;
+     language dflt ;
+      lookup blwmBelowBaseMarklookup5;
+} blwm;
+
+feature mark {
+
+ script DFLT;
+     language dflt ;
+      lookup markMarkPositioninglookup6;
+      lookup markMarkPositioninglookup7;
+      lookup markMarkPositioninglookup8;
+      lookup markMarkPositioninglookup9;
+
+ script latn;
+     language dflt ;
+      lookup markMarkPositioninglookup6;
+      lookup markMarkPositioninglookup7;
+      lookup markMarkPositioninglookup8;
+      lookup markMarkPositioninglookup9;
+
+ script sinh;
+     language dflt ;
+      lookup markMarkPositioninglookup6;
+      lookup markMarkPositioninglookup7;
+      lookup markMarkPositioninglookup8;
+      lookup markMarkPositioninglookup9;
+} mark;
+
+feature mkmk {
+
+ script DFLT;
+     language dflt ;
+      lookup mkmkMarktoMarklookup10;
+
+ script latn;
+     language dflt ;
+      lookup mkmkMarktoMarklookup10;
+
+ script sinh;
+     language dflt ;
+      lookup mkmkMarktoMarklookup10;
+} mkmk;
+
+@GDEF_Simple = [\sinKa \sinKha \sinGa \sinGha \sinNga \sinNnga \sinCa \sinCha \sinJa 
+	\sinJha \sinNya \sinJnya \sinNyja \sinTta \sinTtha \sinDda \sinDdha \sinNna 
+	\sinNndda \sinTa \sinTha \sinDa \sinDha \sinNa \sinNda \sinPa \sinPha \sinBa 
+	\sinBha \sinMa \sinMba \sinYa \sinLa \sinVa \sinSha \sinSsa \sinSa \sinHa \sinLla 
+	\sinFa \sinKSsa \sinKVa \sinTVa \sinNDa \sinNDha \sinNVa \sinNTha \sinDVa 
+	\sinDDha \sinYansaya \sinK.virama \sinKh.virama \sinG.virama \sinGh.virama 
+	\sinNg.virama \sinNng.virama \sinC.virama \sinJ.virama \sinNy.virama 
+	\sinJny.virama \sinNyj.virama \sinTt.virama \sinTth.virama \sinDd.virama 
+	\sinDdh.virama \sinNn.virama \sinNndd.virama \sinT.virama \sinTh.virama 
+	\sinD.virama \sinN.virama \sinNd.virama \sinP.virama \sinPh.virama 
+	\sinB.virama \sinBh.virama \sinM.virama \sinMb.virama \sinY.virama 
+	\sinL.virama \sinV.virama \sinSh.virama \sinSs.virama \sinS.virama 
+	\sinH.virama \sinLl.virama \sinF.virama \sinKSs.virama \sinKV.virama 
+	\sinTV.virama \sinND.virama \sinNV.virama \sinNTh.virama \sinDV.virama 
+	\sinDDh.virama \sinKI \sinKhI \sinGI \sinGhI \sinNngI \sinCI \sinChI \sinJI 
+	\sinJhI \sinNyI \sinJnyI \sinNyjI \sinTtI \sinTthI \sinDdI \sinDdhI \sinNnI 
+	\sinNnddI \sinTI \sinThI \sinDI \sinDhI \sinNI \sinNdI \sinPI \sinPhI \sinBhI 
+	\sinMI \sinYI \sinLI \sinShI \sinSsI \sinSI \sinHI \sinLlI \sinFI \sinKSsI \sinNDI 
+	\sinNThI \sinKIi \sinGIi \sinGhIi \sinCIi \sinChIi \sinJIi \sinNyIi \sinJnyIi 
+	\sinNyjIi \sinTthIi \sinDdhIi \sinNnIi \sinTIi \sinThIi \sinDIi \sinNIi \sinNdIi 
+	\sinPIi \sinPhIi \sinBIi \sinBhIi \sinLIi \sinShIi \sinSsIi \sinSIi \sinHIi 
+	\sinLlIi \sinFIi \sinKSsIi \sinNDIi \sinNThIi \sinKU \sinKhU \sinGU \sinGhU 
+	\sinNngU \sinCU \sinChU \sinJU \sinJhU \sinJnyU \sinNyjU \sinTtU \sinTthU \sinDdU 
+	\sinDdhU \sinNnU \sinNnddU \sinTU \sinThU \sinDhU \sinNU \sinPU \sinPhU \sinBU 
+	\sinMU \sinMbU \sinYU \sinVU \sinShU \sinSsU \sinSU \sinHU \sinLlU \sinFU \sinKSsU 
+	\sinKVU \sinTVU \sinNDhU \sinNVU \sinNThU \sinDVU \sinDDhU \sinKUu \sinKhUu 
+	\sinGhUu \sinNngUu \sinCUu \sinChUu \sinJUu \sinJhUu \sinNyUu \sinJnyUu 
+	\sinNyjUu \sinTtUu \sinTthUu \sinDdUu \sinDdhUu \sinNnUu \sinNnddUu \sinTUu 
+	\sinThUu \sinDUu \sinDhUu \sinNUu \sinNdUu \sinPUu \sinPhUu \sinBUu \sinMUu 
+	\sinMbUu \sinYUu \sinVUu \sinShUu \sinSsUu \sinSUu \sinHUu \sinLlUu \sinFUu 
+	\sinKSsUu \sinKVUu \sinTVUu \sinNDUu \sinNDhUu \sinNVUu \sinNThUu \sinDVUu 
+	\sinDDhUu \sinKRa \sinKhRa \sinGRa \sinGhRa \sinCRa \sinJRa \sinJhRa \sinNyRa 
+	\sinJnyRa \sinNyjRa \sinTtRa \sinDdRa \sinTRa \sinDRa \sinDhRa \sinPRa \sinBRa 
+	\sinBhRa \sinMRa \sinVRa \sinShRa \sinSsRa \sinSRa \sinHRa \sinFRa \sinNDRa 
+	\sinKhR.virama \sinGR.virama \sinGhR.virama \sinCR.virama \sinJR.virama 
+	\sinNyR.virama \sinJnyR.virama \sinNyjR.virama \sinTtR.virama \sinDdR.virama 
+	\sinTR.virama \sinDR.virama \sinPR.virama \sinBR.virama \sinBhR.virama 
+	\sinMR.virama \sinVR.virama \sinShR.virama \sinSsR.virama \sinSR.virama 
+	\sinHR.virama \sinFR.virama \sinKRI \sinKhRI \sinGRI \sinGhRI \sinCRI \sinJRI 
+	\sinJhRI \sinNyRI \sinJnyRI \sinTtRI \sinDdRI \sinTRI \sinDRI \sinDhRI \sinPRI 
+	\sinBhRI \sinMRI \sinShRI \sinSRI \sinHRI \sinKRIi \sinGRIi \sinGhRIi \sinCRIi 
+	\sinJRIi \sinNyRIi \sinJnyRIi \sinTRIi \sinDRIi \sinPRIi \sinBRIi \sinBhRIi 
+	\sinSRIi \sinHRIi \sinKa.reph \sinKha.reph \sinGa.reph \sinGha.reph 
+	\sinCa.reph \sinJa.reph \sinJha.reph \sinNya.reph \sinJnya.reph \sinTta.reph 
+	\sinDda.reph \sinNna.reph \sinTa.reph \sinTha.reph \sinDa.reph \sinDha.reph 
+	\sinNa.reph \sinPa.reph \sinBa.reph \sinBha.reph \sinMa.reph \sinYa.reph 
+	\sinVa.reph \sinSha.reph \sinSsa.reph \sinSa.reph \sinHa.reph \sinKSsa.reph 
+	\sinKVa.reph \sinTVa.reph \sinNDa.reph \sinNDha.reph \sinNVa.reph 
+	\sinNTha.reph \sinDVa.reph \sinDDha.reph \sinYansaya.MatraI 
+	\sinYansaya.MatraIi \sinYansaya.reph \sinYansaya.virama \sinYU.post 
+	\sinYUu.post \sinYansaya_Reph_MatraAa \A \Aacute \Abreve \uni1EAE \uni1EB6 
+	\uni1EB0 \uni1EB2 \uni1EB4 \Acircumflex \uni1EA4 \uni1EAC \uni1EA6 \uni1EA8 
+	\uni1EAA \uni0200 \Adieresis \uni1EA0 \Agrave \uni1EA2 \uni0202 \Amacron 
+	\Aogonek \Aring \Aringacute \Atilde \AE \AEacute \C \Cacute \Ccaron \Ccedilla 
+	\Ccircumflex \Cdotaccent \D \uni01C4 \Dcaron \Dcroat \uni1E0C \uni01C5 \Eth \E 
+	\Eacute \Ebreve \Ecaron \Ecircumflex \uni1EBE \uni1EC6 \uni1EC0 \uni1EC2 
+	\uni1EC4 \uni0204 \Edieresis \Edotaccent \uni1EB8 \Egrave \uni1EBA \uni0206 
+	\Emacron \Eogonek \uni1EBC \G \Gbreve \Gcaron \Gcircumflex \uni0122 \Gdotaccent 
+	\H \Hbar \Hcircumflex \I \Iacute \Ibreve \Icircumflex \uni0208 \Idieresis 
+	\Idotaccent \uni1ECA \Igrave \uni1EC8 \uni020A \Imacron \Iogonek \Itilde \J 
+	\uni004A0301 \Jcircumflex \K \uni0136 \L \uni01C7 \Lacute \Lcaron \uni013B \Ldot 
+	\uni1E36 \uni01C8 \Lslash \M \uni1E42 \N \uni01CA \Nacute \Ncaron \uni0145 
+	\uni1E44 \uni1E46 \uni01CB \Ntilde \O \Oacute \Obreve \Ocircumflex \uni1ED0 
+	\uni1ED8 \uni1ED2 \uni1ED4 \uni1ED6 \uni020C \Odieresis \uni022A \uni0230 
+	\uni1ECC \Ograve \uni1ECE \Ohorn \uni1EDA \uni1EE2 \uni1EDC \uni1EDE \uni1EE0 
+	\Ohungarumlaut \uni020E \Omacron \uni01EA \Oslash \Oslashacute \Otilde \uni022C 
+	\Thorn \Q \R \Racute \Rcaron \uni0156 \uni0210 \uni0212 \S \Sacute \Scaron 
+	\Scedilla \Scircumflex \uni0218 \T \Tbar \Tcaron \uni0162 \uni021A \uni1E6C \U 
+	\Uacute \Ubreve \Ucircumflex \uni0214 \Udieresis \uni1EE4 \Ugrave \uni1EE6 
+	\Uhorn \uni1EE8 \uni1EF0 \uni1EEA \uni1EEC \uni1EEE \Uhungarumlaut \uni0216 
+	\Umacron \Uogonek \Uring \Utilde \W \Wacute \Wcircumflex \Wdieresis \Wgrave \Y 
+	\Yacute \Ycircumflex \Ydieresis \uni1EF4 \Ygrave \uni1EF6 \uni0232 \uni1EF8 \Z 
+	\Zacute \Zcaron \Zdotaccent \a \aacute \abreve \uni1EAF \uni1EB7 \uni1EB1 
+	\uni1EB3 \uni1EB5 \acircumflex \uni1EA5 \uni1EAD \uni1EA7 \uni1EA9 \uni1EAB 
+	\uni0201 \adieresis \uni1EA1 \agrave \uni1EA3 \uni0203 \amacron \aogonek \aring 
+	\aringacute \atilde \ae \aeacute \c \cacute \ccaron \ccedilla \ccircumflex 
+	\cdotaccent \d \dcaron \uni1E0D \uni01C6 \e \eacute \ebreve \ecaron \ecircumflex 
+	\uni1EBF \uni1EC7 \uni1EC1 \uni1EC3 \uni1EC5 \uni0205 \edieresis \edotaccent 
+	\uni1EB9 \egrave \uni1EBB \uni0207 \emacron \eogonek \uni1EBD \g \gbreve \gcaron 
+	\gcircumflex \uni0123 \gdotaccent \h \hbar \hcircumflex \i \dotlessi \iacute 
+	\ibreve \icircumflex \uni0209 \idieresis \i.loclTRK \uni1ECB \igrave \uni1EC9 
+	\uni020B \imacron \iogonek \itilde \j \uni0237 \uni006A0301 \jcircumflex 
+	\uni01C9 \m \uni1E43 \n \nacute \ncaron \uni0146 \uni1E45 \uni1E47 \uni01CC 
+	\ntilde \o \oacute \obreve \ocircumflex \uni1ED1 \uni1ED9 \uni1ED3 \uni1ED5 
+	\uni1ED7 \uni020D \odieresis \uni022B \uni0231 \uni1ECD \ograve \uni1ECF \ohorn 
+	\uni1EDB \uni1EE3 \uni1EDD \uni1EDF \uni1EE1 \ohungarumlaut \uni020F \omacron 
+	\uni01EB \oslash \oslashacute \otilde \uni022D \oe \r \racute \rcaron \uni0157 
+	\uni0211 \uni0213 \s \sacute \scaron \scedilla \scircumflex \uni0219 \t \tcaron 
+	\uni0163 \uni021B \uni1E6D \u \uacute \ubreve \ucircumflex \uni0215 \udieresis 
+	\uni1EE5 \ugrave \uni1EE7 \uhorn \uni1EE9 \uni1EF1 \uni1EEB \uni1EED \uni1EEF 
+	\uhungarumlaut \uni0217 \umacron \uogonek \uring \utilde \w \wacute \wcircumflex 
+	\wdieresis \wgrave \y \yacute \ycircumflex \ydieresis \uni1EF5 \ygrave \uni1EF7 
+	\uni0233 \uni1EF9 \z \zacute \zcaron \zdotaccent \ordfeminine \ordmasculine 
+	\copyright \dollar \yen \uni25CC \sinFI.alt \sinFUu.alt \sinFa.alt 
+	\sinF.virama.alt ];
+@GDEF_Mark = [\sinMatraI \sinMatraIi \sinMatraU \sinMatraUu \sinVirama \uni0308 
+	\uni0307 \gravecomb \acutecomb \uni030B \uni0302 \uni030C \uni0306 \uni030A 
+	\tildecomb \uni0304 \hookabovecomb \uni030F \uni0311 \uni0312 \uni031B 
+	\dotbelowcomb \uni0324 \uni0326 \uni0327 \uni0328 \uni032E \uni0331 ];
+
+table GDEF {
+  GlyphClassDef @GDEF_Simple, , @GDEF_Mark, ;
+
+} GDEF;
+
