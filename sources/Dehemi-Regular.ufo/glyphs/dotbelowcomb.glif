@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dotbelowcomb" format="2">
+  <advance width="0"/>
+  <unicode hex="0323"/>
+  <anchor x="7" y="671" name="Anchor-7"/>
+  <anchor x="5" y="478" name="_Anchor-7"/>
+  <anchor x="5" y="478" name="_Anchor-5"/>
+  <anchor x="5" y="478" name="_Anchor-0"/>
+  <outline>
+    <contour>
+      <point x="8" y="521" type="qcurve" smooth="yes"/>
+      <point x="34" y="521"/>
+      <point x="67" y="556"/>
+      <point x="68" y="615"/>
+      <point x="35" y="648"/>
+      <point x="-11" y="648"/>
+      <point x="-45" y="612"/>
+      <point x="-45" y="581" type="qcurve" smooth="yes"/>
+      <point x="-45" y="554"/>
+      <point x="-16" y="521"/>
+    </contour>
+  </outline>
+</glyph>

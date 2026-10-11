@@ -1,0 +1,38 @@
+{
+  "source": "sources/features.fea",
+  "compiler": "fontTools.feaLib",
+  "reference": "UFDehemi-Italic.ttf version 2.400",
+  "sinhala_matching_cases": 788,
+  "latin_matching_cases": 240,
+  "languages": [
+    "en",
+    "tr",
+    "az",
+    "ca",
+    "crh",
+    "ro",
+    "nl",
+    "kz",
+    "tt",
+    "mo"
+  ],
+  "intentional_addition": "aalt selects existing uni030C.alt; default caron remains unchanged",
+  "outline_and_hint_tables_preserved": [
+    "glyf",
+    "fpgm",
+    "prep",
+    "cvt ",
+    "gasp"
+  ],
+  "unskew_transform": {
+    "shear": -0.24932800284318068,
+    "anchors": 544,
+    "value_records": 0,
+    "anchors_correct": true,
+    "second_call_idempotent": true,
+    "shared_value_record_once": true,
+    "pure_y_value_format_updated": true,
+    "device_rejected_before_mutation": true
+  },
+  "limitations": "Regression parity covers these tested strings/features; Regular positioning still requires visual review. Feature source originated as a reverse export and is now editable, native compiled FEA."
+}
