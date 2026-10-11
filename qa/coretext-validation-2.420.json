@@ -1,0 +1,305 @@
+{
+  "version": "2.420",
+  "engine": "Apple CoreText",
+  "platform": "macOS-26.6.2-arm64-arm-64bit",
+  "architecture": "arm64",
+  "private_font_loading": "file descriptors; no registration or installation",
+  "styles": {
+    "Regular": {
+      "status": "pass",
+      "coretext_cases": 789,
+      "postscript_name": "Dehemi-Regular",
+      "actual_run_fonts": [
+        "Dehemi-Regular"
+      ],
+      "no_missing_glyphs": true,
+      "no_fallback_fonts": true,
+      "expected_conjunct_cases": 3,
+      "font_size_points": 1000,
+      "sha256": "7c4d4c1f7f7174cc720c7c5fff08b5a8c24ec61eb0a11cf816cefab22afa3fc5",
+      "mark_positions": {
+        "අඁ": [
+          {
+            "postscript_name": "Dehemi-Regular",
+            "line_width": 571.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 1,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  207.0,
+                  -150.0
+                ],
+                "base_advance": [
+                  571.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  207.0,
+                  -150.0
+                ],
+                "advance": [
+                  364.0,
+                  150.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "කඁ": [
+          {
+            "postscript_name": "Dehemi-Regular",
+            "line_width": 800.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 19,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  327.0,
+                  -171.0
+                ],
+                "base_advance": [
+                  800.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  327.0,
+                  -171.0
+                ],
+                "advance": [
+                  473.0,
+                  171.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "◌ඁ": [
+          {
+            "postscript_name": "Dehemi-Regular",
+            "line_width": 539.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 1033,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  186.0,
+                  -248.0
+                ],
+                "base_advance": [
+                  539.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  186.0,
+                  -248.0
+                ],
+                "advance": [
+                  353.0,
+                  248.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Italic": {
+      "status": "pass",
+      "coretext_cases": 789,
+      "postscript_name": "Dehemi-Italic",
+      "actual_run_fonts": [
+        "Dehemi-Italic"
+      ],
+      "no_missing_glyphs": true,
+      "no_fallback_fonts": true,
+      "expected_conjunct_cases": 3,
+      "font_size_points": 1000,
+      "sha256": "293fe776fc0d5e40f6c81b0bfb5a3d4eb4c6642a45aa2867987ad53770cd06c6",
+      "mark_positions": {
+        "අඁ": [
+          {
+            "postscript_name": "Dehemi-Italic",
+            "line_width": 571.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 1,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  169.0,
+                  -150.0
+                ],
+                "base_advance": [
+                  571.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  169.0,
+                  -150.0
+                ],
+                "advance": [
+                  402.0,
+                  150.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "කඁ": [
+          {
+            "postscript_name": "Dehemi-Italic",
+            "line_width": 800.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 19,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  284.0,
+                  -171.0
+                ],
+                "base_advance": [
+                  800.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  284.0,
+                  -171.0
+                ],
+                "advance": [
+                  516.0,
+                  171.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ],
+        "◌ඁ": [
+          {
+            "postscript_name": "Dehemi-Italic",
+            "line_width": 539.0,
+            "utf16_range": [
+              0,
+              2
+            ],
+            "glyphs": [
+              {
+                "glyph_id": 1033,
+                "utf16_index": 0,
+                "position": [
+                  0.0,
+                  0.0
+                ],
+                "advance": [
+                  124.0,
+                  -248.0
+                ],
+                "base_advance": [
+                  539.0,
+                  0.0
+                ]
+              },
+              {
+                "glyph_id": 1086,
+                "utf16_index": 1,
+                "position": [
+                  124.0,
+                  -248.0
+                ],
+                "advance": [
+                  415.0,
+                  248.0
+                ],
+                "base_advance": [
+                  0.0,
+                  0.0
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "limitations": "Actual CoreText shaping and font fallback checks for this corpus. Does not certify every string, application, rasterizer or Google Docs availability.",
+  "status": "pass"
+}

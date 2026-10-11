@@ -12,11 +12,13 @@ The 2.420 changes remove the family-name abbreviation, correct spacing macron U+
 
 Local validation records **788 HarfBuzz shaping cases and 5,450 FreeType glyph renders per style**, with assertions for all assigned Sinhala-block codepoints, family metadata, macron width and chandrabindu attachment. It also checks that existing italic outlines, glyph instructions and tested Sinhala shaping remain unchanged. See `qa/validation-2.420.json`.
 
-Fontspector 1.9.0's Google Fonts profile reports **196 PASS, 27 WARN, 0 FAIL, 137 SKIP and 13 INFO** across both 2.420 styles. See `qa/fontspector-2.420.json` and `qa/fontspector-2.420.html`. Zero failures does not mean every check passed: skipped checks and remaining outline, contour, texture and language/metric warnings still require review. Historical reports retain their original version numbers. See [the warning review](documentation/WARNING-REVIEW.md).
+Fontspector 1.9.0's Google Fonts profile reports **196 PASS, 27 WARN, 0 FAIL, 137 SKIP and 13 INFO** across both 2.420 styles. See `qa/fontspector-2.420.json` and `qa/fontspector-2.420.html`. Zero failures does not mean every check passed: skipped checks and remaining outline, contour, texture and language/metric warnings still require review. Historical reports remain available in earlier Git commits and releases. See [the warning review](documentation/WARNING-REVIEW.md).
 
 The Windows Uniscribe harness passes **789 shaping cases per style**; see `qa/windows-validation-2.420.json`. This native Windows result is separate from HarfBuzz/FreeType validation and does not certify every Windows application or DirectWrite behavior.
 
-GitHub Actions defines build and regression jobs for Linux, Windows and macOS. All platforms run the canonical build, HarfBuzz/FreeType validation and native fontmake target. Windows adds its native shaping check; macOS adds CoreText checks. The three-platform CI result for this release is pending; consult the run for the release commit and its platform reports before claiming a CI or macOS result.
+The Linux, Windows and macOS jobs all passed in [GitHub Actions run 38117608968](https://github.com/anushannga/UF-Dehemi/actions/runs/38117608968), for commit `5309778`. Each job ran the canonical build, HarfBuzz/FreeType validation and native fontmake target; Windows also ran its native shaping check and macOS executed CoreText.
+
+Actual macOS CoreText validation passes **789 coverage cases and 3 expected conjunct cases per style**, without missing glyphs or fallback fonts. Chandrabindu checks confirm zero base advance, unchanged cluster width and mark origins matching HarfBuzz within the harness tolerance. See `qa/coretext-validation-2.420.json`. These native platform results cover the recorded corpus; they do not certify every application, DirectWrite or universal platform compatibility.
 
 ## Build
 

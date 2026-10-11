@@ -1,0 +1,16 @@
+{
+  "Regular": {
+    "shaping_cases": 788,
+    "rendered_glyphs": 5450,
+    "sha256": "7c4d4c1f7f7174cc720c7c5fff08b5a8c24ec61eb0a11cf816cefab22afa3fc5",
+    "sinhala_assigned_coverage": true,
+    "metadata_coverage_mark_attachment_assertions": true
+  },
+  "Italic": {
+    "shaping_cases": 788,
+    "rendered_glyphs": 5450,
+    "sha256": "293fe776fc0d5e40f6c81b0bfb5a3d4eb4c6642a45aa2867987ad53770cd06c6",
+    "sinhala_assigned_coverage": true,
+    "metadata_coverage_mark_attachment_assertions": true
+  }
+}

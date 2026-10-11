@@ -26,12 +26,12 @@ Fontspector 1.9.0 Google Fonts profile, both 2.420 styles: **196 PASS, 27 WARN, 
 
 Windows Uniscribe validation passes **789 shaping cases per style**; report: `qa/windows-validation-2.420.json`. This result is separate from HarfBuzz/FreeType tests and does not certify all Windows applications or DirectWrite behavior.
 
-Platform CI: Linux, Windows and macOS jobs are configured for the canonical build, regression checks and native fontmake build, with Windows native shaping and macOS CoreText checks. The three-platform run is pending. Add the exact release-commit run URL and actual job results after completion; no CI or macOS pass is claimed here.
+Platform CI: Linux, Windows and macOS jobs all passed in [run 38117608968](https://github.com/anushannga/UF-Dehemi/actions/runs/38117608968), testing commit `5309778`. Each platform runs the canonical build, regression checks and native fontmake build. Windows Uniscribe passes 789 cases per style. Actual macOS CoreText passes 789 coverage cases plus three expected conjunct substitutions per style, with exact face/fallback checks and chandrabindu base-advance, cluster-width and mark-origin checks. The canonical TTF hashes from all three CI platforms match the packaged release. Reports are in `qa/platform-validation-2.420.json`, `qa/coretext-validation-2.420.json` and `qa/platforms/`.
 
 Contributor agreements, upstream contributor coverage, curator design review and warning review remain pending. The Maname-derived source attribution is retained, and exclusive ownership is not claimed. Google Fonts acceptance and Google Docs availability are not claimed.
 
-Release URL: **pending publication/verification**.
+Release URL: https://github.com/anushannga/UF-Dehemi/releases/tag/v2.420 (verify publication before posting).
 
-CI run URL and confirmed platform results: **pending verification**.
+CI run URL: https://github.com/anushannga/UF-Dehemi/actions/runs/38117608968 — all three platform jobs passed.
 
 Latest Fontspector links: [JSON](https://github.com/anushannga/UF-Dehemi/blob/main/qa/fontspector-2.420.json) and [HTML](https://github.com/anushannga/UF-Dehemi/blob/main/qa/fontspector-2.420.html), available after publication of this commit.
