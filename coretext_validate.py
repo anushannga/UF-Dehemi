@@ -25,6 +25,7 @@ import platform
 import sys
 
 from fontTools.ttLib import TTFont
+import uharfbuzz as hb
 
 
 ROOT = Path(__file__).resolve().parent
@@ -130,6 +131,8 @@ class CoreText:
         self._bind(self.ct, "CTFontGetUnitsPerEm", C.c_uint32, CFRef)
         self._bind(self.ct, "CTLineCreateWithAttributedString", CFRef, CFRef)
         self._bind(self.ct, "CTLineGetGlyphRuns", CFRef, CFRef)
+        self._bind(self.ct, "CTLineGetTypographicBounds", C.c_double, CFRef,
+                   C.POINTER(CGFloat), C.POINTER(CGFloat), C.POINTER(CGFloat))
         self._bind(self.ct, "CTRunGetGlyphCount", CFIndex, CFRef)
         self._bind(self.ct, "CTRunGetAttributes", CFRef, CFRef)
         self._bind(self.ct, "CTRunGetStringRange", CFRange, CFRef)
@@ -142,6 +145,8 @@ class CoreText:
             self.ct, "CTRunGetAdvances", None,
             CFRef, CFRange, C.POINTER(CGSize),
         )
+        self._bind(self.ct, "CTRunGetBaseAdvancesAndOrigins", None,
+                   CFRef, CFRange, C.POINTER(CGSize), C.POINTER(CGPoint))
         self._bind(
             self.ct, "CTRunGetStringIndices", None,
             CFRef, CFRange, C.POINTER(CFIndex),
@@ -256,6 +261,7 @@ class CoreText:
                 "CTLineCreateWithAttributedString",
             )
             runs = self.require(self.ct.CTLineGetGlyphRuns(line), "CTLineGetGlyphRuns")
+            line_width = self.ct.CTLineGetTypographicBounds(line, None, None, None)
             result = []
             for index in range(self.cf.CFArrayGetCount(runs)):
                 # Runs and attributes are borrowed references owned by the line.
@@ -276,12 +282,15 @@ class CoreText:
                 glyphs = (CGGlyph * count)()
                 positions = (CGPoint * count)()
                 advances = (CGSize * count)()
+                base_advances = (CGSize * count)()
+                base_origins = (CGPoint * count)()
                 indices = (CFIndex * count)()
                 whole_run = CFRange(0, 0)
                 if count:
                     self.ct.CTRunGetGlyphs(run, whole_run, glyphs)
                     self.ct.CTRunGetPositions(run, whole_run, positions)
                     self.ct.CTRunGetAdvances(run, whole_run, advances)
+                    self.ct.CTRunGetBaseAdvancesAndOrigins(run, whole_run, base_advances, base_origins)
                     self.ct.CTRunGetStringIndices(run, whole_run, indices)
                 text_range = self.ct.CTRunGetStringRange(run)
                 shaped = []
@@ -301,9 +310,11 @@ class CoreText:
                         "utf16_index": int(indices[i]),
                         "position": [positions[i].x, positions[i].y],
                         "advance": [advances[i].width, advances[i].height],
+                        "base_advance": [base_advances[i].width, base_advances[i].height],
                     })
                 result.append({
                     "postscript_name": actual_name,
+                    "line_width": line_width,
                     "utf16_range": [int(text_range.location), int(text_range.length)],
                     "glyphs": shaped,
                 })
@@ -338,6 +349,8 @@ def validate_style(api, style):
             "ත්\u200dය": [source.getGlyphID("sinTa"), source.getGlyphID("sinYansaya")],
         }
     font = api.private_font(path, expected_name, upm)
+    hb_font = hb.Font(hb.Face(path.read_bytes()))
+    hb_font.scale = (upm, upm)
     try:
         if api.ct.CTFontGetUnitsPerEm(font) != upm:
             raise AssertionError(f"CoreText/source units-per-em mismatch in {path}")
@@ -351,8 +364,29 @@ def validate_style(api, style):
                 marks = [g for g in glyphs if g["glyph_id"] == mark_id]
                 if not marks:
                     raise AssertionError(f"Chandrabindu not shaped in {style}: {text!r}")
-                if any(abs(g["advance"][0]) > 1e-6 for g in marks):
-                    raise AssertionError(f"Chandrabindu has nonzero advance: {style}, {text!r}; geometry={shaped!r}")
+                # CoreText's positioned advances are deltas between glyph origins,
+                # so attached marks can have nonzero run advances. Check the raw
+                # base advance and the complete cluster width instead.
+                if any(abs(g["base_advance"][0]) > 1e-6 for g in marks):
+                    raise AssertionError(f"Chandrabindu has nonzero base advance: {style}, {text!r}; geometry={shaped!r}")
+                base_only = api.shape(font, expected_name, text[:-1])
+                if abs(shaped[0]["line_width"] - base_only[0]["line_width"]) > 1e-6:
+                    raise AssertionError(f"Chandrabindu changes cluster width: {style}, {text!r}; geometry={shaped!r}")
+                buffer = hb.Buffer(); buffer.add_str(text)
+                buffer.guess_segment_properties(); buffer.language = 'si'
+                hb.shape(hb_font, buffer)
+                pen_x = pen_y = 0
+                expected_mark_positions = []
+                for info, position in zip(buffer.glyph_infos, buffer.glyph_positions):
+                    if info.codepoint == mark_id:
+                        expected_mark_positions.append([pen_x + position.x_offset, pen_y + position.y_offset])
+                    pen_x += position.x_advance; pen_y += position.y_advance
+                if len(marks) != len(expected_mark_positions) or any(
+                    abs(actual - expected) > 1
+                    for mark, position in zip(marks, expected_mark_positions)
+                    for actual, expected in zip(mark['position'], position)
+                ):
+                    raise AssertionError(f"CoreText/HarfBuzz mark origin mismatch: {style}, {text!r}; geometry={shaped!r}; expected={expected_mark_positions!r}")
                 if text == "ක\u0d81" and not any(abs(g["position"][1]) > 1e-6 for g in marks):
                     raise AssertionError(f"Chandrabindu attachment has no vertical position: {style}")
                 mark_positions[text] = shaped
