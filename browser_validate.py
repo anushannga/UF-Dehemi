@@ -1,4 +1,4 @@
-"""Actual application line-breaking proof in an isolated Linux CI browser.
+"""Actual application line-breaking proof in isolated platform CI browsers.
 
 Uses a fresh ephemeral Playwright Chromium context, served from localhost.
 No user's browser profile, authentication, or installed font is accessed.

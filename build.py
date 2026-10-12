@@ -116,6 +116,8 @@ def build(style):
             glyph=f['glyf'][name];glyph.recalcBounds(f['glyf'])
             advance,_=f['hmtx'].metrics[name]
             f['hmtx'].metrics[name]=(advance,getattr(glyph,'xMin',0))
+        from outline_cleanup import remove_regular_tiny_retrace
+        remove_regular_tiny_retrace(f)
     from caron_components import componentize_alt_carons
     componentize_alt_carons(f)
     from discretionary_hyphen import configure_discretionary_hyphen

@@ -1,6 +1,23 @@
 # Dehemi
 
-Dehemi is a Sinhala Unicode display family with Regular and Italic styles under SIL Open Font License 1.1. Current version: **2.430**. The repository URL retains its historical `UF-Dehemi` name.
+Current release: **2.440**, Regular and original Italic, SIL OFL 1.1. Choose Dehemi + Italic for the original slanted design. Upstream Maname attribution and documented reverse-export source history remain retained.
+
+The unmodified Fontspector 1.9.0 Google Fonts profile reports **207 PASS, 8 WARN, 0 FAIL, 137 SKIP, 15 INFO**, down from 19 warnings in 2.430. Actual caron component structure, application-controlled soft hyphens with U+2010 coverage, and Regular's tiny retrace are corrected. Remaining eight raw messages and limits are disclosed in [WARNING-REVIEW.md](documentation/WARNING-REVIEW.md); checks are not excluded.
+
+Current local validation passes 788 HarfBuzz cases and 5,585 FreeType renders per style; Windows Uniscribe passes 790 cases. Native fontmake matches 789 Sinhala and 29 Latin cases and the complete cmap. See `qa/validation-2.440.json`, `qa/windows-validation-2.440.json`, `qa/fontmake-validation-2.440.json`, `qa/fontspector-2.440.json`, and [design regression](qa/design-regression-2.440.json).
+
+Original Italic expanded points and hint programs are preserved. Four Latin carons have small compound-renderer antialias differences; Sinhala remains unchanged. Regular's tiny sinTI correction changes 1.333 square design units but has identical pixels through 96 px and unchanged bounds/advances.
+
+Discretionary U+00AD is deliberately not encoded, following the checker recommendation; applications must handle line breaking. Raw glyph APIs which preserve default ignorables can return .notdef for this control. Actual application browser behavior must be verified separately. Default line metrics remain those of 2.430 (1500 units); no further line-height reduction is made.
+
+Current source build inputs additionally include `caron_components.py` and `discretionary_hyphen.py`. The previous build instructions below remain applicable. Current platform evidence is pending actual 2.440 CI. Google Fonts acceptance, Google Docs availability and human CLA are not claimed.
+
+
+---
+
+# Dehemi 2.430 historical baseline
+
+Dehemi is a Sinhala Unicode display family with Regular and Italic styles under SIL Open Font License 1.1. Baseline version: **2.430**. The repository URL retains its historical `UF-Dehemi` name.
 
 Italic preserves the original Tight-232 artwork and TrueType hints. Regular removes the italic shear from outlines and positioning anchors, with bounded outline corrections; it is unhinted. Choose **Dehemi Italic** for the original slanted design.
 
