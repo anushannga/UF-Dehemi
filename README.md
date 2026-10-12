@@ -10,7 +10,7 @@ Original Italic expanded points and hint programs are preserved. Four Latin caro
 
 Discretionary U+00AD is deliberately not encoded, following the checker recommendation; applications must handle line breaking. Raw glyph APIs which preserve default ignorables can return .notdef for this control. Actual application browser behavior must be verified separately. Default line metrics remain those of 2.430 (1500 units); no further line-height reduction is made.
 
-Current source build inputs additionally include `caron_components.py` and `discretionary_hyphen.py`. The previous build instructions below remain applicable. Current platform evidence is pending actual 2.440 CI. Google Fonts acceptance, Google Docs availability and human CLA are not claimed.
+Current source build inputs additionally include `caron_components.py` and `discretionary_hyphen.py`. The previous build instructions below remain applicable. All Linux, Windows and macOS jobs passed in [run 38231411379](https://github.com/anushannga/UF-Dehemi/actions/runs/38231411379), at `6dc1621fc01401ffc11b6b8055a1b5f3dc6817f6`. The canonical font hashes from all platforms match the current release. Actual isolated Chromium conditional-hyphen checks pass on all three operating systems; native Windows Uniscribe and macOS CoreText checks also pass. Reports: `qa/platform-validation-2.440.json`, `qa/coretext-validation-2.440.json`, `qa/platforms/*-browser-validation-2.440.json`. Google Fonts acceptance, Google Docs availability and human CLA are not claimed.
 
 
 ---

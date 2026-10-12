@@ -1,0 +1,164 @@
+{
+  "version": "2.440",
+  "status": "pass",
+  "font_hashes": {
+    "Regular": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+    "Italic": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b"
+  },
+  "browser": "153.0.8010.12",
+  "evidence": {
+    "status": "executed-review-rendering",
+    "samples": [
+      {
+        "style": "Regular",
+        "kind": "wide",
+        "text_codepoints": [
+          "41",
+          "42",
+          "ad",
+          "43",
+          "44"
+        ],
+        "line_height": 33.6,
+        "content_height": 34,
+        "estimated_lines": 1,
+        "shy_rects": [
+          {
+            "width": 0,
+            "height": 36
+          }
+        ],
+        "text_rects": [
+          {
+            "x": 33,
+            "y": 297.015625,
+            "width": 62.984375,
+            "height": 36
+          }
+        ]
+      },
+      {
+        "style": "Regular",
+        "kind": "narrow",
+        "text_codepoints": [
+          "41",
+          "42",
+          "ad",
+          "43",
+          "44"
+        ],
+        "line_height": 33.6,
+        "content_height": 67,
+        "estimated_lines": 2,
+        "shy_rects": [
+          {
+            "width": 0,
+            "height": 36
+          },
+          {
+            "width": 11.546875,
+            "height": 36
+          }
+        ],
+        "text_rects": [
+          {
+            "x": 329,
+            "y": 297.015625,
+            "width": 29.90625,
+            "height": 36
+          },
+          {
+            "x": 358.90625,
+            "y": 297.015625,
+            "width": 11.546875,
+            "height": 36
+          },
+          {
+            "x": 329,
+            "y": 330.609375,
+            "width": 33.078125,
+            "height": 36
+          }
+        ]
+      },
+      {
+        "style": "Italic",
+        "kind": "wide",
+        "text_codepoints": [
+          "41",
+          "42",
+          "ad",
+          "43",
+          "44"
+        ],
+        "line_height": 33.6,
+        "content_height": 34,
+        "estimated_lines": 1,
+        "shy_rects": [
+          {
+            "width": 0,
+            "height": 36
+          }
+        ],
+        "text_rects": [
+          {
+            "x": 33,
+            "y": 476.140625,
+            "width": 62.984375,
+            "height": 36
+          }
+        ]
+      },
+      {
+        "style": "Italic",
+        "kind": "narrow",
+        "text_codepoints": [
+          "41",
+          "42",
+          "ad",
+          "43",
+          "44"
+        ],
+        "line_height": 33.6,
+        "content_height": 67,
+        "estimated_lines": 2,
+        "shy_rects": [
+          {
+            "width": 0,
+            "height": 36
+          },
+          {
+            "width": 11.546875,
+            "height": 36
+          }
+        ],
+        "text_rects": [
+          {
+            "x": 329,
+            "y": 476.140625,
+            "width": 29.90625,
+            "height": 36
+          },
+          {
+            "x": 358.90625,
+            "y": 476.140625,
+            "width": 11.546875,
+            "height": 36
+          },
+          {
+            "x": 329,
+            "y": 509.734375,
+            "width": 33.078125,
+            "height": 36
+          }
+        ]
+      }
+    ],
+    "limitations": "A browser layout proof does not certify Word, LibreOffice, PDF output or every platform.",
+    "browser": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/153.0.8010.12 Safari/537.36",
+    "loaded_faces": {
+      "Regular": 1,
+      "Italic": 1
+    }
+  }
+}

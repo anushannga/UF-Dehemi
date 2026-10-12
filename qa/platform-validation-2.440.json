@@ -1,0 +1,59 @@
+{
+  "version": "2.440",
+  "status": "pass",
+  "ci_run_id": 38231411379,
+  "ci_run_url": "https://github.com/anushannga/UF-Dehemi/actions/runs/38231411379",
+  "tested_commit": "6dc1621fc01401ffc11b6b8055a1b5f3dc6817f6",
+  "canonical_sha256": {
+    "Regular": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+    "Italic": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b"
+  },
+  "platforms": {
+    "linux": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+        "Italic": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5585,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "browser_soft_hyphen_status": "pass",
+      "browser_version": "153.0.8010.12"
+    },
+    "windows": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+        "Italic": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5585,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "uniscribe_cases_per_style": 790,
+      "browser_soft_hyphen_status": "pass",
+      "browser_version": "153.0.8010.12"
+    },
+    "macos": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+        "Italic": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5585,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "coretext_cases_per_style": 790,
+      "expected_conjunct_cases_per_style": 3,
+      "browser_soft_hyphen_status": "pass",
+      "browser_version": "153.0.8010.12"
+    }
+  },
+  "limitations": "Actual tested corpus only; not universal compatibility, office/PDF certification or Google Fonts acceptance."
+}
