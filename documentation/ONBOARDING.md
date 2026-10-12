@@ -1,3 +1,15 @@
+# Dehemi 2.440 current update
+
+207 PASS, 8 WARN, 0 FAIL, 137 SKIP, 15 INFO. Eleven of the 19 prior warning messages are resolved. The remaining eight design/convention/serving warnings are disclosed in WARNING-REVIEW.md; curator acceptance and human contributor work are pending.
+
+All Linux, Windows and macOS jobs passed in [run 38231411379](https://github.com/anushannga/UF-Dehemi/actions/runs/38231411379), at `6dc1621fc01401ffc11b6b8055a1b5f3dc6817f6`. The canonical font hashes from all platforms match the current release. Actual isolated Chromium conditional-hyphen checks pass on all three operating systems; native Windows Uniscribe and macOS CoreText checks also pass. Reports: `qa/platform-validation-2.440.json`, `qa/coretext-validation-2.440.json`, `qa/platforms/*-browser-validation-2.440.json`.
+
+Download: https://github.com/anushannga/UF-Dehemi/releases/tag/v2.440 (verify publication before posting).
+
+The prior 2.430 preparation text below is historical baseline evidence.
+
+---
+
 # Dehemi: remaining Google Fonts onboarding steps
 
 The current family is Dehemi 2.430, with Regular and Italic styles under SIL OFL 1.1. Continue the existing [submission #11099](https://github.com/google/fonts/issues/11099). A successful build or audit does not constitute Google Fonts acceptance.
