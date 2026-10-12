@@ -6,23 +6,23 @@
   <anchor x="0" y="4" name="_Anchor-2"/>
   <outline>
     <contour>
-      <point x="-19" y="-196"/>
-      <point x="-19" y="-154"/>
-      <point x="-45" y="-124"/>
-      <point x="-81" y="-124"/>
-      <point x="-106" y="-151"/>
-      <point x="-107" y="-192"/>
       <point x="-82" y="-222"/>
+      <point x="-107" y="-192"/>
+      <point x="-106" y="-151"/>
+      <point x="-81" y="-124"/>
+      <point x="-45" y="-124"/>
+      <point x="-19" y="-154"/>
+      <point x="-19" y="-196"/>
       <point x="-46" y="-222"/>
     </contour>
     <contour>
-      <point x="105" y="-193"/>
-      <point x="106" y="-152"/>
-      <point x="83" y="-122"/>
-      <point x="47" y="-122"/>
-      <point x="22" y="-152"/>
-      <point x="21" y="-193"/>
       <point x="47" y="-223"/>
+      <point x="21" y="-193"/>
+      <point x="22" y="-152"/>
+      <point x="47" y="-122"/>
+      <point x="83" y="-122"/>
+      <point x="106" y="-152"/>
+      <point x="105" y="-193"/>
       <point x="83" y="-223"/>
     </contour>
   </outline>

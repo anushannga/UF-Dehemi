@@ -2,6 +2,13 @@
 <glyph name="k" format="2">
   <advance width="611"/>
   <unicode hex="006B"/>
+  <anchor x="397" y="716" name="Anchor-15"/>
+  <anchor x="397" y="716" name="Anchor-14"/>
+  <anchor x="397" y="716" name="Anchor-13"/>
+  <anchor x="397" y="716" name="Anchor-12"/>
+  <anchor x="397" y="716" name="Anchor-11"/>
+  <anchor x="397" y="716" name="Anchor-10"/>
+  <anchor x="397" y="716" name="Anchor-9"/>
   <outline>
     <contour>
       <point x="34" y="0" type="line"/>

@@ -2,6 +2,7 @@
 <glyph name="uni0302" format="2">
   <advance width="0"/>
   <unicode hex="0302"/>
+  <anchor x="125" y="479" name="_Anchor-12"/>
   <anchor x="176" y="679" name="Anchor-7"/>
   <anchor x="125" y="479" name="_Anchor-7"/>
   <anchor x="125" y="479" name="_Anchor-5"/>

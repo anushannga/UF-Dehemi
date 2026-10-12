@@ -33,7 +33,7 @@ from build import OUT as FONT_DIR, VERSION, PREFIX
 REPORT = ROOT / "qa" / f"coretext-validation-{VERSION}.json"
 CASES = [
     "ශ්‍රී ලංකා", "ක්‍රියා", "ප්‍රශ්න", "විද්‍යාව", "න්‍යාය", "ක්ෂේත්‍ර",
-    "ඇ ඈ", "අ\u0d81", "ක\u0d81", "\u25cc\u0d81",
+    "ඇ ඈ", "අ\u0d81", "ක\u0d81", "\u25cc\u0d81", "◌්",
 ]
 SUFFIXES = [
     "", "ා", "ැ", "ෑ", "ි", "ී", "ු", "ූ", "ෘ", "ෲ", "ෙ", "ේ", "ෛ",
@@ -339,9 +339,10 @@ def validate_style(api, style):
             for cp in range(0xD9A, 0xDC7) if cp in cmap
             for suffix in SUFFIXES
         ]
-        if len(texts) != 789:
-            raise AssertionError(f"Expected the 789-case Windows corpus, got {len(texts)}")
+        if len(texts) != 790:
+            raise AssertionError(f"Expected the 790-case Windows corpus, got {len(texts)}")
         mark_id = source.getGlyphID(cmap[0xD81])
+        virama_id = source.getGlyphID(cmap[0xDCA])
         upm = source["head"].unitsPerEm
         conjuncts = {
             "ක්\u200dෂ": [source.getGlyphID("sinKSsa")],
@@ -359,26 +360,27 @@ def validate_style(api, style):
         for text in texts:
             shaped = api.shape(font, expected_name, text)
             run_names.update(run["postscript_name"] for run in shaped)
-            if text in CASES[-3:]:
+            if '\u0d81' in text or text == '◌්':
                 glyphs = [g for run in shaped for g in run["glyphs"]]
-                marks = [g for g in glyphs if g["glyph_id"] == mark_id]
+                target_mark = virama_id if text == '◌්' else mark_id
+                marks = [g for g in glyphs if g["glyph_id"] == target_mark]
                 if not marks:
-                    raise AssertionError(f"Chandrabindu not shaped in {style}: {text!r}")
+                    raise AssertionError(f"Nonspacing mark not shaped in {style}: {text!r}")
                 # CoreText's positioned advances are deltas between glyph origins,
                 # so attached marks can have nonzero run advances. Check the raw
                 # base advance and the complete cluster width instead.
                 if any(abs(g["base_advance"][0]) > 1e-6 for g in marks):
-                    raise AssertionError(f"Chandrabindu has nonzero base advance: {style}, {text!r}; geometry={shaped!r}")
+                    raise AssertionError(f"Nonspacing mark has nonzero base advance: {style}, {text!r}; geometry={shaped!r}")
                 base_only = api.shape(font, expected_name, text[:-1])
                 if abs(shaped[0]["line_width"] - base_only[0]["line_width"]) > 1e-6:
-                    raise AssertionError(f"Chandrabindu changes cluster width: {style}, {text!r}; geometry={shaped!r}")
+                    raise AssertionError(f"Nonspacing mark changes cluster width: {style}, {text!r}; geometry={shaped!r}")
                 buffer = hb.Buffer(); buffer.add_str(text)
                 buffer.guess_segment_properties(); buffer.language = 'si'
                 hb.shape(hb_font, buffer)
                 pen_x = pen_y = 0
                 expected_mark_positions = []
                 for info, position in zip(buffer.glyph_infos, buffer.glyph_positions):
-                    if info.codepoint == mark_id:
+                    if info.codepoint == target_mark:
                         expected_mark_positions.append([pen_x + position.x_offset, pen_y + position.y_offset])
                     pen_x += position.x_advance; pen_y += position.y_advance
                 if len(marks) != len(expected_mark_positions) or any(

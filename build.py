@@ -7,7 +7,7 @@ from fontTools.pens.transformPen import TransformPen
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'fonts/ttf/dehemi'
 OUT.mkdir(parents=True, exist_ok=True)
-VERSION='2.420'
+VERSION='2.430'
 FAMILY='Dehemi'
 PREFIX='Dehemi'
 NOTICE='Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.'
@@ -73,11 +73,19 @@ def build(style):
     from native_features import compile_features,unskew_positioning
     compile_features(f)
     f['hmtx'].metrics['uni02C9'] = (550,178)
+    # Both HarfBuzz and Windows already shape virama without added advance.
+    # Represent that behavior in the source metrics rather than a spacing mark.
+    _,virama_lsb=f['hmtx'].metrics['sinVirama']
+    f['hmtx'].metrics['sinVirama']=(0,virama_lsb)
     add_chandrabindu(f)
     add_rupee(f)
     for cp in [0x2028,0x2029]:add_glyph(f,f'uni{cp:04X}',TTGlyphPen(None).glyph(),0,cp)
     for name in ['multiply','less','greater','equal','divide','plus','minus']:
         _,lsb=f['hmtx'].metrics[name];f['hmtx'].metrics[name]=(550,lsb)
+    from latin_extensions import add_latin_extensions
+    add_latin_extensions(f)
+    from sinhala_marks import attach_virama_to_dotted_circle
+    attach_virama_to_dotted_circle(f)
     if style == 'Regular':
         glyphset=f.getGlyphSet()
         fresh={}
@@ -101,12 +109,25 @@ def build(style):
         f['OS/2'].fsSelection=(f['OS/2'].fsSelection & ~1)|64
         f['head'].macStyle &= ~2
     configure_metadata(f,style)
+    if style=='Regular':
+        from outline_cleanup import normalize_regular_outlines
+        normalize_regular_outlines(f,snap_axes=True)
+        for name in f.getGlyphOrder():
+            glyph=f['glyf'][name];glyph.recalcBounds(f['glyf'])
+            advance,_=f['hmtx'].metrics[name]
+            f['hmtx'].metrics[name]=(advance,getattr(glyph,'xMin',0))
     f.save(OUT / f'{PREFIX}-{style}.ttf')
 
 def configure_metadata(f,style):
     f['head'].fontRevision=float(VERSION)
     f['OS/2'].fsType=0
     f['OS/2'].fsSelection |= 0x100
+    # Shared line metrics cover the complete glyph bounding envelope with a
+    # margin and meet the 1.5 UPM recommendation. Keep Windows clipping margins.
+    f['hhea'].ascent=f['OS/2'].sTypoAscender=1167
+    f['hhea'].descent=f['OS/2'].sTypoDescender=-333
+    f['hhea'].lineGap=f['OS/2'].sTypoLineGap=0
+    f['OS/2'].fsSelection |= 0x80
     f['OS/2'].recalcAvgCharWidth(f)
     f['hhea'].caretSlopeRise=1000
     f['hhea'].caretSlopeRun=249 if style=='Italic' else 0

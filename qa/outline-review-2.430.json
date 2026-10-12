@@ -1,0 +1,207 @@
+{
+  "version": "Version 2.430",
+  "reference_version": "Version 2.420",
+  "snapshot_sha256": {
+    "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+    "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3"
+  },
+  "italic_coordinate_difference_glyphs": [],
+  "italic_hint_difference_glyphs": [],
+  "regular_difference_from_bounded_cleanup_glyphs": [],
+  "regular_cleanup": {
+    "zero_segments_removed": 182,
+    "zero_area_line_contours_removed": 2,
+    "glyphs_reoriented": 1078,
+    "retained_nonidentical_retrace": "sinTI",
+    "axis_points_adjusted": 515,
+    "axis_glyphs_adjusted": 270,
+    "max_axis_shift": 3.0,
+    "axis_alignment_requested": true,
+    "ambiguous_zero_signed_area_glyphs": [],
+    "cleanup_area_magnitude_max_difference": 6.693881005048752e-10
+  },
+  "styles": {
+    "Regular": {
+      "old_glyph_render_cases": 5450,
+      "different_bitmap_cases": 4901,
+      "max_single_pixel_antialias_difference": 72,
+      "max_binary_threshold_pixel_difference": 56,
+      "bitmap_bounds_changes": [
+        {
+          "glyph": "kgreenlandic",
+          "ppem": 12,
+          "before": [
+            1,
+            6,
+            6,
+            7
+          ],
+          "after": [
+            1,
+            6,
+            6,
+            6
+          ]
+        },
+        {
+          "glyph": "kgreenlandic",
+          "ppem": 16,
+          "before": [
+            1,
+            8,
+            8,
+            9
+          ],
+          "after": [
+            1,
+            8,
+            8,
+            8
+          ]
+        },
+        {
+          "glyph": "kgreenlandic",
+          "ppem": 24,
+          "before": [
+            2,
+            12,
+            12,
+            13
+          ],
+          "after": [
+            2,
+            12,
+            12,
+            12
+          ]
+        },
+        {
+          "glyph": "kgreenlandic",
+          "ppem": 48,
+          "before": [
+            5,
+            24,
+            22,
+            25
+          ],
+          "after": [
+            5,
+            24,
+            22,
+            24
+          ]
+        },
+        {
+          "glyph": "sinNnUu",
+          "ppem": 96,
+          "before": [
+            0,
+            66,
+            82,
+            87
+          ],
+          "after": [
+            0,
+            66,
+            81,
+            87
+          ]
+        },
+        {
+          "glyph": "kgreenlandic",
+          "ppem": 96,
+          "before": [
+            10,
+            47,
+            43,
+            48
+          ],
+          "after": [
+            10,
+            47,
+            43,
+            47
+          ]
+        }
+      ],
+      "hmtx_changes": [
+        {
+          "glyph": "sinVirama",
+          "before": [
+            237,
+            -20
+          ],
+          "after": [
+            0,
+            -20
+          ]
+        }
+      ],
+      "all_old_glyphs_rendered": true
+    },
+    "Italic": {
+      "old_glyph_render_cases": 5450,
+      "different_bitmap_cases": 0,
+      "max_single_pixel_antialias_difference": 0,
+      "max_binary_threshold_pixel_difference": 0,
+      "bitmap_bounds_changes": [],
+      "hmtx_changes": [
+        {
+          "glyph": "sinVirama",
+          "before": [
+            237,
+            75
+          ],
+          "after": [
+            0,
+            75
+          ]
+        }
+      ],
+      "all_old_glyphs_rendered": true
+    }
+  },
+  "new_latin_signed_areas": {
+    "Regular/uni0132": -142765.12500000003,
+    "Regular/uni0133": -130380.04166666672,
+    "Regular/uni02BB": -16363.916666666664,
+    "Regular/uni01E4": -140187.79166666663,
+    "Regular/uni01E5": -155616.62500000003,
+    "Regular/uni01B7": -99114.66666666663,
+    "Regular/uni0292": -84067.16666666666,
+    "Regular/uni017F": -71157.16666666669,
+    "Regular/uni01CD": -129196.50000000003,
+    "Regular/uni01CE": -106207.08333333337,
+    "Regular/uni01D3": -133447.95833333343,
+    "Regular/uni01D4": -109290.33333333334,
+    "Regular/uni021E": -168031.5000000001,
+    "Regular/uni021F": -136047.66666666663,
+    "Regular/uni01E8": -145002.875,
+    "Regular/uni01E9": -129312.45833333331,
+    "Regular/uni01EE": -115391.12499999997,
+    "Regular/uni01EF": -100410.74999999997,
+    "Italic/uni0132": 142726.49999999994,
+    "Italic/uni0133": 130357.41666666666,
+    "Italic/uni02BB": 16372.083333333336,
+    "Italic/uni01E4": 140177.33333333337,
+    "Italic/uni01E5": 155573.2916666667,
+    "Italic/uni01B7": 99115.5,
+    "Italic/uni0292": 83811.0,
+    "Italic/uni017F": -71298.5,
+    "Italic/uni01CD": 129083.37500000004,
+    "Italic/uni01CE": 106141.29166666667,
+    "Italic/uni01D3": 133648.41666666674,
+    "Italic/uni01D4": 109375.74999999999,
+    "Italic/uni021E": 168145.33333333328,
+    "Italic/uni021F": 136118.125,
+    "Italic/uni01E8": 145018.4166666667,
+    "Italic/uni01E9": 129339.08333333337,
+    "Italic/uni01EE": 115455.70833333334,
+    "Italic/uni01EF": 100151.20833333333
+  },
+  "visual_review": "Bounded Regular axis corrections retain original Ink texture and letterforms; reference/current/difference contact sheet reviewed. Original Italic point order and hint programs must stay intact.",
+  "remaining_manual_design_review": "Original Italic winding and deliberate Ink texture/jaggy contour-count warnings remain raw warnings. sinTI contains a tiny non-identical quadratic spike and is retained. Four original decomposed caron forms need manual design review. This is not a claim that all Fontspector checks or all platforms pass.",
+  "status": "reviewed",
+  "scope": "Actual local FreeType glyph raster comparison, coordinate/hint comparisons and bounded axis cleanup verification; no external platform certification.",
+  "visual_proof": "documentation/outline-proof-2.430.png"
+}
