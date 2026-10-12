@@ -1,0 +1,32 @@
+{
+  "version": "2.430",
+  "family": "Dehemi",
+  "verification": "fresh process; selected installed GDI faces; no private font registration",
+  "styles": {
+    "Regular": {
+      "actual_family": "Dehemi",
+      "actual_style": "Regular",
+      "actual_version": "Version 2.430",
+      "selected_font_sha256": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+      "matches_verified_release_font_bytes": true,
+      "windows_shaping_cases": 790,
+      "expected_conjunct_cases": 3,
+      "italic_angle": 0.0
+    },
+    "Italic": {
+      "actual_family": "Dehemi",
+      "actual_style": "Italic",
+      "actual_version": "Version 2.430",
+      "selected_font_sha256": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3",
+      "matches_verified_release_font_bytes": true,
+      "windows_shaping_cases": 790,
+      "expected_conjunct_cases": 3,
+      "italic_angle": -14.0
+    }
+  },
+  "enumerated_related_families": [
+    "Dehemi"
+  ],
+  "old_families_absent": true,
+  "status": "pass"
+}
