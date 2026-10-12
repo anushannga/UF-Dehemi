@@ -34,6 +34,16 @@ for style,path in paths.items():
     assert (font['OS/2'].sTypoAscender,font['OS/2'].sTypoDescender)==(1167,-333)
     assert font['head'].yMax<=font['hhea'].ascent and font['head'].yMin>=font['hhea'].descent
     assert all(cp in cmap for cp in AUXILIARY_CODEPOINTS)
+    assert 0xAD not in cmap and 0x2010 in cmap
+    assert font['hmtx'].metrics[cmap[0x2010]][0]==font['hmtx'].metrics[cmap[0x2D]][0]
+    shy=shape(data,'co\u00adoperate');plain=shape(data,'cooperate')
+    assert all(g[0] for g in shy) and sum(g[1] for g in shy)==sum(g[1] for g in plain)
+    assert [g[0] for g in shy if g[1]]==[g[0] for g in plain if g[1]]
+    from caron_components import CARON_GLYPHS
+    for name in CARON_GLYPHS:
+        assert font['glyf'][name].isComposite(),(style,name)
+        assert [c.glyphName for c in font['glyf'][name].components]==[name+'.body',name+'.caron']
+        assert font['hmtx'].metrics[name+'.caron'][0]==0
     for cp in [0x2028,0x2029]:
         assert cp in cmap and font['hmtx'].metrics[cmap[cp]][0]==0 and font['glyf'][cmap[cp]].numberOfContours==0
     assert 0x20B9 in cmap

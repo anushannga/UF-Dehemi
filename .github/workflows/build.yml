@@ -30,7 +30,6 @@ jobs:
           python -m pip install playwright==1.63.0
           python -m playwright install --with-deps chromium
           python browser_validate.py
-        if: runner.os == 'Linux'
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
@@ -38,9 +37,9 @@ jobs:
           path: |
             fonts/ttf/dehemi/*.ttf
             build/fontmake/*.ttf
-            qa/validation-2.430.json
-            qa/windows-validation-2.430.json
-            qa/coretext-validation-2.430.json
-            qa/browser-validation-2.430.json
-            qa/browser-proof-2.430.png
+            qa/validation-2.440.json
+            qa/windows-validation-2.440.json
+            qa/coretext-validation-2.440.json
+            qa/browser-validation-2.440.json
+            qa/browser-proof-2.440.png
             qa/fontmake-validation.json

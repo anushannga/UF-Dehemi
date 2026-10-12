@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="dcaron.caron" format="2">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="632" y="517" type="qcurve"/>
+      <point x="650" y="539"/>
+      <point x="696" y="620"/>
+      <point x="742" y="716"/>
+      <point x="758" y="758" type="qcurve"/>
+      <point x="745" y="762"/>
+      <point x="716" y="768"/>
+      <point x="700" y="768" type="qcurve" smooth="yes"/>
+      <point x="690" y="768" type="line" smooth="yes"/>
+      <point x="685" y="768"/>
+      <point x="680" y="766" type="qcurve"/>
+      <point x="668" y="732"/>
+      <point x="635" y="648"/>
+      <point x="601" y="570"/>
+      <point x="587" y="543" type="qcurve"/>
+      <point x="590" y="532"/>
+      <point x="619" y="519"/>
+    </contour>
+  </outline>
+</glyph>

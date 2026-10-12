@@ -2218,5 +2218,23 @@
     <string>uni01E_E_.glif</string>
     <key>uni01EF</key>
     <string>uni01E_F_.glif</string>
+    <key>Lcaron.body</key>
+    <string>L_caron.body.glif</string>
+    <key>Lcaron.caron</key>
+    <string>L_caron.caron.glif</string>
+    <key>dcaron.body</key>
+    <string>dcaron.body.glif</string>
+    <key>dcaron.caron</key>
+    <string>dcaron.caron.glif</string>
+    <key>lcaron.body</key>
+    <string>lcaron.body.glif</string>
+    <key>lcaron.caron</key>
+    <string>lcaron.caron.glif</string>
+    <key>tcaron.body</key>
+    <string>tcaron.body.glif</string>
+    <key>tcaron.caron</key>
+    <string>tcaron.caron.glif</string>
+    <key>uni2010</key>
+    <string>uni2010.glif</string>
   </dict>
 </plist>
