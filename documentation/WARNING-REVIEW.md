@@ -1,5 +1,7 @@
 # Dehemi 2.440: remaining warning review
 
+Additional experiments, all 81 encoded contour-warning proofs, and the upstream draft proposal are recorded in [the 2026-10-12 investigation](OUTLINE-INVESTIGATION-2.440.md). Production still has eight raw warnings; experimental candidates were rejected.
+
 Fontspector 1.9.0, unmodified Google Fonts profile, both styles: **207 PASS, 8 WARN, 0 FAIL, 137 SKIP, 15 INFO**. The 2.430 baseline had 19 WARN. No check is excluded and no raw severity is relabeled.
 
 ## Corrections in this release

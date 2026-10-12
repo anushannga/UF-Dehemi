@@ -1,6 +1,7 @@
 # Dehemi: proposed Google Fonts serving coverage review
 
 Status: **proposal for curator review; not an applied Google Fonts serving fix**.
+Submitted as [draft PR 32](https://github.com/googlefonts/nam-files/pull/32). The overlap test is not green: seven new cross-subset conflicts require a maintainer policy decision. No deployment is claimed.
 The adjacent [SUBSET-COVERAGE-PROPOSAL.patch](SUBSET-COVERAGE-PROPOSAL.patch) targets
 the upstream `googlefonts/nam-files` repository. It does not modify the published
 Dehemi fonts, turn off a QA check, or claim that Google has accepted the proposal.
