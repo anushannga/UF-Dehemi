@@ -1,0 +1,70 @@
+{
+  "font_snapshots": {
+    "Italic": {
+      "sha256": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3",
+      "family": "Dehemi",
+      "style": "Italic",
+      "version": "Version 2.430",
+      "glyph_count": 1108
+    },
+    "Regular": {
+      "sha256": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+      "family": "Dehemi",
+      "style": "Regular",
+      "version": "Version 2.430",
+      "glyph_count": 1108
+    }
+  },
+  "mapping": {
+    "Italic": {
+      "sinTI_text": [
+        3501,
+        3538
+      ],
+      "sinTI_shaped_glyphs": [
+        "sinTI"
+      ],
+      "representatives": {
+        "U+0D86": "sinAa",
+        "U+0D87": "sinAe",
+        "U+0D88": "sinAae",
+        "U+0D93": "sinAi",
+        "U+0D94": "sinO",
+        "U+0D9B": "sinKha"
+      }
+    },
+    "Regular": {
+      "sinTI_text": [
+        3501,
+        3538
+      ],
+      "sinTI_shaped_glyphs": [
+        "sinTI"
+      ],
+      "representatives": {
+        "U+0D86": "sinAa",
+        "U+0D87": "sinAe",
+        "U+0D88": "sinAae",
+        "U+0D93": "sinAi",
+        "U+0D94": "sinO",
+        "U+0D9B": "sinKha"
+      }
+    }
+  },
+  "render_engine": "Pillow RAQM/HarfBuzz + FreeType",
+  "dotted_circle_proof": "Isolated before/after GPOS experiment, same artwork as 2.430 release.",
+  "version": "2.430",
+  "review_date": "2026-10-12",
+  "review_scope": {
+    "alt_caron": "Visually inspected all four accented/unaccented pairs in both styles at 16, 24, 48 and 144 px. Short upright/slanted accents remain separate and legible. Raw manual-check warnings retained.",
+    "texture_and_mapping": "Visually inspected six representative encoded Sinhala letters at 24/48 px and sinTI at 400 px. Representative review only; every flagged contour/segment has not been manually certified.",
+    "original_italic": "All old coordinates and hint instructions unchanged; old glyph raster comparison is recorded separately in outline-review-2.430.json.",
+    "dotted_virama": "Visually inspected focused before/after proof: mark moves from floating at following origin to the upper-right dotted-circle attachment."
+  },
+  "proofs": [
+    "documentation/caron-proof-2.430.png",
+    "documentation/texture-proof-2.430.png",
+    "documentation/dotted-virama-proof-2.430.png"
+  ],
+  "limitations": "Author preparation evidence, not a curator or every-application certification."
+}

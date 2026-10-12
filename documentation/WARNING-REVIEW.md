@@ -1,74 +1,35 @@
-# Dehemi: remaining warning review
+# Dehemi 2.430: warning resolution and review
 
-This document records design and shaping questions that require review after the
-technical corrections. A warning is not automatically a malformed font, and it
-must not be converted to a pass by disabling the check. The current Fontspector
-JSON/HTML report is the authority for the checks and counts in the release being
-reviewed. This document does not claim that every check passes or that Google
-Fonts has accepted the family.
+The unmodified Fontspector 1.9.0 Google Fonts profile reports **204 PASS, 19 WARN, 0 FAIL, 137 SKIP and 13 INFO**, compared with 27 warnings in 2.420. No checks were disabled, no encoded characters were removed to suppress a check, and no warning was relabeled as a pass. These are warning messages: eight come from four alternate-caron glyphs in two styles. See the raw [JSON](../qa/fontspector-2.430.json) and [HTML](../qa/fontspector-2.430.html).
 
-The original Tight-232 italic artwork has an ink texture. Some outlines contain
-small cuts, additional contours and irregular edges. The Regular companion was
-created by mechanically removing the italic shear and requires its own design
-review. Blanket outline cleanup could visibly change the font that the designer
-asked to preserve. Where a warning involves artwork, keep the original as a
-comparison and review a proposed correction before adopting it.
+## Completed technical corrections
 
-## Review checklist
-
-| Check | Current review status and proposed verification |
+| Check | Correction and evidence |
 | --- | --- |
-| `outline_jaggy_segments` | **Open: visual review.** The detector reports acute changes between line and curve segments. Some may be intentional cuts in the ink texture; others may be unintended spikes. Inspect each reported segment at high magnification, then compare normal-size specimens at 12, 24, 48 and 96 px. Correct unintended spikes locally. Do not smooth every edge, because that would remove the original texture. Compare corrected glyphs and common Sinhala words in both styles. |
-| `contour_count` | **Open: mapping and artwork review.** The check compares contour counts with reference fonts. Texture and disconnected ink details can make the correct design exceed those counts. Check each reported glyph against its Unicode assignment and the intended letter, including the distinction between U+0D87 ඇ and U+0D81 chandrabindu. Confirm there are no accidental duplicate contours, missing counters or wrongly mapped letters. Retain intentional details and document the reviewed exceptions. |
-| `outline_direction` | **Open: fill and winding review.** Many outlines have outer contours in the direction flagged by the checker. Inspect outer contours and counters together, including nested contours and overlaps. Compare rendering with nonzero fill rules in FreeType, Windows DirectWrite and CoreText. Reversing every contour, or selectively reversing without understanding holes, can change filled areas. Normalize only with a reviewed contour hierarchy and before/after render comparison. |
-| `overlapping_path_segments` | **Open: segment review.** The report includes zero-length segments and repeated path segments. Check reported segments in glyphs such as `sinTVa`, `sinTTha` and `sinTTh.virama` separately from deliberate overlapping texture. Remove proven redundant or degenerate segments locally and compare raster output. A blanket remove-overlap operation can merge contours, change small cuts and disturb the artwork. |
-| `outline_semi_vertical` | **Open: Regular review.** Mechanically removing the shear and rounding to integer coordinates produces nearly horizontal or vertical lines. Inspect each reported line to distinguish rounding artifacts from intentional edge irregularity. Snap only strokes intended to be straight and compare both the isolated glyph and shaped text. Do not apply axis snapping to the original italic style. |
-| `googlefonts/vertical_metrics` | **Open: line spacing and clipping review.** The 2.400 baseline uses UPM 1000, hhea ascender 1194 and descender -359, a total of 1553 (1.553 times UPM), above the check's recommended 1.2–1.5 range. Baseline actual glyph bounds are -319 to 1154. These numbers describe that baseline, and must be remeasured after glyph additions. Reducing metrics merely to meet the recommendation changes line spacing and may clip tall marks. Test all current bounds, stacked marks, multiline Sinhala/Latin text, browser line heights and print output before adjusting. Keep the family metrics consistent. |
-| `opentype/GDEF_spacing_marks` | **Open: `sinVirama` shaping review.** The original virama is in GDEF mark class 3 but has advance width 237. The check questions that spacing. Do not zero its advance blindly: isolated virama and existing Sinhala substitutions may rely on the current behavior. Review its GSUB/GPOS treatment and compare standalone virama, dead consonants, ZWJ/ZWNJ forms and conjuncts, including ශ්‍රී, ක්‍රියා, ප්‍රශ්න, විද්‍යාව, න්‍යාය and ක්ෂේත්‍ර. Compare glyph advances, mark positions and appearance in multiple shaping engines before changing the width or GDEF class. New chandrabindu attachment must be tested separately. |
-| `soft_hyphen` | **Open: text behavior decision.** U+00AD is present. Verify it stays invisible within an unbroken word and behaves appropriately when an application uses it for a line break. Compare browser, office and PDF output. Removing its cmap entry solely to silence a warning can reduce text compatibility; retaining it needs documented review rather than a hidden test exception. |
-| `alt_caron` | **Open: Latin visual review.** The checker cannot automatically assess the decomposed `Lcaron`, `dcaron`, `lcaron` and `tcaron` outlines. Check that the accent has the intended short vertical/apostrophe-like design, appropriate placement and spacing. Review their normal-size text alongside the unaccented letters. A manual check is required; a decomposed outline alone does not establish a design error. |
-| `googlefonts/glyphsets/shape_languages` | **Open: auxiliary Latin support review.** The baseline report includes missing auxiliary Latin characters and a Lithuanian `l` + combining tilde attachment warning. Re-run this check after coverage or feature changes, inspect every remaining missing character, and test any newly added composites and anchors. Basic Latin coverage passing does not establish complete support for every language listed in metadata. |
-| `googlefonts/metadata/unreachable_subsetting` | **Open: served coverage review.** The baseline metadata leaves some encoded characters outside its declared subsets. Review the exact codepoints in the latest report and the intended Google Fonts subset definitions. Do not add unrelated writing-system subsets merely to silence this warning. The full local TTF can contain characters that a hosted subset does not serve; curator agreement or appropriate glyphset changes may still be needed. |
+| `googlefonts/glyphsets/shape_languages` | Both styles PASS. Added 18 real auxiliary Latin glyphs and top-mark support, including Lithuanian `l` + tilde. Ten NFC/NFD pairs, 29 native-fontmake Latin comparisons and glyph renders pass. New drawings remain subject to design review. |
+| `opentype/GDEF_spacing_marks` | Both styles PASS. Virama advance is zero while GDEF mark class is retained. Normal Sinhala shaping comparisons remain unchanged. A focused native GPOS attachment now places virama on the dotted circle; Windows and HarfBuzz confirm nonspacing attachment. See [proof](dotted-virama-proof-2.430.png). |
+| `googlefonts/vertical_metrics` | Both styles PASS. hhea/typo metrics are 1167/-333, zero line gap and USE_TYPO_METRICS enabled; Windows clipping margins are retained. Current complete glyph bounds are -319..1154. Default line spacing decreases about 3.4%; this can reflow documents. A 3,130-string metrics experiment supports the measured tested corpus, not arbitrary mark stacks. |
+| `outline_semi_vertical` | Regular PASS. Only unhinted Regular straight segments near an axis are adjusted, at most three design units. Original Italic is unchanged. See [outline report](../qa/outline-review-2.430.json) and [before/after proof](outline-proof-2.430.png). |
+| `outline_direction` | Regular PASS. Whole-glyph winding is normalized with counter/raster review. New Ezh/caron contours were aligned before normalization. Original hinted Italic retains its source point order; its one raw warning remains below. |
 
-Safe metadata changes, new glyphs and newly authored feature code must be evaluated
-in the latest report. Their removal from the baseline warnings does not resolve
-the artwork questions above. If a technical fix introduces a new warning, record
-and investigate it before publishing the next release.
+Regular cleanup removes 182 zero-length segments and two zero-area line contours. Cleanup without axis adjustment changes raster antialias values by at most 1/255. The bounded axis refinement introduces small real geometry/raster changes, recorded in the outline report; it is not claimed to be pixel-identical. Old Italic coordinates, programs and 5,450 raster comparisons remain identical to 2.420.
 
-## Tests and their limits
+## Remaining raw warnings
 
-Automated build, font parsing, Unicode coverage, shaping regression and raster
-tests can confirm that the tested files build and that the tested inputs produce
-the expected glyphs and positions. A comparison with the earlier italic release
-can detect unintended changes to existing artwork and layout. New glyphs,
-new anchors and the upright companion need additional expected results and visual
-review; simply matching an old result cannot establish their correctness.
+| Check | Messages | Decision, scope and remaining review |
+| --- | ---: | --- |
+| `alt_caron` | 8 | All `Lcaron`, `dcaron`, `lcaron`, `tcaron` pairs were visually inspected in both styles at 16/24/48/144 px. Their short separate accent strokes are legible; outlines are decomposed, so the automated check requests manual review. See [caron proof](caron-proof-2.430.png). Curator/Latin design review remains available; glyphs were not componentized merely to evade this check. |
+| `contour_count` | 2 | The check compares with reference-font contour counts, including textured/disconnected details in this design. Unicode coverage/mapping assertions pass. Representative Sinhala mappings and new Latin composites were inspected. This is not a manual certification of every flagged contour. See [texture proof](texture-proof-2.430.png). |
+| `outline_jaggy_segments` | 2 | Small ink cuts and acute turns remain in both styles. Representative normal-size and magnified proofs retain the chosen texture. Blanket smoothing would alter the requested artwork. Every reported segment has not been individually approved; specialist/curator review may request local design changes. |
+| `overlapping_path_segments` | 2 | Regular redundant segments are removed; a non-identical quadratic retrace in `sinTI` remains because it encloses a tiny real sliver. Original Italic segments are retained with their hint point order. The magnified `sinTI` proof shows the location. Removing hinted points safely would require a separate hint-aware redesign/revalidation. |
+| `outline_direction` | 1 | Original Italic winding remains for review. Original coordinates and hints plus tested rasters are preserved; reversing/reindexing hinted contours solely to reduce a count risks changing instruction behavior. Regular is normalized. Tested engine results cannot establish every application's fill behavior. |
+| `soft_hyphen` | 2 | U+00AD is deliberately retained. Removing its cmap entry can produce `.notdef` in default-ignorable-preserving/raw Windows tests. Actual Linux Chromium proof confirms invisible unbroken text and a visible hyphen at a conditional break in both styles. Runtime [JSON](../qa/browser-validation-2.430.json) and [screenshot](../qa/browser-proof-2.430.png) are saved; the screenshot was visually reviewed. The controlled fixture pins its hyphen character to `-`; this is a browser behavior test, not an every-application glyph/fallback certification. This does not certify office/PDF behavior. |
+| `googlefonts/metadata/unreachable_subsetting` | 2 | This is an inferred Google Fonts serving-coverage issue, not a defect in the complete downloadable TTF. A concrete [upstream proposal](SUBSET-COVERAGE-PROPOSAL.md) and patch cover the 17 displayed codepoints. Eight more encoded aliases/controls/PUA entries need curator policy. No hosted fix or warning resolution is claimed. |
 
-For cross-platform review, record the font version, application, operating system,
-shaping engine and specimen text. Test Windows DirectWrite in a browser and an
-office application, macOS CoreText, and a HarfBuzz-based Linux/browser stack.
-Check small and large text, multiline line spacing, combining marks, Sinhala
-conjuncts, Latin accents, fallback behavior, text selection and exported PDFs.
-The published test report should distinguish actual platform runs from proposed
-tests; a FreeType/HarfBuzz run does not count as a DirectWrite or CoreText run.
+The [manual review record](../qa/manual-review-2.430.json) identifies exact font hashes, specimens, rendering engine and review limits. The [resolution record](../qa/warning-resolution-2.430.json) maps the baseline and current results. These decisions preserve the original design and expose remaining questions; they do not promise curator acceptance.
 
-Passing the available tests does not certify every Unicode sequence, application,
-printing pipeline or future software version. Tests also do not grant Google
-Fonts acceptance, place a font in Google Docs, resolve trademark/naming decisions,
-or establish copyright ownership. The family was renamed to Dehemi with the
-designer's approval; no `UF` family-name exception is requested for this release.
+## Actual platform results and onboarding
 
-## Licensing and contributor agreements
+Local HarfBuzz/FreeType, Windows Uniscribe and native fontmake checks pass. All Linux, Windows and macOS jobs passed in [run 38225787985](https://github.com/anushannga/UF-Dehemi/actions/runs/38225787985), testing `23d58fbd91f8827bb8116a87e87e05e3bd1ed1a6`. Canonical TTF hashes from all three platforms match the current release. Windows Uniscribe and actual macOS CoreText each pass 790 coverage cases per style; CoreText also passes three expected conjunct cases per style with no missing/fallback glyphs and mark-geometry checks. Linux Chromium 153.0.8010.12 passes the conditional soft-hyphen line-breaking proof in both styles. Reports: `qa/platform-validation-2.430.json`, `qa/coretext-validation-2.430.json`, `qa/browser-validation-2.430.json` and `qa/platforms/`. CoreText checks examine fallback, expected conjuncts and mark origin/base/cluster advances; browser checks use a fresh isolated context. The recorded corpus cannot certify every Unicode sequence, application, printing pipeline or future software version.
 
-Keep the SIL OFL 1.1 text and the Maname-derived source attribution with the fonts
-and editable sources. Technical adjustments and successful builds do not remove
-upstream authors' rights or make the artwork exclusively owned by the release
-preparer.
-
-Google's Contributor License Agreement must be completed by the appropriate
-human contributor or authorized organization representative. An automated tool
-cannot sign it, attest to a person's authority, or mark it completed without
-evidence. Identify relevant contributors and copyright holders, review the source
-history and the applicable contribution process, and retain confirmation of the
-actual agreement. Until that review and the curator's review are complete, record
-their status as pending rather than approved.
+Continue the existing Google Fonts issue rather than opening a duplicate. Keep Maname attribution and OFL terms. Human CLA, upstream contributor coverage, Google Fonts curator acceptance and downstream Google Docs availability remain separate pending items. [Official QA guide](https://googlefonts.github.io/gf-guide/qa.html) describes the need for human judgment on warnings.

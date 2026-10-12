@@ -1,6 +1,6 @@
 # Dehemi: remaining Google Fonts onboarding steps
 
-The current family is Dehemi 2.420, with Regular and Italic styles under SIL OFL 1.1. Continue the existing [submission #11099](https://github.com/google/fonts/issues/11099). A successful build or audit does not constitute Google Fonts acceptance.
+The current family is Dehemi 2.430, with Regular and Italic styles under SIL OFL 1.1. Continue the existing [submission #11099](https://github.com/google/fonts/issues/11099). A successful build or audit does not constitute Google Fonts acceptance.
 
 ## Contributor agreements
 
@@ -19,16 +19,18 @@ The author has selected **Dehemi**, replacing `UF Dehemi`. The earlier abbreviat
 
 ## Technical and design review
 
-The confirmed 2.420 Fontspector result is 196 PASS, 27 WARN, 0 FAIL, 137 SKIP and 13 INFO across both styles. Keep the current JSON/HTML reports with the submission. Historical 2.400 and 2.410 reports must be identified by version. Remaining warnings require review rather than disabling checks or assuming intentional texture resolves them. Use [WARNING-REVIEW.md](WARNING-REVIEW.md) as a review checklist and remeasure any baseline values against the current fonts.
+The confirmed 2.430 Fontspector result is 204 PASS, 19 WARN, 0 FAIL, 137 SKIP and 13 INFO across both styles. Keep the current JSON/HTML reports with the submission. Historical 2.400 and 2.410 reports must be identified by version. Remaining warnings require review rather than disabling checks or assuming intentional texture resolves them. Use [WARNING-REVIEW.md](WARNING-REVIEW.md) as a review checklist and remeasure any baseline values against the current fonts.
 
 The canonical build preserves the existing italic outlines and hinting from TTX while compiling editable native FEA. The UFO/fontmake target also compiles feature source; it does not copy binary layout tables. SFD/UFO outlines and the initial FEA originated as reverse exports, which remains part of the documented source history. The unhinted fontmake output is separately checked for shaping parity and does not replace the canonical release.
 
-[GitHub Actions run 38117608968](https://github.com/anushannga/UF-Dehemi/actions/runs/38117608968), at commit `5309778`, passed all three Linux, Windows and macOS jobs. Each platform ran the canonical build, HarfBuzz/FreeType regression checks and native fontmake target. Windows Uniscribe validation passed 789 cases per style. Actual macOS CoreText validation passed 789 coverage cases and 3 expected conjunct cases per style, with no missing glyphs or fallback fonts; chandrabindu checks confirmed zero base advance, unchanged cluster width and mark-origin parity with HarfBuzz within the harness tolerance. Retain the run and its platform reports with the submission.
+All Linux, Windows and macOS jobs passed in [run 38225787985](https://github.com/anushannga/UF-Dehemi/actions/runs/38225787985), testing `23d58fbd91f8827bb8116a87e87e05e3bd1ed1a6`. Canonical TTF hashes from all three platforms match the current release. Windows Uniscribe and actual macOS CoreText each pass 790 coverage cases per style; CoreText also passes three expected conjunct cases per style with no missing/fallback glyphs and mark-geometry checks. Linux Chromium 153.0.8010.12 passes the conditional soft-hyphen line-breaking proof in both styles. Reports: `qa/platform-validation-2.430.json`, `qa/coretext-validation-2.430.json`, `qa/browser-validation-2.430.json` and `qa/platforms/`.
 
-These results cover the recorded corpus and do not certify DirectWrite, every application or universal platform compatibility. Human review should still cover the Regular design, textured contours, the 27 remaining Fontspector warnings, mark placement, line spacing, browser and office use, and print/export behavior. Contributor agreements, upstream contributor coverage and Google Fonts curator acceptance remain pending.
+These results cover the recorded corpus and do not certify DirectWrite, every application or universal platform compatibility. Human review should still cover the Regular design, textured contours, the 19 remaining Fontspector warnings, mark placement, line spacing, browser and office use, and print/export behavior. Contributor agreements, upstream contributor coverage and Google Fonts curator acceptance remain pending.
 
 ## Submission update and Google Docs
 
 Update the existing issue with the new family name, release/source links, exact confirmed audit results, platform results and the remaining contributor/design review items. Avoid opening a duplicate issue. The [submission draft](SUBMISSION-DRAFT.md) is a preparation document until its placeholders are verified and the update is posted.
 
 Public OFL distribution and Google Fonts onboarding are separate steps. Neither a public release nor local QA guarantees Google Docs availability. Curator acceptance and any downstream product availability remain external decisions. [Official onboarding guide](https://googlefonts.github.io/gf-guide/onboarding.html).
+
+A concrete [serving coverage proposal](SUBSET-COVERAGE-PROPOSAL.md) and adjacent patch are prepared for curator review. The 17 displayed unreachable codepoints and eight additional encoded entries require upstream policy; no hosted fix is claimed.

@@ -1,0 +1,44 @@
+{
+  "version": "2.430",
+  "fontspector_version": "1.9.0",
+  "profile": "googlefonts",
+  "checks_disabled": [],
+  "baseline_summary": {
+    "SKIP": 137,
+    "PASS": 196,
+    "INFO": 13,
+    "WARN": 27
+  },
+  "current_summary": {
+    "SKIP": 137,
+    "PASS": 204,
+    "INFO": 13,
+    "WARN": 19,
+    "FAIL": 0
+  },
+  "remaining_warning_messages_by_check": {
+    "alt_caron": 8,
+    "contour_count": 2,
+    "soft_hyphen": 2,
+    "outline_direction": 1,
+    "outline_jaggy_segments": 2,
+    "overlapping_path_segments": 2,
+    "googlefonts/metadata/unreachable_subsetting": 2
+  },
+  "resolved_checks": [
+    "googlefonts/glyphsets/shape_languages",
+    "opentype/GDEF_spacing_marks",
+    "googlefonts/vertical_metrics",
+    "outline_semi_vertical"
+  ],
+  "partially_resolved_checks": {
+    "outline_direction": "Regular passes; original hinted Italic retained for review.",
+    "overlapping_path_segments": "Regular redundant segments removed; non-identical sinTI retrace and original hinted Italic retained."
+  },
+  "external_dependency": "Google Fonts serving subset definitions require curator policy; proposal is not deployed.",
+  "font_hashes": {
+    "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3",
+    "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330"
+  },
+  "limitations": "19 raw WARN messages remain. This report neither relabels them as PASS nor establishes acceptance."
+}

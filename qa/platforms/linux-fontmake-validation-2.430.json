@@ -1,0 +1,20 @@
+{
+  "Regular": {
+    "version": "2.430",
+    "matching_shaping_cases": 789,
+    "matching_latin_cases": 29,
+    "identical_cmap": true,
+    "canonical_sha256": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+    "development_sha256": "36387c8850e9b622afb7a4cf075d084d6a37e2e7ba66efc09ab36264b3c54f96",
+    "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
+  },
+  "Italic": {
+    "version": "2.430",
+    "matching_shaping_cases": 789,
+    "matching_latin_cases": 29,
+    "identical_cmap": true,
+    "canonical_sha256": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3",
+    "development_sha256": "6f65abbd17fee2dcc8aeaef7a7b78d775969343b0e1c93f5fc12f2d2741a0896",
+    "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
+  }
+}

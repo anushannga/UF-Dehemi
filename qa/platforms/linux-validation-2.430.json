@@ -1,0 +1,26 @@
+{
+  "Regular": {
+    "shaping_cases": 788,
+    "rendered_glyphs": 5540,
+    "sha256": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+    "sinhala_assigned_coverage": true,
+    "metadata_coverage_mark_attachment_assertions": true,
+    "auxiliary_latin_codepoints": 18,
+    "nfc_nfd_comparisons": 10,
+    "virama_dotted_circle_attachment": true,
+    "line_height_units": 1500,
+    "previous_line_height_units": 1553
+  },
+  "Italic": {
+    "shaping_cases": 788,
+    "rendered_glyphs": 5540,
+    "sha256": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3",
+    "sinhala_assigned_coverage": true,
+    "metadata_coverage_mark_attachment_assertions": true,
+    "auxiliary_latin_codepoints": 18,
+    "nfc_nfd_comparisons": 10,
+    "virama_dotted_circle_attachment": true,
+    "line_height_units": 1500,
+    "previous_line_height_units": 1553
+  }
+}
