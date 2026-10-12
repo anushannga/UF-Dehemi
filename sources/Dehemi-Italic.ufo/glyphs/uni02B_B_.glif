@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="uni02BB" format="2">
+  <advance width="334"/>
+  <unicode hex="02BB"/>
+  <anchor x="250" y="674" name="Anchor-15"/>
+  <anchor x="250" y="674" name="Anchor-14"/>
+  <anchor x="250" y="674" name="Anchor-13"/>
+  <anchor x="250" y="674" name="Anchor-12"/>
+  <anchor x="250" y="674" name="Anchor-11"/>
+  <anchor x="250" y="674" name="Anchor-10"/>
+  <anchor x="250" y="674" name="Anchor-9"/>
+  <outline>
+    <component base="quoteleft"/>
+  </outline>
+</glyph>

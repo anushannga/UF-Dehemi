@@ -1,0 +1,126 @@
+{
+  "Regular": {
+    "windows_uniscribe_cases": 790,
+    "mark_positions": {
+      "'\\u0d85\\u0d81'": [
+        [
+          1,
+          571,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -364,
+          -150
+        ]
+      ],
+      "'\\u0d9a\\u0d81'": [
+        [
+          19,
+          800,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -473,
+          -171
+        ]
+      ],
+      "'\\u25cc\\u0d81'": [
+        [
+          1033,
+          539,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -353,
+          -248
+        ]
+      ]
+    },
+    "dotted_circle_virama": [
+      [
+        1033,
+        539,
+        0,
+        0
+      ],
+      [
+        89,
+        0,
+        -219,
+        -14
+      ]
+    ],
+    "limitations": "No CoreText, DirectWrite or every-app certification."
+  },
+  "Italic": {
+    "windows_uniscribe_cases": 790,
+    "mark_positions": {
+      "'\\u0d85\\u0d81'": [
+        [
+          1,
+          571,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -402,
+          -150
+        ]
+      ],
+      "'\\u0d9a\\u0d81'": [
+        [
+          19,
+          800,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -516,
+          -171
+        ]
+      ],
+      "'\\u25cc\\u0d81'": [
+        [
+          1033,
+          539,
+          0,
+          0
+        ],
+        [
+          1086,
+          0,
+          -415,
+          -248
+        ]
+      ]
+    },
+    "dotted_circle_virama": [
+      [
+        1033,
+        539,
+        0,
+        0
+      ],
+      [
+        89,
+        0,
+        -222,
+        -14
+      ]
+    ],
+    "limitations": "No CoreText, DirectWrite or every-app certification."
+  }
+}

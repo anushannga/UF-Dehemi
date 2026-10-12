@@ -13,7 +13,7 @@
     <key>versionMajor</key>
     <integer>2</integer>
     <key>versionMinor</key>
-    <integer>420</integer>
+    <integer>430</integer>
     <key>copyright</key>
     <string>Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.</string>
     <key>unitsPerEm</key>
@@ -31,9 +31,9 @@
     <key>openTypeHeadCreated</key>
     <string>2026/01/27 00:00:00</string>
     <key>openTypeHheaAscender</key>
-    <integer>1194</integer>
+    <integer>1167</integer>
     <key>openTypeHheaDescender</key>
-    <integer>-359</integer>
+    <integer>-333</integer>
     <key>openTypeHheaLineGap</key>
     <integer>0</integer>
     <key>openTypeNameDesigner</key>
@@ -47,9 +47,9 @@
     <key>openTypeNameLicenseURL</key>
     <string>https://openfontlicense.org</string>
     <key>openTypeNameVersion</key>
-    <string>Version 2.420</string>
+    <string>Version 2.430</string>
     <key>openTypeNameUniqueID</key>
-    <string>2.420;UFDE;Dehemi-Regular</string>
+    <string>2.430;UFDE;Dehemi-Regular</string>
     <key>openTypeNameDescription</key>
     <string>Original Tight-232 slanted display design, preserving glyphs, hinting and Sinhala layouts. Maname derivative under SIL OFL 1.1.</string>
     <key>openTypeNameSampleText</key>
@@ -81,9 +81,9 @@
     <key>openTypeOS2Type</key>
     <array/>
     <key>openTypeOS2TypoAscender</key>
-    <integer>1194</integer>
+    <integer>1167</integer>
     <key>openTypeOS2TypoDescender</key>
-    <integer>-359</integer>
+    <integer>-333</integer>
     <key>openTypeOS2TypoLineGap</key>
     <integer>0</integer>
     <key>openTypeOS2WinAscent</key>

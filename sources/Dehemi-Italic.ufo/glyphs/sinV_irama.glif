@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <glyph name="sinVirama" format="2">
-  <advance width="237"/>
+  <advance width="0"/>
   <unicode hex="0DCA"/>
+  <anchor x="111" y="382" name="_Anchor-16"/>
   <anchor x="111" y="382" name="_Anchor-6"/>
   <anchor x="111" y="382" name="_Anchor-1"/>
   <outline>

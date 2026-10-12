@@ -2,6 +2,7 @@
 <glyph name="uni0312" format="2">
   <advance width="0"/>
   <unicode hex="0312"/>
+  <anchor x="5" y="426" name="_Anchor-15"/>
   <anchor x="7" y="670" name="Anchor-7"/>
   <anchor x="5" y="426" name="_Anchor-7"/>
   <anchor x="5" y="426" name="_Anchor-5"/>
@@ -9,22 +10,22 @@
   <outline>
     <contour>
       <point x="69" y="693" type="qcurve"/>
-      <point x="53" y="674"/>
-      <point x="13" y="598"/>
-      <point x="-26" y="509"/>
-      <point x="-37" y="468" type="qcurve"/>
-      <point x="-25" y="461"/>
-      <point x="6" y="449"/>
-      <point x="21" y="446" type="qcurve" smooth="yes"/>
-      <point x="25" y="445"/>
-      <point x="35" y="444"/>
-      <point x="41" y="443" type="qcurve"/>
-      <point x="46" y="477"/>
-      <point x="70" y="558"/>
-      <point x="98" y="632"/>
-      <point x="110" y="657" type="qcurve"/>
-      <point x="106" y="668"/>
       <point x="81" y="688"/>
+      <point x="106" y="668"/>
+      <point x="110" y="657" type="qcurve"/>
+      <point x="98" y="632"/>
+      <point x="70" y="558"/>
+      <point x="46" y="477"/>
+      <point x="41" y="443" type="qcurve"/>
+      <point x="35" y="444"/>
+      <point x="25" y="445"/>
+      <point x="21" y="446" type="qcurve" smooth="yes"/>
+      <point x="6" y="449"/>
+      <point x="-25" y="461"/>
+      <point x="-37" y="468" type="qcurve"/>
+      <point x="-26" y="509"/>
+      <point x="13" y="598"/>
+      <point x="53" y="674"/>
     </contour>
   </outline>
 </glyph>

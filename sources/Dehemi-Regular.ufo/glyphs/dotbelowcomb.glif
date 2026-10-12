@@ -9,15 +9,15 @@
   <outline>
     <contour>
       <point x="8" y="521" type="qcurve" smooth="yes"/>
-      <point x="34" y="521"/>
-      <point x="67" y="556"/>
-      <point x="68" y="615"/>
-      <point x="35" y="648"/>
-      <point x="-11" y="648"/>
-      <point x="-45" y="612"/>
-      <point x="-45" y="581" type="qcurve" smooth="yes"/>
-      <point x="-45" y="554"/>
       <point x="-16" y="521"/>
+      <point x="-45" y="554"/>
+      <point x="-45" y="581" type="qcurve" smooth="yes"/>
+      <point x="-45" y="612"/>
+      <point x="-11" y="648"/>
+      <point x="35" y="648"/>
+      <point x="68" y="615"/>
+      <point x="67" y="556"/>
+      <point x="34" y="521"/>
     </contour>
   </outline>
 </glyph>

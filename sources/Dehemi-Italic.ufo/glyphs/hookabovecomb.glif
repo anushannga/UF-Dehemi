@@ -2,6 +2,7 @@
 <glyph name="hookabovecomb" format="2">
   <advance width="0"/>
   <unicode hex="0309"/>
+  <anchor x="111" y="426" name="_Anchor-15"/>
   <anchor x="177" y="680" name="Anchor-7"/>
   <anchor x="111" y="426" name="_Anchor-7"/>
   <anchor x="111" y="426" name="_Anchor-5"/>

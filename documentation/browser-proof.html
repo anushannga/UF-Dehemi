@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<title>Dehemi soft hyphen browser proof</title>
+<style>
+@font-face { font-family: "Dehemi SHY QA"; font-style: normal; font-weight: 400;
+  src: url("../fonts/ttf/dehemi/Dehemi-Regular.ttf") format("truetype"); }
+@font-face { font-family: "Dehemi SHY QA"; font-style: italic; font-weight: 400;
+  src: url("../fonts/ttf/dehemi/Dehemi-Italic.ttf") format("truetype"); }
+body { max-width: 800px; margin: 32px; font: 16px/1.5 sans-serif; color: #15263c; }
+h1 { font-size: 24px; } h2 { font-size: 18px; margin-top: 28px; }
+.row { display: flex; align-items: start; gap: 36px; }
+.case { width: 260px; }
+.sample { font: 24px/1.4 "Dehemi SHY QA"; padding: 0; margin: 8px 0;
+  border: 1px solid #9bacc2; width: 240px; white-space: normal;
+  hyphens: manual; overflow-wrap: normal; word-break: normal; }
+.sample.narrow { width: 50px; }
+.italic .sample { font-style: italic; }
+code, pre { font-size: 13px; } pre { white-space: pre-wrap; }
+</style>
+<h1>Soft hyphen: actual browser line breaking</h1>
+<p>Both samples contain <code>AB U+00AD CD</code>. In the wide box the
+  conditional hyphen should be invisible. In the narrow box the browser should
+  break at that point and display the appropriate hyphen.</p>
+<p>This proof loads the two release TTF files directly for this page. It checks
+  browser text layout and does not demonstrate permanent PC installation.</p>
+<section class="regular" data-style="Regular">
+  <h2>Regular</h2><div class="row">
+    <div class="case">Wide: no hyphen expected<div class="sample wide">AB&shy;CD</div></div>
+    <div class="case">Narrow: conditional break expected<div class="sample narrow">AB&shy;CD</div></div>
+  </div>
+</section>
+<section class="italic" data-style="Italic">
+  <h2>Original Italic</h2><div class="row">
+    <div class="case">Wide: no hyphen expected<div class="sample wide">AB&shy;CD</div></div>
+    <div class="case">Narrow: conditional break expected<div class="sample narrow">AB&shy;CD</div></div>
+  </div>
+</section>
+<h2>Runtime evidence</h2>
+<pre id="evidence">Browser test has not completed.</pre>
+<script>
+(async () => {
+  const evidence = { status: "not-run", samples: [], limitations:
+    "A browser layout proof does not certify Word, LibreOffice, PDF output or every platform." };
+  try {
+    const regular = await document.fonts.load('24px "Dehemi SHY QA"');
+    const italic = await document.fonts.load('italic 24px "Dehemi SHY QA"');
+    await document.fonts.ready;
+    evidence.browser = navigator.userAgent;
+    evidence.loaded_faces = { Regular: regular.length, Italic: italic.length };
+    if (!regular.length || !italic.length) throw new Error("Release font loading failed");
+    for (const section of document.querySelectorAll('section')) {
+      const canvas = document.createElement('canvas'), ctx = canvas.getContext('2d');
+      ctx.font = (section.dataset.style === 'Italic' ? 'italic ' : '') + '24px "Dehemi SHY QA"';
+      section.querySelector('.narrow').style.width = (Math.ceil(Math.max(ctx.measureText('AB-').width,ctx.measureText('CD').width)) + 3) + 'px';
+    }
+    for (const sample of document.querySelectorAll('.sample')) {
+      const style = sample.closest('section').dataset.style;
+      const css = getComputedStyle(sample);
+      const range = document.createRange();
+      range.selectNodeContents(sample);
+      const shyRange = document.createRange();
+      shyRange.setStart(sample.firstChild,2);shyRange.setEnd(sample.firstChild,3);
+      evidence.samples.push({ style, kind: sample.classList.contains('narrow') ? 'narrow' : 'wide',
+        text_codepoints: Array.from(sample.textContent).map(c => c.codePointAt(0).toString(16)),
+        line_height: parseFloat(css.lineHeight), content_height: sample.clientHeight,
+        estimated_lines: Math.round(sample.clientHeight / parseFloat(css.lineHeight)),
+        shy_rects: Array.from(shyRange.getClientRects()).map(r => ({width:r.width,height:r.height})),
+        text_rects: Array.from(range.getClientRects()).map(r => ({ x:r.x, y:r.y, width:r.width, height:r.height })) });
+    }
+    evidence.status = "executed-review-rendering";
+  } catch (error) {
+    evidence.status = "failed"; evidence.error = String(error);
+  }
+  window.softHyphenProof = evidence;
+  document.querySelector('#evidence').textContent = JSON.stringify(evidence, null, 2);
+  document.body.dataset.ready = "true";
+})();
+</script>
+</html>
+

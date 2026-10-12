@@ -4,18 +4,18 @@ FullName: Dehemi Italic
 FamilyName: Dehemi
 Weight: Book
 Copyright: Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.
-Version: 2.420
+Version: 2.430
 ItalicAngle: -14
 UnderlinePosition: -125
 UnderlineWidth: 50
 Ascent: 800
 Descent: 200
 InvalidEm: 0
-sfntRevision: 0x00026b85
+sfntRevision: 0x00026e14
 LayerCount: 2
 Layer: 0 1 "Back" 1
 Layer: 1 1 "Fore" 0
-XUID: [1021 69 801467504 31735]
+XUID: [1021 77 1099468659 16742]
 StyleMap: 0x0001
 FSType: 0
 OS2Version: 4
@@ -29,18 +29,18 @@ TTFWidth: 5
 LineGap: 0
 VLineGap: 0
 Panose: 0 0 0 0 0 0 0 0 0 0
-OS2TypoAscent: 1194
+OS2TypoAscent: 1167
 OS2TypoAOffset: 0
-OS2TypoDescent: -359
+OS2TypoDescent: -333
 OS2TypoDOffset: 0
 OS2TypoLinegap: 0
 OS2WinAscent: 1194
 OS2WinAOffset: 0
 OS2WinDescent: 359
 OS2WinDOffset: 0
-HheadAscent: 1194
+HheadAscent: 1167
 HheadAOffset: 0
-HheadDescent: -359
+HheadDescent: -333
 HheadDOffset: 0
 OS2SubXSize: 650
 OS2SubYSize: 600
@@ -110,6 +110,8 @@ Lookup: 260 0 0 "'mark' Mark Positioning lookup 8" { "'mark' Mark Positioning lo
 Lookup: 260 0 0 "'mark' Mark Positioning lookup 9" { "'mark' Mark Positioning lookup 9 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > 'sinh' <'dflt' > ) ]
 Lookup: 262 131088 0 "'mkmk' Mark to Mark lookup 10" { "'mkmk' Mark to Mark lookup 10 subtable"  } ['mkmk' ('DFLT' <'dflt' > 'latn' <'dflt' > 'sinh' <'dflt' > ) ]
 Lookup: 260 0 0 "'abvm' Above Base Mark lookup 11" { "'abvm' Above Base Mark lookup 11 subtable"  } ['abvm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'sinh' <'dflt' > ) ]
+Lookup: 260 0 0 "'mark' Mark Positioning lookup 12" { "'mark' Mark Positioning lookup 12 subtable"  } ['mark' ('DFLT' <'dflt' > 'latn' <'dflt' > 'sinh' <'dflt' > ) ]
+Lookup: 260 0 0 "'abvm' Above Base Mark lookup 13" { "'abvm' Above Base Mark lookup 13 subtable"  } ['abvm' ('DFLT' <'dflt' > 'latn' <'dflt' > 'sinh' <'dflt' > ) ]
 MarkAttachSets: 3
 "MarkSet-0" 131 uni0308 uni0307 gravecomb acutecomb uni030B uni0302 uni030C uni0306 uni030A tildecomb uni0304 hookabovecomb uni030F uni0311 uni0312
 "MarkSet-1" 9 sinVirama
@@ -3942,11 +3944,11 @@ EndShort
 ShortTable: maxp 16
   1
   0
-  1090
+  1108
   328
   16
-  0
-  0
+  133
+  6
   2
   106
   183
@@ -3954,10 +3956,10 @@ ShortTable: maxp 16
   0
   412
   3920
-  0
-  0
+  2
+  1
 EndShort
-LangName: 1033 "" "" "" "2.420;UFDE;Dehemi-Italic" "" "Version 2.420" "" "" "ANUSHANGA K P" "Pasan Anushanga; The Maname Project Authors" "Original Tight-232 slanted display design, preserving glyphs, hinting and Sinhala layouts. Maname derivative under SIL OFL 1.1." "https://github.com/mooniak/maname-font" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. See OFL.txt." "https://openfontlicense.org" "" "" "" "" "+Da8N0A27DasN0g26DZwNvQ2n +DYkNxA29 +DYUNxA3DDdoA +Da8Nnw2aDbsNsQAA +DcANvQ3PDbQN2Q3F +DbgNwA2xDc8A +DcMN3A2zDdQNuw3U +Da8Nww3UDbEA +DbsNzw2tDcogDQ27DdINugAA +DYsNrw3PDcANrQ3K +DcMNuA2c +DZoNyiANDcINug3ADdoA."
+LangName: 1033 "" "" "" "2.430;UFDE;Dehemi-Italic" "" "Version 2.430" "" "" "ANUSHANGA K P" "Pasan Anushanga; The Maname Project Authors" "Original Tight-232 slanted display design, preserving glyphs, hinting and Sinhala layouts. Maname derivative under SIL OFL 1.1." "https://github.com/mooniak/maname-font" "" "This Font Software is licensed under the SIL Open Font License, Version 1.1. See OFL.txt." "https://openfontlicense.org" "" "" "" "" "+Da8N0A27DasN0g26DZwNvQ2n +DYkNxA29 +DYUNxA3DDdoA +Da8Nnw2aDbsNsQAA +DcANvQ3PDbQN2Q3F +DbgNwA2xDc8A +DcMN3A2zDdQNuw3U +Da8Nww3UDbEA +DbsNzw2tDcogDQ27DdINugAA +DYsNrw3PDcANrQ3K +DcMNuA2c +DZoNyiANDcINug3ADdoA."
 GaspTable: 1 65535 15 1
 OtfFeatName: 'ss02' 1033 "Sinhala historical pa+-f combination"
 Encoding: UnicodeFull
@@ -3966,8 +3968,8 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-AnchorClass2: "Anchor-0" "'abvm' Above Base Mark lookup 3 subtable" "Anchor-1" "'abvm' Above Base Mark lookup 4 subtable" "Anchor-2" "'blwm' Below Base Mark lookup 5 subtable" "Anchor-3" "'mark' Mark Positioning lookup 6 subtable" "Anchor-4" "'mark' Mark Positioning lookup 7 subtable" "Anchor-5" "'mark' Mark Positioning lookup 8 subtable" "Anchor-6" "'mark' Mark Positioning lookup 9 subtable" "Anchor-7" "'mkmk' Mark to Mark lookup 10 subtable" "Anchor-8" "'abvm' Above Base Mark lookup 11 subtable"
-BeginChars: 1114551 1090
+AnchorClass2: "Anchor-0" "'abvm' Above Base Mark lookup 3 subtable" "Anchor-1" "'abvm' Above Base Mark lookup 4 subtable" "Anchor-2" "'blwm' Below Base Mark lookup 5 subtable" "Anchor-3" "'mark' Mark Positioning lookup 6 subtable" "Anchor-4" "'mark' Mark Positioning lookup 7 subtable" "Anchor-5" "'mark' Mark Positioning lookup 8 subtable" "Anchor-6" "'mark' Mark Positioning lookup 9 subtable" "Anchor-7" "'mkmk' Mark to Mark lookup 10 subtable" "Anchor-8" "'abvm' Above Base Mark lookup 11 subtable" "Anchor-9" "'mark' Mark Positioning lookup 12 subtable" "Anchor-10" "'mark' Mark Positioning lookup 12 subtable" "Anchor-11" "'mark' Mark Positioning lookup 12 subtable" "Anchor-12" "'mark' Mark Positioning lookup 12 subtable" "Anchor-13" "'mark' Mark Positioning lookup 12 subtable" "Anchor-14" "'mark' Mark Positioning lookup 12 subtable" "Anchor-15" "'mark' Mark Positioning lookup 12 subtable" "Anchor-16" "'abvm' Above Base Mark lookup 13 subtable"
+BeginChars: 1114551 1108
 
 StartChar: .notdef
 Encoding: 1114112 -1 0
@@ -61569,7 +61571,7 @@ EndChar
 
 StartChar: sinVirama
 Encoding: 3530 3530 89
-Width: 237
+Width: 0
 GlyphClass: 4
 Flags: W
 TtInstrs:
@@ -61632,6 +61634,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-16" 111 382 mark 0
 AnchorPoint: "Anchor-6" 111 382 mark 0
 AnchorPoint: "Anchor-1" 111 382 mark 0
 LayerCount: 2
@@ -551526,7 +551529,7 @@ EndChar
 StartChar: k
 Encoding: 107 107 792
 Width: 611
-GlyphClass: 1
+GlyphClass: 2
 Flags: W
 TtInstrs:
 NPUSHB
@@ -551734,6 +551737,13 @@ NPUSHB
  31
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-15" 397 716 basechar 0
+AnchorPoint: "Anchor-14" 397 716 basechar 0
+AnchorPoint: "Anchor-13" 397 716 basechar 0
+AnchorPoint: "Anchor-12" 397 716 basechar 0
+AnchorPoint: "Anchor-11" 397 716 basechar 0
+AnchorPoint: "Anchor-10" 397 716 basechar 0
+AnchorPoint: "Anchor-9" 397 716 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -552388,7 +552398,7 @@ EndChar
 StartChar: l
 Encoding: 108 108 795
 Width: 418
-GlyphClass: 1
+GlyphClass: 2
 Flags: W
 TtInstrs:
 MPPEM
@@ -552510,6 +552520,13 @@ NPUSHB
  28
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-15" 300 716 basechar 0
+AnchorPoint: "Anchor-14" 300 716 basechar 0
+AnchorPoint: "Anchor-13" 300 716 basechar 0
+AnchorPoint: "Anchor-12" 300 716 basechar 0
+AnchorPoint: "Anchor-11" 300 716 basechar 0
+AnchorPoint: "Anchor-10" 300 716 basechar 0
+AnchorPoint: "Anchor-9" 300 716 basechar 0
 LayerCount: 2
 Fore
 SplineSet
@@ -623160,6 +623177,7 @@ NPUSHB
  22
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-16" 428 368 basechar 0
 AnchorPoint: "Anchor-8" 299 452 basechar 0
 AnchorPoint: "Anchor-5" 381 489 basechar 0
 AnchorPoint: "Anchor-4" 416 2 basechar 0
@@ -623372,6 +623390,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-9" 110 426 mark 0
 AnchorPoint: "Anchor-7" 154 597 basemark 0
 AnchorPoint: "Anchor-7" 110 426 mark 0
 AnchorPoint: "Anchor-5" 110 426 mark 0
@@ -623446,6 +623465,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-10" 112 426 mark 0
 AnchorPoint: "Anchor-7" 156 597 basemark 0
 AnchorPoint: "Anchor-7" 112 426 mark 0
 AnchorPoint: "Anchor-5" 112 426 mark 0
@@ -623478,6 +623498,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-10" 112 426 mark 0
 AnchorPoint: "Anchor-7" 161 618 basemark 0
 AnchorPoint: "Anchor-7" 112 426 mark 0
 AnchorPoint: "Anchor-5" 112 426 mark 0
@@ -623509,6 +623530,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-11" 125 478 mark 0
 AnchorPoint: "Anchor-7" 167 639 basemark 0
 AnchorPoint: "Anchor-7" 125 478 mark 0
 AnchorPoint: "Anchor-5" 125 478 mark 0
@@ -623544,6 +623566,7 @@ PUSHB_6
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-10" 112 426 mark 0
 AnchorPoint: "Anchor-7" 183 701 basemark 0
 AnchorPoint: "Anchor-7" 112 426 mark 0
 AnchorPoint: "Anchor-5" 112 426 mark 0
@@ -623633,6 +623656,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-12" 125 479 mark 0
 AnchorPoint: "Anchor-7" 176 679 basemark 0
 AnchorPoint: "Anchor-7" 125 479 mark 0
 AnchorPoint: "Anchor-5" 125 479 mark 0
@@ -623671,6 +623695,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-10" 112 426 mark 0
 AnchorPoint: "Anchor-7" 153 587 basemark 0
 AnchorPoint: "Anchor-7" 112 426 mark 0
 AnchorPoint: "Anchor-5" 112 426 mark 0
@@ -623750,6 +623775,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-13" 116 447 mark 0
 AnchorPoint: "Anchor-7" 151 616 basemark 0
 AnchorPoint: "Anchor-7" 116 447 mark 0
 AnchorPoint: "Anchor-5" 116 447 mark 0
@@ -623834,6 +623860,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-11" 125 478 mark 0
 AnchorPoint: "Anchor-7" 178 682 basemark 0
 AnchorPoint: "Anchor-7" 125 478 mark 0
 AnchorPoint: "Anchor-5" 125 478 mark 0
@@ -623935,6 +623962,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-14" 124 478 mark 0
 AnchorPoint: "Anchor-7" 166 639 basemark 0
 AnchorPoint: "Anchor-7" 124 478 mark 0
 AnchorPoint: "Anchor-5" 124 478 mark 0
@@ -624002,6 +624030,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 155 597 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -624059,6 +624088,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 177 680 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -624103,6 +624133,7 @@ PUSHB_6
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 187 722 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -624177,6 +624208,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 157 605 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -624211,6 +624243,7 @@ PUSHB_4
  50
 CALL
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 174 670 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -624265,6 +624298,7 @@ PUSHB_2
  0
 WCVTP
 EndTTInstrs
+AnchorPoint: "Anchor-15" 111 426 mark 0
 AnchorPoint: "Anchor-7" 179 691 basemark 0
 AnchorPoint: "Anchor-7" 111 426 mark 0
 AnchorPoint: "Anchor-5" 111 426 mark 0
@@ -633945,6 +633979,515 @@ Width: 0
 GlyphClass: 1
 Flags: W
 LayerCount: 2
+EndChar
+
+StartChar: uni0132
+Encoding: 306 306 1090
+Width: 931
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 567 677 basechar 0
+AnchorPoint: "Anchor-14" 567 677 basechar 0
+AnchorPoint: "Anchor-13" 567 677 basechar 0
+AnchorPoint: "Anchor-12" 567 677 basechar 0
+AnchorPoint: "Anchor-11" 567 677 basechar 0
+AnchorPoint: "Anchor-10" 567 677 basechar 0
+AnchorPoint: "Anchor-9" 567 677 basechar 0
+LayerCount: 2
+Fore
+Refer: 568 73 N 1 0 0 1 0 0 2
+Refer: 582 74 N 1 0 0 1 462 0 2
+EndChar
+
+StartChar: uni0133
+Encoding: 307 307 1091
+Width: 799
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 521 736 basechar 0
+AnchorPoint: "Anchor-14" 521 736 basechar 0
+AnchorPoint: "Anchor-13" 521 736 basechar 0
+AnchorPoint: "Anchor-12" 521 736 basechar 0
+AnchorPoint: "Anchor-11" 521 736 basechar 0
+AnchorPoint: "Anchor-10" 521 736 basechar 0
+AnchorPoint: "Anchor-9" 521 736 basechar 0
+LayerCount: 2
+Fore
+Refer: 773 105 N 1 0 0 1 0 0 2
+Refer: 788 106 N 1 0 0 1 398 0 2
+EndChar
+
+StartChar: uni02BB
+Encoding: 699 699 1092
+Width: 334
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 250 674 basechar 0
+AnchorPoint: "Anchor-14" 250 674 basechar 0
+AnchorPoint: "Anchor-13" 250 674 basechar 0
+AnchorPoint: "Anchor-12" 250 674 basechar 0
+AnchorPoint: "Anchor-11" 250 674 basechar 0
+AnchorPoint: "Anchor-10" 250 674 basechar 0
+AnchorPoint: "Anchor-9" 250 674 basechar 0
+LayerCount: 2
+Fore
+Refer: 994 8216 N 1 0 0 1 0 0 2
+EndChar
+
+StartChar: uni01E4
+Encoding: 484 484 1093
+Width: 705
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 471 679 basechar 0
+AnchorPoint: "Anchor-14" 471 679 basechar 0
+AnchorPoint: "Anchor-13" 471 679 basechar 0
+AnchorPoint: "Anchor-12" 471 679 basechar 0
+AnchorPoint: "Anchor-11" 471 679 basechar 0
+AnchorPoint: "Anchor-10" 471 679 basechar 0
+AnchorPoint: "Anchor-9" 471 679 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+291 -22 m 0,0,1
+ 325 -22 325 -22 367 -12.5 c 128,-1,2
+ 409 -3 409 -3 451.5 20.5 c 128,-1,3
+ 494 44 494 44 530 85 c 1,4,-1
+ 565 209 l 2,5,6
+ 568 219 568 219 571 228 c 1,7,-1
+ 503 228 l 1,8,-1
+ 503 234 l 1,9,-1
+ 574 234 l 1,10,11
+ 581 249 581 249 590 255 c 0,12,13
+ 604 264 604 264 618 264 c 2,14,-1
+ 630 264 l 1,15,-1
+ 635 312 l 1,16,17
+ 610 311 610 311 580 309.5 c 128,-1,18
+ 550 308 550 308 521 308 c 0,19,20
+ 501 308 501 308 477.5 309 c 128,-1,21
+ 454 310 454 310 429 312 c 1,22,-1
+ 420 261 l 1,23,24
+ 463 261 463 261 475 242 c 0,25,26
+ 482 230 482 230 477 211 c 2,27,-1
+ 432 66 l 1,28,29
+ 412 54 412 54 388.5 48 c 128,-1,30
+ 365 42 365 42 336 42 c 0,31,32
+ 267 42 267 42 232.5 78 c 128,-1,33
+ 198 114 198 114 193 174 c 0,34,35
+ 191 191 191 191 191 209 c 1,36,-1
+ 189 209 l 1,37,-1
+ 189 216 l 1,38,-1
+ 191 216 l 1,39,40
+ 193 257 193 257 204 301 c 0,41,42
+ 224 376 224 376 265 441 c 128,-1,43
+ 306 506 306 506 363.5 547 c 128,-1,44
+ 421 588 421 588 488 588 c 0,45,46
+ 511 588 511 588 529.5 583 c 128,-1,47
+ 548 578 548 578 562 572 c 1,48,49
+ 570 553 570 553 575.5 526.5 c 128,-1,50
+ 581 500 581 500 583 470 c 1,51,-1
+ 637 468 l 1,52,53
+ 641 478 641 478 645 495 c 2,54,-1
+ 654 529 l 2,55,56
+ 663 563 663 563 667.5 585.5 c 128,-1,57
+ 672 608 672 608 674 622 c 1,58,59
+ 668 625 668 625 633 634.5 c 128,-1,60
+ 598 644 598 644 544 644 c 0,61,62
+ 454 644 454 644 380.5 611 c 128,-1,63
+ 307 578 307 578 252 524 c 128,-1,64
+ 197 470 197 470 160.5 404.5 c 128,-1,65
+ 124 339 124 339 107 274 c 0,66,67
+ 84 182 84 182 100 115.5 c 128,-1,68
+ 116 49 116 49 165.5 13.5 c 128,-1,69
+ 215 -22 215 -22 291 -22 c 0,0,1
+97 268 m 1,70,-1
+ 582 268 l 1,71,-1
+ 591 306 l 1,72,-1
+ 106 306 l 1,73,-1
+ 97 268 l 1,70,-1
+EndSplineSet
+EndChar
+
+StartChar: uni01E5
+Encoding: 485 485 1094
+Width: 682
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 411 524 basechar 0
+AnchorPoint: "Anchor-14" 411 524 basechar 0
+AnchorPoint: "Anchor-13" 411 524 basechar 0
+AnchorPoint: "Anchor-12" 411 524 basechar 0
+AnchorPoint: "Anchor-11" 411 524 basechar 0
+AnchorPoint: "Anchor-10" 411 524 basechar 0
+AnchorPoint: "Anchor-9" 411 524 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+267 183 m 0,0,1
+ 329 183 329 183 378.5 207 c 128,-1,2
+ 428 231 428 231 461.5 270.5 c 128,-1,3
+ 495 310 495 310 507 356 c 0,4,5
+ 511 368 511 368 512 380 c 1,6,-1
+ 565 380 l 2,7,8
+ 597 380 597 380 626 378 c 1,9,10
+ 629 385 629 385 632 395.5 c 128,-1,11
+ 635 406 635 406 638 417 c 0,12,13
+ 642 435 642 435 646 453.5 c 128,-1,14
+ 650 472 650 472 652 486 c 1,15,16
+ 605 459 605 459 568.5 442.5 c 128,-1,17
+ 532 426 532 426 509 419 c 1,18,19
+ 501 445 501 445 480.5 460.5 c 128,-1,20
+ 460 476 460 476 434 482.5 c 128,-1,21
+ 408 489 408 489 384 489 c 0,22,23
+ 333 489 333 489 283.5 467 c 128,-1,24
+ 234 445 234 445 195.5 406 c 128,-1,25
+ 157 367 157 367 144 315 c 0,26,27
+ 131 265 131 265 150 233 c 128,-1,28
+ 169 201 169 201 214 189 c 1,29,30
+ 181 168 181 168 150 146 c 128,-1,31
+ 119 124 119 124 95 99 c 1,32,33
+ 91 67 91 67 106.5 56.5 c 128,-1,34
+ 122 46 122 46 167 46 c 2,35,-1
+ 186 46 l 1,36,37
+ 183 45 183 45 181 44 c 1,38,-1
+ 242 44 l 1,39,-1
+ 242 39 l 1,40,41
+ 248 42 248 42 255 44 c 0,42,43
+ 295 42 295 42 327.5 33.5 c 128,-1,44
+ 360 25 360 25 377.5 6.5 c 128,-1,45
+ 395 -12 395 -12 387 -45 c 0,46,47
+ 380 -70 380 -70 356.5 -98 c 128,-1,48
+ 333 -126 333 -126 293.5 -145.5 c 128,-1,49
+ 254 -165 254 -165 198 -165 c 0,50,51
+ 146 -165 146 -165 120.5 -144.5 c 128,-1,52
+ 95 -124 95 -124 105 -85 c 0,53,54
+ 113 -55 113 -55 137 -29.5 c 128,-1,55
+ 161 -4 161 -4 193 15 c 0,56,57
+ 214 27 214 27 235 36 c 1,58,-1
+ 164 36 l 1,59,60
+ 140 25 140 25 116 11 c 0,61,62
+ 81 -10 81 -10 54.5 -38.5 c 128,-1,63
+ 28 -67 28 -67 19 -102 c 0,64,65
+ 5 -155 5 -155 44 -184.5 c 128,-1,66
+ 83 -214 83 -214 164 -214 c 0,67,68
+ 244 -214 244 -214 311 -187.5 c 128,-1,69
+ 378 -161 378 -161 423 -116.5 c 128,-1,70
+ 468 -72 468 -72 482 -20 c 0,71,72
+ 494 27 494 27 475 53 c 0,73,74
+ 465 66 465 66 449 76 c 1,75,-1
+ 449 72 l 1,76,-1
+ 130 71 l 1,77,-1
+ 130 75 l 1,78,-1
+ 448 76 l 1,79,80
+ 435 84 435 84 417 89 c 0,81,82
+ 378 100 378 100 327 102 c 128,-1,83
+ 276 104 276 104 224 104 c 0,84,85
+ 208 104 208 104 203 111 c 0,86,87
+ 200 117 200 117 202 127 c 0,88,89
+ 209 153 209 153 249 183 c 1,90,-1
+ 249 184 l 1,91,92
+ 257 183 257 183 267 183 c 0,0,1
+293 227 m 0,93,94
+ 259 227 259 227 238.5 250.5 c 128,-1,95
+ 218 274 218 274 231 324 c 0,96,97
+ 241 363 241 363 263 390 c 128,-1,98
+ 285 417 285 417 312 431.5 c 128,-1,99
+ 339 446 339 446 363 446 c 0,100,101
+ 403 446 403 446 415 413.5 c 128,-1,102
+ 427 381 427 381 417 341 c 0,103,104
+ 405 296 405 296 371.5 261.5 c 128,-1,105
+ 338 227 338 227 293 227 c 0,93,94
+207 49 m 1,106,-1
+ 207 56 l 1,107,-1
+ 323 56 l 1,108,-1
+ 453 58 l 1,109,-1
+ 453 51 l 1,110,-1
+ 291 48 l 1,111,-1
+ 291 49 l 1,112,-1
+ 207 49 l 1,106,-1
+-23 -92 m 1,113,-1
+ 542 -92 l 1,114,-1
+ 551 -55 l 1,115,-1
+ -14 -55 l 1,116,-1
+ -23 -92 l 1,113,-1
+EndSplineSet
+EndChar
+
+StartChar: uni01B7
+Encoding: 439 439 1095
+Width: 650
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 416 675 basechar 0
+AnchorPoint: "Anchor-14" 416 675 basechar 0
+AnchorPoint: "Anchor-13" 416 675 basechar 0
+AnchorPoint: "Anchor-12" 416 675 basechar 0
+AnchorPoint: "Anchor-11" 416 675 basechar 0
+AnchorPoint: "Anchor-10" 416 675 basechar 0
+AnchorPoint: "Anchor-9" 416 675 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+210 640 m 1,0,-1
+ 197 590 l 1,1,-1
+ 491 590 l 1,2,-1
+ 224 352 l 1,3,-1
+ 270 320 l 1,4,5
+ 435 340 435 340 401 205 c 0,6,7
+ 359 36 359 36 227 36 c 0,8,9
+ 131 36 131 36 97 116 c 1,10,-1
+ 50 80 l 1,11,12
+ 85 -20 85 -20 220 -20 c 0,13,14
+ 460 -20 460 -20 517 210 c 1,15,16
+ 531 365 531 365 320 360 c 1,17,-1
+ 590 600 l 1,18,-1
+ 600 640 l 1,19,-1
+ 210 640 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uni0292
+Encoding: 658 658 1096
+Width: 530
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 332 524 basechar 0
+AnchorPoint: "Anchor-14" 332 524 basechar 0
+AnchorPoint: "Anchor-13" 332 524 basechar 0
+AnchorPoint: "Anchor-12" 332 524 basechar 0
+AnchorPoint: "Anchor-11" 332 524 basechar 0
+AnchorPoint: "Anchor-10" 332 524 basechar 0
+AnchorPoint: "Anchor-9" 332 524 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+162 489 m 1,0,-1
+ 149 436 l 1,1,-1
+ 384 436 l 1,2,-1
+ 155 183 l 1,3,-1
+ 189 149 l 1,4,5
+ 323 171 323 171 287 27 c 0,6,7
+ 242 -152 242 -152 137 -152 c 0,8,9
+ 60 -152 60 -152 38 -67 c 1,10,-1
+ -2 -105 l 1,11,12
+ 19 -211 19 -211 127 -211 c 0,13,14
+ 319 -211 319 -211 380 33 c 1,15,16
+ 401 197 401 197 232 192 c 1,17,-1
+ 463 446 l 1,18,-1
+ 474 489 l 1,19,-1
+ 162 489 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uni017F
+Encoding: 383 383 1097
+Width: 510
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 375 750 basechar 0
+AnchorPoint: "Anchor-14" 375 750 basechar 0
+AnchorPoint: "Anchor-13" 375 750 basechar 0
+AnchorPoint: "Anchor-12" 375 750 basechar 0
+AnchorPoint: "Anchor-11" 375 750 basechar 0
+AnchorPoint: "Anchor-10" 375 750 basechar 0
+AnchorPoint: "Anchor-9" 375 750 basechar 0
+LayerCount: 2
+Fore
+SplineSet
+58 0 m 1,0,-1
+ 66 32 l 1,1,2
+ 98 32 98 32 114 95 c 2,3,-1
+ 227 550 l 2,4,5
+ 268 715 268 715 418 715 c 0,6,7
+ 483 715 483 715 497 663 c 1,8,-1
+ 457 631 l 1,9,10
+ 450 670 450 670 414 670 c 0,11,12
+ 347 670 347 670 320 560 c 2,13,-1
+ 204 95 l 2,14,15
+ 188 34 188 34 222 32 c 1,16,-1
+ 214 0 l 1,17,-1
+ 58 0 l 1,0,-1
+EndSplineSet
+EndChar
+
+StartChar: uni01CD
+Encoding: 461 461 1098
+Width: 617
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 427 866 basechar 0
+AnchorPoint: "Anchor-14" 427 866 basechar 0
+AnchorPoint: "Anchor-13" 427 866 basechar 0
+AnchorPoint: "Anchor-12" 427 866 basechar 0
+AnchorPoint: "Anchor-11" 427 866 basechar 0
+AnchorPoint: "Anchor-10" 427 866 basechar 0
+AnchorPoint: "Anchor-9" 427 866 basechar 0
+LayerCount: 2
+Fore
+Refer: 496 65 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 339 229 2
+EndChar
+
+StartChar: uni01CE
+Encoding: 462 462 1099
+Width: 503
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 359 700 basechar 0
+AnchorPoint: "Anchor-14" 359 700 basechar 0
+AnchorPoint: "Anchor-13" 359 700 basechar 0
+AnchorPoint: "Anchor-12" 359 700 basechar 0
+AnchorPoint: "Anchor-11" 359 700 basechar 0
+AnchorPoint: "Anchor-10" 359 700 basechar 0
+AnchorPoint: "Anchor-9" 359 700 basechar 0
+LayerCount: 2
+Fore
+Refer: 702 97 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 214 63 2
+EndChar
+
+StartChar: uni01D3
+Encoding: 467 467 1100
+Width: 758
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 537 887 basechar 0
+AnchorPoint: "Anchor-14" 537 887 basechar 0
+AnchorPoint: "Anchor-13" 537 887 basechar 0
+AnchorPoint: "Anchor-12" 537 887 basechar 0
+AnchorPoint: "Anchor-11" 537 887 basechar 0
+AnchorPoint: "Anchor-10" 537 887 basechar 0
+AnchorPoint: "Anchor-9" 537 887 basechar 0
+LayerCount: 2
+Fore
+Refer: 661 85 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 345 250 2
+EndChar
+
+StartChar: uni01D4
+Encoding: 468 468 1101
+Width: 586
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 427 741 basechar 0
+AnchorPoint: "Anchor-14" 427 741 basechar 0
+AnchorPoint: "Anchor-13" 427 741 basechar 0
+AnchorPoint: "Anchor-12" 427 741 basechar 0
+AnchorPoint: "Anchor-11" 427 741 basechar 0
+AnchorPoint: "Anchor-10" 427 741 basechar 0
+AnchorPoint: "Anchor-9" 427 741 basechar 0
+LayerCount: 2
+Fore
+Refer: 867 117 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 252 104 2
+EndChar
+
+StartChar: uni021E
+Encoding: 542 542 1102
+Width: 808
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 515 887 basechar 0
+AnchorPoint: "Anchor-14" 515 887 basechar 0
+AnchorPoint: "Anchor-13" 515 887 basechar 0
+AnchorPoint: "Anchor-12" 515 887 basechar 0
+AnchorPoint: "Anchor-11" 515 887 basechar 0
+AnchorPoint: "Anchor-10" 515 887 basechar 0
+AnchorPoint: "Anchor-9" 515 887 basechar 0
+LayerCount: 2
+Fore
+Refer: 565 72 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 390 250 2
+EndChar
+
+StartChar: uni021F
+Encoding: 543 543 1103
+Width: 594
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 426 731 basechar 0
+AnchorPoint: "Anchor-14" 426 731 basechar 0
+AnchorPoint: "Anchor-13" 426 731 basechar 0
+AnchorPoint: "Anchor-12" 426 731 basechar 0
+AnchorPoint: "Anchor-11" 426 731 basechar 0
+AnchorPoint: "Anchor-10" 426 731 basechar 0
+AnchorPoint: "Anchor-9" 426 731 basechar 0
+LayerCount: 2
+Fore
+Refer: 770 104 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 359 94 2
+EndChar
+
+StartChar: uni01E8
+Encoding: 488 488 1104
+Width: 756
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 499 887 basechar 0
+AnchorPoint: "Anchor-14" 499 887 basechar 0
+AnchorPoint: "Anchor-13" 499 887 basechar 0
+AnchorPoint: "Anchor-12" 499 887 basechar 0
+AnchorPoint: "Anchor-11" 499 887 basechar 0
+AnchorPoint: "Anchor-10" 499 887 basechar 0
+AnchorPoint: "Anchor-9" 499 887 basechar 0
+LayerCount: 2
+Fore
+Refer: 585 75 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 378 250 2
+EndChar
+
+StartChar: uni01E9
+Encoding: 489 489 1105
+Width: 611
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 424 927 basechar 0
+AnchorPoint: "Anchor-14" 424 927 basechar 0
+AnchorPoint: "Anchor-13" 424 927 basechar 0
+AnchorPoint: "Anchor-12" 424 927 basechar 0
+AnchorPoint: "Anchor-11" 424 927 basechar 0
+AnchorPoint: "Anchor-10" 424 927 basechar 0
+AnchorPoint: "Anchor-9" 424 927 basechar 0
+LayerCount: 2
+Fore
+Refer: 792 107 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 285 290 2
+EndChar
+
+StartChar: uni01EE
+Encoding: 494 494 1106
+Width: 650
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 442 886 basechar 0
+AnchorPoint: "Anchor-14" 442 886 basechar 0
+AnchorPoint: "Anchor-13" 442 886 basechar 0
+AnchorPoint: "Anchor-12" 442 886 basechar 0
+AnchorPoint: "Anchor-11" 442 886 basechar 0
+AnchorPoint: "Anchor-10" 442 886 basechar 0
+AnchorPoint: "Anchor-9" 442 886 basechar 0
+LayerCount: 2
+Fore
+Refer: 1095 439 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 304 249 2
+EndChar
+
+StartChar: uni01EF
+Encoding: 495 495 1107
+Width: 530
+GlyphClass: 2
+Flags: W
+AnchorPoint: "Anchor-15" 366 735 basechar 0
+AnchorPoint: "Anchor-14" 366 735 basechar 0
+AnchorPoint: "Anchor-13" 366 735 basechar 0
+AnchorPoint: "Anchor-12" 366 735 basechar 0
+AnchorPoint: "Anchor-11" 366 735 basechar 0
+AnchorPoint: "Anchor-10" 366 735 basechar 0
+AnchorPoint: "Anchor-9" 366 735 basechar 0
+LayerCount: 2
+Fore
+Refer: 1096 658 N 1 0 0 1 0 0 2
+Refer: 1041 780 N 1 0 0 1 220 98 2
 EndChar
 EndChars
 EndSplineFont
