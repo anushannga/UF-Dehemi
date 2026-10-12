@@ -8,3 +8,5 @@
 *.sfd text eol=lf
 *.ttf binary
 *.png binary
+*.html text eol=lf
+*.patch text eol=lf whitespace=-blank-at-eol

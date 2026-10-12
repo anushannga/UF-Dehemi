@@ -1,0 +1,55 @@
+{
+  "version": "2.430",
+  "status": "pass",
+  "ci_run_id": 38225787985,
+  "ci_run_url": "https://github.com/anushannga/UF-Dehemi/actions/runs/38225787985",
+  "tested_commit": "23d58fbd91f8827bb8116a87e87e05e3bd1ed1a6",
+  "canonical_sha256": {
+    "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+    "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3"
+  },
+  "platforms": {
+    "linux": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+        "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5540,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "browser_soft_hyphen_status": "pass",
+      "browser_version": "153.0.8010.12"
+    },
+    "windows": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+        "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5540,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "uniscribe_cases_per_style": 790
+    },
+    "macos": {
+      "job_status": "success",
+      "canonical_font_hashes_match": true,
+      "sha256": {
+        "Regular": "34b2241aa3d89a79dfba0741ac986887e3e0120abbf5be529e38c37652319330",
+        "Italic": "14c1cec053bcd4c28cdda6f47a410f179b3355482132fbae74e6c54dc6208dd3"
+      },
+      "harfbuzz_cases_per_style": 788,
+      "freetype_renders_per_style": 5540,
+      "fontmake_sinhala_cases_per_style": 789,
+      "fontmake_latin_cases_per_style": 29,
+      "coretext_cases_per_style": 790,
+      "expected_conjunct_cases_per_style": 3
+    }
+  },
+  "limitations": "Actual tested corpus only; not universal compatibility, office/PDF certification or Google Fonts acceptance."
+}
