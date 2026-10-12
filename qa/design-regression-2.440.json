@@ -1,0 +1,180 @@
+{
+  "version": "2.440",
+  "baseline_version": "2.430",
+  "styles": {
+    "Regular": {
+      "sha256": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
+      "old_glyph_raster_cases": 5540,
+      "different_raster_cases": [],
+      "max_antialias_delta": 0,
+      "bounds_and_advances_identical": true,
+      "coordinate_changes": [
+        "sinTI"
+      ],
+      "hint_program_changes": []
+    },
+    "Italic": {
+      "sha256": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b",
+      "old_glyph_raster_cases": 5540,
+      "different_raster_cases": [
+        {
+          "glyph": "Lcaron",
+          "ppem": 12,
+          "max_antialias_delta": 1
+        },
+        {
+          "glyph": "dcaron",
+          "ppem": 12,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "lcaron",
+          "ppem": 12,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "tcaron",
+          "ppem": 12,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "Lcaron",
+          "ppem": 16,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "dcaron",
+          "ppem": 16,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "lcaron",
+          "ppem": 16,
+          "max_antialias_delta": 1
+        },
+        {
+          "glyph": "tcaron",
+          "ppem": 16,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "Lcaron",
+          "ppem": 24,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "dcaron",
+          "ppem": 24,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "lcaron",
+          "ppem": 24,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "tcaron",
+          "ppem": 24,
+          "max_antialias_delta": 5
+        },
+        {
+          "glyph": "Lcaron",
+          "ppem": 48,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "dcaron",
+          "ppem": 48,
+          "max_antialias_delta": 3
+        },
+        {
+          "glyph": "lcaron",
+          "ppem": 48,
+          "max_antialias_delta": 4
+        },
+        {
+          "glyph": "tcaron",
+          "ppem": 48,
+          "max_antialias_delta": 4
+        },
+        {
+          "glyph": "Lcaron",
+          "ppem": 96,
+          "max_antialias_delta": 4
+        },
+        {
+          "glyph": "dcaron",
+          "ppem": 96,
+          "max_antialias_delta": 4
+        },
+        {
+          "glyph": "lcaron",
+          "ppem": 96,
+          "max_antialias_delta": 2
+        },
+        {
+          "glyph": "tcaron",
+          "ppem": 96,
+          "max_antialias_delta": 4
+        }
+      ],
+      "max_antialias_delta": 5,
+      "bounds_and_advances_identical": true,
+      "coordinate_changes": [],
+      "hint_program_changes": []
+    }
+  },
+  "limitations": "Measured source/raster regression, not every application or curator approval.",
+  "tiny_retrace_experiment": {
+    "area_change_square_design_units": 1.3333333333721384,
+    "removed_retrace_pairs": 1,
+    "bounds_and_advance_unchanged": true,
+    "rasters": [
+      {
+        "ppem": 8,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 10,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 12,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 16,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 24,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 48,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 96,
+        "max_antialias_delta": 0,
+        "differing_pixels": 0
+      },
+      {
+        "ppem": 144,
+        "max_antialias_delta": 6,
+        "differing_pixels": 2
+      },
+      {
+        "ppem": 400,
+        "max_antialias_delta": 17,
+        "differing_pixels": 3
+      }
+    ]
+  }
+}

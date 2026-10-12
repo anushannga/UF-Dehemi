@@ -146,3 +146,43 @@ def normalize_regular_outlines(font, snap_axes=False, max_axis_shift=3):
         font['glyf'][name] = glyph
     font._dehemi_regular_outline_cleanup = stats
     return stats
+
+def remove_regular_tiny_retrace(font, allow_absent=False):
+    """Remove sinTI's tiny out-and-back quadratic nib in unhinted Regular.
+
+    This is a real geometric correction, not exact-area normalization. The
+    measured change is 1.333 square design units; bounds/advance stay unchanged.
+    Original hinted Italic is not processed. Fontmake sources already contain
+    the correction, so their native build may legitimately find no retrace.
+    """
+    if font['name'].getDebugName(2)!='Regular':
+        raise ValueError('Tiny retrace correction is restricted to Regular')
+    glyph=font['glyf']['sinTI']
+    if getattr(glyph,'program',None) and glyph.program.getBytecode():
+        raise ValueError('Cannot remove hinted points')
+    rec=DecomposingRecordingPen(font.getGlyphSet())
+    font.getGlyphSet()['sinTI'].draw(rec)
+    before=AreaPen(None);rec.replay(before)
+    output=[];position=None;index=0;removed=0
+    while index<len(rec.value):
+        operation,args=rec.value[index]
+        if operation=='qCurveTo' and len(args)==2 and index+1<len(rec.value):
+            following,next_args=rec.value[index+1]
+            if following=='qCurveTo' and len(next_args)==2 and next_args[-1]==position and max(abs(a-b) for a,b in zip(args[0],next_args[0]))<=1:
+                removed+=1;index+=2;continue
+        output.append((operation,args))
+        if operation in ('moveTo','lineTo','qCurveTo'):position=args[-1]
+        elif operation=='closePath':position=None
+        index+=1
+    if removed==0 and allow_absent:return {'removed_pairs':0,'already_corrected':True}
+    if removed!=1:raise ValueError(f'Unexpected sinTI retrace count: {removed}')
+    rec.value=output;after=AreaPen(None);rec.replay(after)
+    difference=abs(before.value-after.value)
+    if difference>2:raise ValueError('Tiny retrace change exceeded area bound')
+    original_bounds=(glyph.xMin,glyph.yMin,glyph.xMax,glyph.yMax)
+    pen=TTGlyphPen(None);rec.replay(pen)
+    corrected=pen.glyph();corrected.recalcBounds(font['glyf'])
+    if (corrected.xMin,corrected.yMin,corrected.xMax,corrected.yMax)!=original_bounds:
+        raise ValueError('Tiny retrace correction changed bounds')
+    font['glyf']['sinTI']=corrected
+    return {'removed_pairs':removed,'area_change_square_design_units':difference,'bounds_unchanged':True}

@@ -1,0 +1,28 @@
+{
+  "version": "2.440",
+  "profile": "googlefonts",
+  "fontspector_version": "1.9.0",
+  "summary": {
+    "SKIP": 137,
+    "PASS": 207,
+    "INFO": 15,
+    "WARN": 8,
+    "FAIL": 0
+  },
+  "baseline_warning_messages": 19,
+  "remaining_warning_messages_by_check": {
+    "contour_count": 2,
+    "outline_direction": 1,
+    "outline_jaggy_segments": 2,
+    "overlapping_path_segments": 1,
+    "googlefonts/metadata/unreachable_subsetting": 2
+  },
+  "checks_disabled": [],
+  "resolved": [
+    "alt_caron (8 messages)",
+    "soft_hyphen (2 messages)",
+    "Regular overlapping_path_segments (1 message)"
+  ],
+  "source_policy": "Original italic expanded points and hint instructions retained. Standard U+00AD layout is delegated to applications; U+2010 is supplied. Raw/default-ignorable-preserving glyph APIs can return .notdef for U+00AD and are not an application line-breaking test.",
+  "status": "Eight raw warnings remain for design/convention and upstream serving review; not all resolved or curator-approved."
+}

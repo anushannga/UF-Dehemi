@@ -55,6 +55,11 @@ the family.
 | U+2219 | BULLET OPERATOR |
 
 The proposed patch adds these to the editable Latin Extended serving definition.
+Dehemi 2.440 also supplies U+2010 HYPHEN for application discretionary line
+breaking; the current checker lists that character outside the inferred Latin
+subsets too. The adjacent patch therefore covers 18 characters: the 17 baseline
+characters above plus U+2010. Its addition is a typography coverage proposal,
+not a request to declare unrelated scripts or hide the warning.
 U+02D8, U+02D9 and U+02DB are already covered by its Spacing Modifier Letters
 block, but explicit exclusions currently remove them. The patch removes those
 three exclusions and adds the other 14 characters. U+02DA remains excluded here
