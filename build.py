@@ -7,7 +7,7 @@ from fontTools.pens.transformPen import TransformPen
 ROOT = Path(__file__).resolve().parent
 OUT = ROOT / 'fonts/ttf/dehemi'
 OUT.mkdir(parents=True, exist_ok=True)
-VERSION='2.430'
+VERSION='2.440'
 FAMILY='Dehemi'
 PREFIX='Dehemi'
 NOTICE='Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.'
@@ -116,6 +116,10 @@ def build(style):
             glyph=f['glyf'][name];glyph.recalcBounds(f['glyf'])
             advance,_=f['hmtx'].metrics[name]
             f['hmtx'].metrics[name]=(advance,getattr(glyph,'xMin',0))
+    from caron_components import componentize_alt_carons
+    componentize_alt_carons(f)
+    from discretionary_hyphen import configure_discretionary_hyphen
+    configure_discretionary_hyphen(f)
     f.save(OUT / f'{PREFIX}-{style}.ttf')
 
 def configure_metadata(f,style):

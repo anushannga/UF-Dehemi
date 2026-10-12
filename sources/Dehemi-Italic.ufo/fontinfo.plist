@@ -13,7 +13,7 @@
     <key>versionMajor</key>
     <integer>2</integer>
     <key>versionMinor</key>
-    <integer>430</integer>
+    <integer>440</integer>
     <key>copyright</key>
     <string>Copyright 2026 The Dehemi Project Authors (https://github.com/anushannga/UF-Dehemi). Copyright 2015-2023 The Maname Project Authors (https://github.com/mooniak/maname-font). Dehemi modifications by Pasan Anushanga. Release prepared for ANUSHANGA K P.</string>
     <key>unitsPerEm</key>
@@ -47,9 +47,9 @@
     <key>openTypeNameLicenseURL</key>
     <string>https://openfontlicense.org</string>
     <key>openTypeNameVersion</key>
-    <string>Version 2.430</string>
+    <string>Version 2.440</string>
     <key>openTypeNameUniqueID</key>
-    <string>2.430;UFDE;Dehemi-Italic</string>
+    <string>2.440;UFDE;Dehemi-Italic</string>
     <key>openTypeNameDescription</key>
     <string>Original Tight-232 slanted display design, preserving glyphs, hinting and Sinhala layouts. Maname derivative under SIL OFL 1.1.</string>
     <key>openTypeNameSampleText</key>

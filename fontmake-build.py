@@ -39,6 +39,10 @@ for style in ['Regular','Italic']:
     attach_virama_to_dotted_circle(fresh,reference=reference)
     if style=='Regular':unskew_positioning(fresh,tan(radians(-14)))
     configure_metadata(fresh,style)
+    from caron_components import componentize_alt_carons
+    componentize_alt_carons(fresh)
+    from discretionary_hyphen import configure_discretionary_hyphen
+    configure_discretionary_hyphen(fresh)
     fresh.save(target)
     release=OUT/f'{PREFIX}-{style}.ttf'
     assert fresh.getBestCmap()==canonical.getBestCmap(),(style,'cmap mismatch')

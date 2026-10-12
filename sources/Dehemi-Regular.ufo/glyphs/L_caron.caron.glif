@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<glyph name="Lcaron.caron" format="2">
+  <advance width="0"/>
+  <outline>
+    <contour>
+      <point x="353" y="565" type="qcurve"/>
+      <point x="340" y="567"/>
+      <point x="307" y="580"/>
+      <point x="302" y="591" type="qcurve"/>
+      <point x="309" y="618"/>
+      <point x="322" y="696"/>
+      <point x="336" y="780"/>
+      <point x="339" y="814" type="qcurve"/>
+      <point x="344" y="815"/>
+      <point x="349" y="815" type="qcurve" smooth="yes"/>
+      <point x="359" y="815" type="line" smooth="yes"/>
+      <point x="375" y="815"/>
+      <point x="405" y="810"/>
+      <point x="419" y="806" type="qcurve"/>
+      <point x="414" y="763"/>
+      <point x="391" y="668"/>
+      <point x="366" y="587"/>
+    </contour>
+  </outline>
+</glyph>

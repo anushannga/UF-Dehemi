@@ -7,9 +7,9 @@ the equivalent italic-space reference before the Regular positioning transform.
 
 New accent/ligature glyphs use this font's existing matching components. Ezh,
 long s and the added G/g bars are new drawings, not foreign font outlines.
-These new designs need human review. Existing decomposed Lcaron/dcaron/lcaron/
-tcaron remain unchanged: converting them to composites would disturb their
-point order and TrueType instructions merely to evade a manual-review warning.
+These new designs need human review. The separate caron_components module
+retains the existing alternate-caron point order/instructions while maintaining
+the actual body and distinctive accent drawings as editable components.
 
 Character identities/reference forms: Unicode Latin Extended-A/B, IPA
 Extensions and Spacing Modifier Letters charts at https://unicode.org/charts/.
