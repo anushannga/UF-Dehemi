@@ -1,24 +1,24 @@
 # Dehemi onboarding readiness
 
-Published release: **2.440**. The unreleased **2.441 candidate** corrects embedded OFL metadata and repository build/documentation. Local full-profile QA reports **213 PASS, 8 WARN, 0 FAIL, 133 SKIP, 15 INFO**, with the OFL file supplied explicitly and all four required licensing results passing. [Audit context](../qa/audit-context-2.441.json). New cross-platform candidate CI is not yet verified. Continue [google/fonts#11099](https://github.com/google/fonts/issues/11099), rather than opening a duplicate submission.
+Published release: **2.440**. The unreleased **2.441 candidate** corrects embedded OFL metadata and repository build/documentation. Full-profile QA reports **213 PASS, 8 WARN, 0 FAIL, 133 SKIP, 15 INFO**, with the OFL file supplied explicitly and all four required licensing results passing. [Audit context](../qa/audit-context-2.441.json). [Three-platform CI](https://github.com/anushannga/UF-Dehemi/actions/runs/38353650647) passes at `23d68dde8facfc8cd7187e07ee5d9abd5fb64b1f`. Continue [google/fonts#11099](https://github.com/google/fonts/issues/11099), rather than opening a duplicate submission.
 
 The author should personally read the [Google Fonts Guide](https://googlefonts.github.io/gf-guide/) and review the [official Add Font template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md), as [requested by the maintainer](https://github.com/google/fonts/issues/11099#issuecomment-6137696893). The prepared [submission draft](SUBMISSION-DRAFT.md) keeps personal declarations unchecked. Repository repairs and automated checks cannot supply those declarations.
 
 ## Author confirmations
 
-The following cover the official template's requirements, shortened for this checklist. An unchecked item is not a conclusion that the requirement fails.
+The following cover the official template's requirements, shortened for this checklist. Checked facts have evidence or an author confirmation; unchecked items remain unconfirmed rather than automatically failed. See the [item-by-item verification](CHECKLIST-VERIFICATION.md) for scope and limits.
 
-- [ ] Confirm the public repository contains the entire offered font project under OFL.
+- [x] Confirm the current public repository contains the offered two-style font project under OFL; the author agrees to OFL.
 - [ ] Confirm no larger retail, plus or pro version exists elsewhere.
-- [ ] Confirm maintained source/build inputs are available in the repository.
+- [x] Confirm maintained source/build inputs are available in the repository.
 - [ ] Confirm all relevant authors' contributions are covered by OFL and disclose AI assistance.
-- [ ] Confirm known upstream Reserved Font Names are absent from Dehemi's family name, or agree an exception with Google Fonts.
-- [ ] Verify family-name uniqueness using [FontData namecheck](https://namecheck.fontdata.com/).
-- [ ] Confirm **Dehemi** as the definitive app-menu family name, with Regular and Italic styles.
-- [ ] Confirm candidate coverage of the required [Google Fonts Latin Core](https://github.com/googlefonts/glyphsets/blob/main/data/results/txt/nice-names/GF_Latin_Core.txt).
-- [ ] Confirm the completed repository meets the [preferred upstream structure](https://googlefonts.github.io/gf-guide/upstream.html), including the one-command build and specimen.
+- [x] Confirm inspected current/upstream license headers contain no Reserved Font Name declaration.
+- [x] Run [FontData namecheck](https://namecheck.fontdata.com/?q=Dehemi): no exact Dehemi match found on 13 October 2026.
+- [x] Confirm **Dehemi** as the definitive app-menu family name, with Regular and Italic styles.
+- [x] Confirm both candidate styles map all 319 required [Latin Core codepoints](../qa/latin-core-2.441.json) to non-.notdef glyphs.
+- [x] Confirm the listed [upstream structure](https://googlefonts.github.io/gf-guide/upstream.html) elements, including the one-command source build and README specimen.
 - [ ] Personally read, agree to and comply with the full contributing requirements.
-- [ ] Personally commit to repository maintenance and participation during onboarding.
+- [x] Author agrees to maintenance and community participation during onboarding.
 
 Verified repository facts: maintained source/build inputs are present; reverse-export and acquisition limits are disclosed in [SOURCE-HISTORY.md](SOURCE-HISTORY.md). Current app-menu naming is Dehemi. AI assistance and upstream Maname attribution are disclosed. Current Dehemi and inspected Maname license notices contain no RFN declaration. These facts do not fill the author's personal confirmations.
 
@@ -34,4 +34,4 @@ The published 2.440 audit has eight raw warnings: six outline/design messages an
 
 [nam-files PR #32](https://github.com/googlefonts/nam-files/pull/32) is closed and unmerged. Simon Cozens explained that distributing bases and marks across separate served fonts can [break attachment](https://github.com/googlefonts/nam-files/pull/32#issuecomment-6129761200), and [directed serving work to the onboarding team](https://github.com/googlefonts/nam-files/pull/32#issuecomment-6137450860). The local [proposal and patch](SUBSET-COVERAGE-PROPOSAL.md) remain historical evidence, not an active merge request or deployed fix.
 
-The candidate's [table comparison](../qa/metadata-change-2.441.json) proves drawing, hinting, layout and metric table bytes unchanged from 2.440. Local canonical, Windows and native fontmake checks pass, as linked from the README. Candidate cross-platform CI remains to be verified. The historical 2.440 audit omitted the OFL collection input, so its PASS total must not be treated as directly comparable with the candidate's complete audit. Tests cover a recorded corpus, with no every-application, Office/PDF or DirectWrite certification. Acceptance and downstream Google Docs availability are external decisions.
+The candidate's [table comparison](../qa/metadata-change-2.441.json) proves drawing, hinting, layout and metric table bytes unchanged from 2.440. Canonical, native platform, fontmake and browser checks pass in the recorded three-platform run. The historical 2.440 audit omitted the OFL collection input, so its PASS total must not be treated as directly comparable with the candidate's complete audit. Tests cover a recorded corpus, with no every-application, Office/PDF or DirectWrite certification. Acceptance and downstream Google Docs availability are external decisions.
