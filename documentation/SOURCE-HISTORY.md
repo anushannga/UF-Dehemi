@@ -19,6 +19,11 @@ These hashes identify the recorded files, not the missing upstream acquisition h
 
 ## Upstream attribution
 
+The [historical replay](HISTORICAL-REPLAY.md) now reconstructs all recorded
+Maname-derived glyph geometry, metrics, cmap/layout and final hint programs, with
+matching canonical TTX fingerprints. This closes the technical composition gap;
+the original acquisition date and original command log are still not certified.
+
 The retained Maname notice matches the upstream [OFL.txt](https://github.com/mooniak/maname-font/blob/main/OFL.txt): Copyright 2015-2023 The Maname Project Authors. Its header contains no Reserved Font Name declaration. The full SIL OFL 1.1 terms and upstream copyright remain in this project's license and fonts.
 
 Upstream [AUTHORS.txt](https://github.com/mooniak/maname-font/blob/main/AUTHORS.txt) identifies Pathum Egodawatta for copyright purposes. [CONTRIBUTORS.txt](https://github.com/mooniak/maname-font/blob/main/CONTRIBUTORS.txt) is empty in the inspected upstream repository. An empty contributor file does not establish complete contributor coverage or a completed Google CLA. [The upstream README](https://github.com/mooniak/maname-font) describes the project's design history.

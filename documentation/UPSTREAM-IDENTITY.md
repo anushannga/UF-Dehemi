@@ -33,6 +33,13 @@ source commit solely because both binaries report version 1.002.
 
 ## Remaining historical pipeline gaps
 
+**13 October follow-up:** [A current replay](HISTORICAL-REPLAY.md) now reproduces
+all recorded artwork/metrics/layout and final hint bytes. The remaining limits
+below concern the original historical scripts/commands and file identity, rather
+than an unidentified artwork source. The missing seven-unit step has been
+reconstructed explicitly from the observed differences, not presented as a
+recovered original script.
+
 Local scripts and reports describe the earlier study, extraction, texture,
 production and tightening stages, but the submitted project contains only part
 of that historical pipeline. In particular, the checked tightening script writes

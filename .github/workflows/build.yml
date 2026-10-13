@@ -44,6 +44,13 @@ jobs:
           mkdir -p "$RUNNER_TEMP/fontspector"
           tar -xzf "$archive" -C "$RUNNER_TEMP/fontspector" --strip-components=1
           python audit.py --fontspector "$RUNNER_TEMP/fontspector/fontspector"
+      - name: Verify historical source composition
+        if: runner.os == 'Windows'
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python -m pip install -r sources/history/requirements.txt
+          python sources/history/replay.py
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
@@ -62,3 +69,4 @@ jobs:
             qa/fontspector-*.json
             qa/fontspector-*.html
             qa/audit-context-*.json
+            qa/history-replay-*.json

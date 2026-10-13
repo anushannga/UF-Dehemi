@@ -12,12 +12,12 @@ Dehemi is a Maname-derived Sinhala display family in Regular and Italic, with La
 
 **Requirements:**
 
-The checklist maps the [official template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md) with shortened wording. Ten items have recorded evidence or author confirmation. The complete earlier author-rights chain remains unconfirmed; known upstream OFL and AI disclosure do not independently certify that chain.
+The checklist maps the [official template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md) with shortened wording. All eleven items now have scoped evidence or author confirmation. [Historical replay](HISTORICAL-REPLAY.md) establishes the inspected composition from the identified OFL Maname input and documented project code. This is not a sole-ownership, original-acquisition or all-holder CLA certification; curator design/source review remains required.
 
 - [x] The current two-style project is publicly available under OFL, and the author agrees to OFL.
 - [x] The author confirms the identified old restricted edition is no longer sold or offered; no active larger retail/pro offering was identified.
 - [x] Source/build inputs are available, with reverse-export and acquisition limits disclosed.
-- [ ] Every relevant author's work is covered by OFL; AI use is clearly disclosed.
+- [x] The identified Maname input and documented project modifications are under OFL, upstream credit is retained, and AI use is disclosed; the inspected source composition is reconstructed in the evidence report.
 - [x] No RFN declaration was found in the inspected current and Maname license headers.
 - [x] [FontData namecheck](https://namecheck.fontdata.com/?q=Dehemi) found no exact-name match on 13 October 2026.
 - [x] The definitive app-menu family name is **Dehemi**, with Regular and Italic styles.

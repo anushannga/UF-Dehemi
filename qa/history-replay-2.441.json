@@ -1,0 +1,44 @@
+{
+  "scope": "Current reconstruction; not certification of original acquisition/commands or exclusive authorship",
+  "maname_input_sha256": "8e616ff912bf881ffafbf032c9b80a46d0200c6037271352871d526b3be3f24f",
+  "alphabet_paths_reproduced": 59,
+  "many_weatz_input_loaded": false,
+  "stages": {
+    "production": {
+      "glyphs": 1086,
+      "geometry_metrics_cmap_layout_identical": true,
+      "replayed_sha256": "1ed6bfe3e0742f4e3bc004911afadd3fa08d8501ece539962b1aff18b3525a1e"
+    },
+    "ink": {
+      "glyphs": 1086,
+      "geometry_metrics_cmap_layout_identical": true,
+      "replayed_sha256": "be0c5b2ce84f15e2cde06c922100211a7cd52dd27e10c7375e4b65f96f38e28d"
+    },
+    "clean": {
+      "glyphs": 1086,
+      "geometry_metrics_cmap_layout_identical": true,
+      "replayed_sha256": "c6ad8a1f1ac79c6b793d49bd54d8b180ddc8aef76cb84a3dbe8000bf1c11c424"
+    },
+    "final": {
+      "glyphs": 1086,
+      "geometry_metrics_cmap_layout_identical": true,
+      "replayed_sha256": "16eda0ed24e37179938404b89e1866bb0b9f0131e25f53e045f890baf2c30407"
+    },
+    "tight2330": {
+      "glyphs": 1086,
+      "geometry_metrics_cmap_layout_identical": true,
+      "replayed_sha256": "1ebd57386f45f1bf0430ae0f115a733efc2f37ef9888b20c7ce359e8696295a5"
+    }
+  },
+  "tight2330_glyph_programs_and_hint_tables_identical": true,
+  "canonical_ttx_stage_fingerprint_identical": true,
+  "spacing_glyphs_changed": 513,
+  "dependencies": {
+    "fonttools": "4.63.0",
+    "skia-pathops": "0.9.2",
+    "uharfbuzz": "0.54.1",
+    "svgpathtools": "1.8.0",
+    "ttfautohint-py": "0.6.1"
+  },
+  "hint_tool": "ttfautohint 1.8.4.16-eb64"
+}

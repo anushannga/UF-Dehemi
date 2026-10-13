@@ -10,7 +10,7 @@ It does not supply personal declarations the author has not made.
 | 1. Entire offered project public and OFL | Verified for the current two-style repository; author agrees to OFL | Public GitHub repository, root OFL, license bundled with both fonts, embedded licensing checks pass. Author explicitly agreed to OFL in this review. Earlier prototypes are not evidence of a larger current offering. |
 | 2. No larger retail/pro version elsewhere | Author confirms identified restricted edition is no longer offered | On 13 October the author explicitly confirmed that the old restricted edition is neither sold nor offered now. No active larger retail offering was identified in the scoped search. Historical files remain intact; they were not deleted or retroactively relicensed. |
 | 3. Sources available | Verified | Both styles have committed UFO/SFD sources, TTX, maintained FEA/helpers and a one-command build in sources/. Reverse-export and historical-build limits remain disclosed. |
-| 4. All relevant authors' work licensed and AI disclosed | Known Maname OFL and AI disclosure verified; complete rights chain unconfirmed | Maname OFL/copyright retained; AUTHORS/CONTRIBUTORS record known roles. README/submission disclose Codex. Missing historical pipeline details prevent certifying every earlier contribution. The separate successful CLA check does not establish every copyright holder's coverage. |
+| 4. All relevant authors' work licensed and AI disclosed | Documented input composition and licensing supported by replay | All 1,086 recorded glyphs, metrics, layout and final hint programs reconstruct from the identified OFL Maname input and project scripts; the canonical TTX matches. No Many Weatz or Noto artwork input is needed in this chain. Maname credit, current project OFL and Codex disclosure are retained. [Replay evidence](HISTORICAL-REPLAY.md). This supports identified-material licensing; it is not an exclusive-ownership certificate or all-holder CLA verification. |
 | 5. Reserved Font Names respected | Verified for inspected current and upstream notices | No RFN declaration appears in either OFL header. The generic RFN definition in the license body is not a reservation. |
 | 6. Unique family name | Required database check completed; no exact match | FontData search for Dehemi returned no font by that exact name on 13 October. General web searches found no separate exact-name typeface offering. This is the prescribed limited name check, not trademark clearance. |
 | 7. Definitive app-menu name | Verified | Both generated fonts use family Dehemi, styles Regular/Italic. Metadata validation confirms exact names; the former UF exception is withdrawn. |
@@ -39,7 +39,7 @@ Full Fontspector 1.9.0: 213 PASS, 8 WARN, 0 FAIL, 133 SKIP, 15 INFO; all four
 required licensing results pass. [Audit context](../qa/audit-context-2.441.json).
 Drawing, hinting, layout and metric tables are identical to published 2.440.
 
-Remaining outside these checklist facts: six design/outline warnings, complete
-historical source reconstruction, all-holder contributor coverage, and curator
+Remaining outside these checklist facts: six design/outline warnings, original
+acquisition/command-log certification, all-holder contributor coverage, and curator
 design/source acceptance. The font is Maname-derived; this verification does not
 relabel it as independently drawn or promise Google Fonts/Google Docs availability.
