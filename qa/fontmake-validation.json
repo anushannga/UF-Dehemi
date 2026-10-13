@@ -1,20 +1,20 @@
 {
   "Regular": {
-    "version": "2.440",
+    "version": "2.441",
     "matching_shaping_cases": 789,
     "matching_latin_cases": 29,
     "identical_cmap": true,
-    "canonical_sha256": "9686a27f50f47d877248fb3f9930fa71f613faae09657650165a47641270c568",
-    "development_sha256": "26e4f21778475da213db576f493599699defc939c5f54ff2d6b13d9e0041b38d",
+    "canonical_sha256": "c4de26513c1ede47a187a824475cbb54bfcd567a1428bf19b174cd326adb853e",
+    "development_sha256": "fbba2a44f67161784601ddfa9015abe14bac83655932685a7490e1581b0e39a5",
     "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
   },
   "Italic": {
-    "version": "2.440",
+    "version": "2.441",
     "matching_shaping_cases": 789,
     "matching_latin_cases": 29,
     "identical_cmap": true,
-    "canonical_sha256": "0c6eb0a906497006fe0d8f585b176d4a46f6367e137bf95bfb4fcbddc2b3c08b",
-    "development_sha256": "33cfce69837ed1808b20350c59736ba27c28638162d8eb0b63cbd16c131490d3",
+    "canonical_sha256": "b68f46ca124f27203012c6e348f431ea67ff628cf8510722c9a8ee4ded318c08",
+    "development_sha256": "8eff462e398ef420d0ac25968e2c172684cb08ba817246353e1ee33af08f4bfe",
     "limitations": "Fontmake development output is unhinted and is not pixel-identical to canonical release."
   }
 }

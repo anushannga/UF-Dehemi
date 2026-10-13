@@ -3,8 +3,8 @@ import json, hashlib
 from fontTools.ttLib import TTFont
 import uharfbuzz as hb
 import freetype
-from build import VERSION,FAMILY,PREFIX,OUT,NOTICE
-from latin_extensions import AUXILIARY_CODEPOINTS,CARON_BASES
+from build import VERSION,FAMILY,PREFIX,OUT,NOTICE,LICENSE_DESCRIPTION,LICENSE_URL
+from sources.latin_extensions import AUXILIARY_CODEPOINTS,CARON_BASES
 R=Path(__file__).resolve().parent
 paths={s:OUT/f'{PREFIX}-{s}.ttf' for s in ['Regular','Italic']}
 old=TTFont();old.importXML(R/'sources/Upstream-Tight232.ttx')
@@ -24,6 +24,10 @@ for style,path in paths.items():
     assert font['name'].getDebugName(1)==FAMILY
     assert font['name'].getDebugName(0)==NOTICE==(R/'OFL.txt').read_text(encoding='utf8').splitlines()[0]
     assert font['name'].getDebugName(2)==style
+    assert (OUT/'OFL.txt').read_bytes()==(R/'OFL.txt').read_bytes()
+    for nid,expected in [(13,LICENSE_DESCRIPTION),(14,LICENSE_URL)]:
+        records=[n for n in font['name'].names if n.nameID==nid]
+        assert records and all(n.toUnicode()==expected for n in records),(style,nid)
     assert not any(n.nameID in [16,17] for n in font['name'].names)
     assert font['hmtx'].metrics[cmap[0x2C9]][0]>0
     assert font['hmtx'].metrics[cmap[0xD81]][0]==0
@@ -39,7 +43,7 @@ for style,path in paths.items():
     shy=shape(data,'co\u00adoperate');plain=shape(data,'cooperate')
     assert all(g[0] for g in shy) and sum(g[1] for g in shy)==sum(g[1] for g in plain)
     assert [g[0] for g in shy if g[1]]==[g[0] for g in plain if g[1]]
-    from caron_components import CARON_GLYPHS
+    from sources.caron_components import CARON_GLYPHS
     for name in CARON_GLYPHS:
         assert font['glyf'][name].isComposite(),(style,name)
         assert [c.glyphName for c in font['glyf'][name].components]==[name+'.body',name+'.caron']
@@ -68,6 +72,6 @@ for style,path in paths.items():
     assert any(g[0]==markid and g[1]==0 and g[4]!=0 for g in positioned),(style,positioned)
     viramaid=font.getGlyphID('sinVirama');positioned=shape(data,'◌්')
     assert any(g[0]==viramaid and g[1]==0 and (g[3] or g[4]) for g in positioned),(style,positioned)
-    result[style]={'shaping_cases':len(samples),'rendered_glyphs':len(font.getGlyphOrder())*5,'sha256':hashlib.sha256(data).hexdigest(),'sinhala_assigned_coverage':True,'metadata_coverage_mark_attachment_assertions':True,'auxiliary_latin_codepoints':len(AUXILIARY_CODEPOINTS),'nfc_nfd_comparisons':len(CARON_BASES),'virama_dotted_circle_attachment':True,'line_height_units':1500,'previous_line_height_units':1553}
+    result[style]={'shaping_cases':len(samples),'rendered_glyphs':len(font.getGlyphOrder())*5,'sha256':hashlib.sha256(data).hexdigest(),'sinhala_assigned_coverage':True,'metadata_coverage_mark_attachment_assertions':True,'license_metadata_and_bundled_license':True,'auxiliary_latin_codepoints':len(AUXILIARY_CODEPOINTS),'nfc_nfd_comparisons':len(CARON_BASES),'virama_dotted_circle_attachment':True,'line_height_units':1500,'previous_line_height_units':1553}
 (R/'qa'/f'validation-{VERSION}.json').write_text(json.dumps(result,indent=2),encoding='utf8')
 print(json.dumps(result))

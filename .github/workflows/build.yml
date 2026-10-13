@@ -19,27 +19,54 @@ jobs:
           brew install freetype
           echo "DYLD_LIBRARY_PATH=$(brew --prefix freetype)/lib" >> "$GITHUB_ENV"
         if: runner.os == 'macOS'
-      - run: python build.py
+      - name: Build canonical and native sources
+        shell: bash
+        run: bash sources/build.sh
       - run: python validate.py
       - run: python windows_validate.py
         if: runner.os == 'Windows'
       - run: python coretext_validate.py
         if: runner.os == 'macOS'
-      - run: python fontmake-build.py
       - run: |
           python -m pip install playwright==1.63.0
           python -m playwright install --with-deps chromium
           python browser_validate.py
+      - name: Audit with Fontspector 1.9.0
+        if: runner.os == 'Linux'
+        shell: bash
+        run: |
+          set -euo pipefail
+          archive="$RUNNER_TEMP/fontspector.tar.gz"
+          curl --fail --location --retry 3 \
+            'https://github.com/fonttools/fontspector/releases/download/fontspector-v1.9.0/fontspector-1.9.0-x86_64-unknown-linux-gnu.tar.gz' \
+            --output "$archive"
+          printf '%s  %s\n' '0d4a7fbc577f7f99a084dec2a7acc13f64f923cbe44c0e3c5e3d76469786b8e2' "$archive" | sha256sum --check
+          mkdir -p "$RUNNER_TEMP/fontspector"
+          tar -xzf "$archive" -C "$RUNNER_TEMP/fontspector" --strip-components=1
+          python audit.py --fontspector "$RUNNER_TEMP/fontspector/fontspector"
+      - name: Verify historical source composition
+        if: runner.os == 'Windows'
+        env:
+          PYTHONIOENCODING: utf-8
+        run: |
+          python -m pip install -r sources/history/requirements.txt
+          python sources/history/replay.py
       - uses: actions/upload-artifact@v7.0.2
         if: always()
         with:
           name: Dehemi-build-${{ matrix.os }}
           path: |
-            fonts/ttf/dehemi/*.ttf
+            fonts/ttf/dehemi/
             build/fontmake/*.ttf
-            qa/validation-2.440.json
-            qa/windows-validation-2.440.json
-            qa/coretext-validation-2.440.json
-            qa/browser-validation-2.440.json
-            qa/browser-proof-2.440.png
+            build/fontmake/OFL.txt
+            qa/validation-*.json
+            qa/windows-validation-*.json
+            qa/coretext-validation-*.json
+            qa/browser-validation-*.json
+            qa/browser-proof-*.png
             qa/fontmake-validation.json
+            qa/fontmake-validation-*.json
+            qa/fontspector-*.json
+            qa/fontspector-*.html
+            qa/audit-context-*.json
+            qa/history-replay-*.json

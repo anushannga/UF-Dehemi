@@ -1,63 +1,55 @@
 # Dehemi
 
-Current release: **2.440**, Regular and original Italic, SIL OFL 1.1. Choose Dehemi + Italic for the original slanted design. Upstream Maname attribution and documented reverse-export source history remain retained.
+Dehemi is a Maname-derived Sinhala display family with Regular and Italic styles, released under [SIL OFL 1.1](OFL.txt). The app-menu family name is **Dehemi**; choose Italic for the original slanted design.
 
-The unmodified Fontspector 1.9.0 Google Fonts profile reports **207 PASS, 8 WARN, 0 FAIL, 137 SKIP, 15 INFO**, down from 19 warnings in 2.430. Actual caron component structure, application-controlled soft hyphens with U+2010 coverage, and Regular's tiny retrace are corrected. Remaining eight raw messages and limits are disclosed in [WARNING-REVIEW.md](documentation/WARNING-REVIEW.md); checks are not excluded.
+The published release remains [2.440](https://github.com/anushannga/UF-Dehemi/releases/tag/v2.440). This branch prepares **2.441**, an unreleased candidate correcting embedded OFL license metadata and repository build/documentation. [Linux, Windows and macOS candidate CI](https://github.com/anushannga/UF-Dehemi/actions/runs/38353650647) passes at `23d68dde8facfc8cd7187e07ee5d9abd5fb64b1f`.
 
-Current local validation passes 788 HarfBuzz cases and 5,585 FreeType renders per style; Windows Uniscribe passes 790 cases. Native fontmake matches 789 Sinhala and 29 Latin cases and the complete cmap. See `qa/validation-2.440.json`, `qa/windows-validation-2.440.json`, `qa/fontmake-validation-2.440.json`, `qa/fontspector-2.440.json`, and [design regression](qa/design-regression-2.440.json).
+![Dehemi 2.440 Regular and Italic Sinhala and Latin specimen](documentation/Preview.png)
 
-Original Italic expanded points and hint programs are preserved. Four Latin carons have small compound-renderer antialias differences; Sinhala remains unchanged. Regular's tiny sinTI correction changes 1.333 square design units but has identical pixels through 96 px and unchanged bounds/advances.
-
-Discretionary U+00AD is deliberately not encoded, following the checker recommendation; applications must handle line breaking. Raw glyph APIs which preserve default ignorables can return .notdef for this control. Actual application browser behavior must be verified separately. Default line metrics remain those of 2.430 (1500 units); no further line-height reduction is made.
-
-Current source build inputs additionally include `caron_components.py` and `discretionary_hyphen.py`. The previous build instructions below remain applicable. All Linux, Windows and macOS jobs passed in [run 38231411379](https://github.com/anushannga/UF-Dehemi/actions/runs/38231411379), at `6dc1621fc01401ffc11b6b8055a1b5f3dc6817f6`. The canonical font hashes from all platforms match the current release. Actual isolated Chromium conditional-hyphen checks pass on all three operating systems; native Windows Uniscribe and macOS CoreText checks also pass. Reports: `qa/platform-validation-2.440.json`, `qa/coretext-validation-2.440.json`, `qa/platforms/*-browser-validation-2.440.json`. Google Fonts acceptance, Google Docs availability and human CLA are not claimed.
-
-
----
-
-# Dehemi 2.430 historical baseline
-
-Dehemi is a Sinhala Unicode display family with Regular and Italic styles under SIL Open Font License 1.1. Baseline version: **2.430**. The repository URL retains its historical `UF-Dehemi` name.
-
-Italic preserves the original Tight-232 artwork and TrueType hints. Regular removes the italic shear from outlines and positioning anchors, with bounded outline corrections; it is unhinted. Choose **Dehemi Italic** for the original slanted design.
-
-## Release and verification
-
-Release files: `fonts/ttf/dehemi/Dehemi-Regular.ttf` and `fonts/ttf/dehemi/Dehemi-Italic.ttf`.
-
-Version 2.430 fixes virama spacing and dotted-circle attachment, adds 18 auxiliary Latin characters, repairs Lithuanian `l` + tilde positioning, and aligns hhea/typo line metrics. Regular winding and nearly axial line segments are corrected, and proven degenerate segments are removed. Existing Italic coordinates and glyph hint instructions remain unchanged.
-
-The shared default line height changes from 1553 to 1500 design units (about **3.4% less spacing**); existing documents may reflow. The measured glyph envelope remains -319 to 1154, within typo/hhea metrics -333 to 1167. Windows clipping margins remain -359 to 1194. This is tested coverage, not a claim for arbitrary stacks of combining marks.
-
-Fontspector 1.9.0, unmodified Google Fonts profile, both styles: **204 PASS, 19 WARN, 0 FAIL, 137 SKIP, 13 INFO**. The 2.420 baseline had 196 PASS and 27 WARN. No checks are excluded and warnings are not relabeled as passes. Reports: [JSON](qa/fontspector-2.430.json), [HTML](qa/fontspector-2.430.html), [resolution record](qa/warning-resolution-2.430.json), [warning review](documentation/WARNING-REVIEW.md).
-
-Local checks pass 788 HarfBuzz Sinhala cases and 5,540 FreeType glyph renders per style, plus 10 Latin NFC/NFD comparisons and targeted mark assertions. Windows Uniscribe passes 790 cases per style. Native UFO/fontmake builds match 789 Sinhala and 29 Latin cases per style and the complete cmap. Reports are in `qa/validation-2.430.json`, `qa/windows-validation-2.430.json` and `qa/fontmake-validation-2.430.json`.
-
-The original 1,090 Italic glyphs have identical point coordinates and hint instructions to 2.420; 5,450 old-glyph raster comparisons are identical. Regular corrections move 515 points across 270 old glyphs by at most three design units. Existing advances change only for `sinVirama` (237 to zero); tested normal Sinhala shaping stays unchanged. See [outline QA](qa/outline-review-2.430.json) and [visual proof](documentation/outline-proof-2.430.png).
-
-All Linux, Windows and macOS jobs passed in [run 38226501752](https://github.com/anushannga/UF-Dehemi/actions/runs/38226501752), testing `574efaca4d82c4ab0604663d703ad9c01e3f9c3f`. Canonical TTF hashes from all three platforms match the current release. Windows Uniscribe and actual macOS CoreText each pass 790 coverage cases per style; CoreText also passes three expected conjunct cases per style with no missing/fallback glyphs and mark-geometry checks. Linux Chromium 153.0.8010.12 passes the conditional soft-hyphen line-breaking proof in both styles. Reports: `qa/platform-validation-2.430.json`, `qa/coretext-validation-2.430.json`, `qa/browser-validation-2.430.json` and `qa/platforms/`.
+*Published 2.440 specimen. Candidate drawing, hinting, layout and metric table bytes are identical; only the head and name tables differ. [Comparison](qa/metadata-change-2.441.json).*
 
 ## Build
 
-Use Python 3.12 and pinned dependencies:
+Use Python 3.12 and a Bash shell, including Git Bash on Windows. From the repository root:
 
 ```sh
-pip install -r requirements.txt
-python build.py
-python validate.py
-python fontmake-build.py
+python -m pip install -r requirements.txt
+bash sources/build.sh
 ```
 
-The canonical build reads `sources/Upstream-Tight232.ttx`, preserves original Italic outlines/hints, and compiles maintained `sources/features.fea` with fontTools feaLib. `latin_extensions.py` and `sinhala_marks.py` generate source-defined glyph/positioning additions. `outline_cleanup.py` applies the bounded Regular correction. No binary layout table is copied from a compiled release.
+The entry point runs the maintained implementations `sources/build.py` and `sources/fontmake-build.py`. It builds the canonical TTFs with a copy of `OFL.txt` in `fonts/ttf/dehemi/`, then the native UFO/fontmake development output in `build/fontmake/`, with shaping and cmap parity checks. Root `build.py` and `fontmake-build.py` remain compatibility entry points.
 
-SFD/UFO outlines are reverse exports, not the original drawing workflow. The FEA began as a reverse export and is now maintained, editable compiler input. `fontmake-build.py` builds UFO outlines/features, adds the same source-defined positioning and metadata, and compares layouts against the canonical release. Its outputs in `build/fontmake/` are unhinted and are not pixel-identical to the canonical TTFs.
+Run canonical validation and the full Fontspector audit from the repository root:
 
-The CI workflow builds on Linux, Windows and macOS. It runs native Windows Uniscribe and macOS CoreText checks on their actual platforms. Linux additionally executes `browser_validate.py` with an isolated Playwright Chromium context; it checks conditional soft-hyphen line breaking using the release TTFs. This does not access a user's browser profile.
+```sh
+python validate.py
+python audit.py
+```
 
-## Attribution and onboarding
+`audit.py` requires Fontspector 1.9.0 on PATH, or an executable supplied with `--fontspector /path/to/fontspector`. It supplies both TTFs and the bundled OFL file explicitly to the unmodified Google Fonts profile. Platform checks are recorded separately in `qa/`.
 
-Dehemi derives from Maname. Upstream copyright and SIL OFL 1.1 terms are retained in [OFL.txt](OFL.txt) and the fonts. Pasan Anushanga is credited for modifications; ANUSHANGA K P is the supplied release preparer name. OpenAI Codex assisted with technical adjustments, the upright transformation, source preparation and QA. Exclusive ownership of upstream work is not claimed.
+The canonical build compiles `sources/features.fea` and source-defined helpers while preserving the recorded Italic outlines and TrueType hint programs from `sources/Upstream-Tight232.ttx`. Regular removes the Italic shear from outlines and positioning anchors and is unhinted. Native fontmake output is also unhinted and differs in pixels from the canonical TTFs.
 
-Continue [Google Fonts submission #11099](https://github.com/google/fonts/issues/11099). The selected name Dehemi removes the previous UF abbreviation issue. Human CLA, upstream contributor coverage and curator design/serving review remain pending. See [onboarding](documentation/ONBOARDING.md) and the [serving coverage proposal](documentation/SUBSET-COVERAGE-PROPOSAL.md).
+## Source and attribution
 
-OFL distribution permits use and redistribution under the license. A public release and successful checks do not constitute Google Fonts acceptance or guarantee Google Docs availability. [Official onboarding guide](https://googlefonts.github.io/gf-guide/onboarding.html).
+Dehemi retains Maname copyright and OFL terms. Pasan Anushanga is credited for modifications; ANUSHANGA K P is the release preparer. OpenAI Codex assisted with technical adjustments, the upright companion, source/build preparation and QA.
+
+The TTX records the supplied derivative Tight-232 stage, not the original Maname drawing sources. SFD/UFO outlines and the initial feature source are reverse exports. Earlier upstream acquisition/design steps are not fully pinned. See [source history](documentation/SOURCE-HISTORY.md) for the inputs and limits of reproducibility.
+
+## Candidate 2.441 QA and limits
+
+Fontspector 1.9.0, unmodified Google Fonts profile with both fonts and OFL: **213 PASS, 8 WARN, 0 FAIL, 133 SKIP, 15 INFO**. All four required licensing results pass. Six warnings concern textured contours, acute joins and preserved Italic overlap/winding; two concern inferred serving subsets. Checks remain enabled. [Raw report](qa/fontspector-2.441.json), [audit inputs](qa/audit-context-2.441.json), [warning review](documentation/WARNING-REVIEW.md).
+
+Candidate local checks pass 788 HarfBuzz cases, 5,585 FreeType renders and 790 Windows Uniscribe cases per style. The one-command build passes 789 Sinhala/29 Latin native fontmake comparisons per style and complete cmap parity. Reports: [canonical validation](qa/validation-2.441.json), [Windows](qa/windows-validation-2.441.json), [fontmake](qa/fontmake-validation.json).
+
+An isolated local Chromium 151.0.7922.34 run passes conditional soft-hyphen checks in both styles. [Browser report](qa/browser-validation-2.441.json). The recorded three-platform CI also passes browser checks in Chromium 153.0.8010.12.
+
+Published 2.440 [three-platform evidence](qa/platform-validation-2.440.json) remains a historical baseline, not a candidate CI run. Its font-only audit was 207 PASS, 8 WARN, 0 FAIL, 137 SKIP, 15 INFO; it omitted the OFL collection input, so the PASS totals are not a count of new font fixes. These tests cover a recorded corpus and do not certify human design approval, Office/PDF export, DirectWrite or every application.
+
+U+00AD is handled by application line breaking rather than encoded; U+2010 supplies its visible hyphen. Raw APIs preserving default ignorables can return .notdef for U+00AD. Shared line metrics are 1500 units, as in 2.430; unusually stacked marks need separate review.
+
+## Google Fonts onboarding
+
+Continue the existing [submission #11099](https://github.com/google/fonts/issues/11099). The author must personally review and confirm the [submission requirements](documentation/ONBOARDING.md), as [requested by the maintainer](https://github.com/google/fonts/issues/11099#issuecomment-6137696893). Successful checks alone do not establish acceptance or Google Docs availability.
+
+The `cla/google` check on the final head of [nam-files PR #32](https://github.com/googlefonts/nam-files/pull/32/checks) succeeded. Coverage of every relevant copyright holder for this font submission remains unconfirmed. That subset PR is **closed, unmerged**; Google Fonts maintainers handle serving subsets during onboarding. Its [patch and investigation](documentation/SUBSET-COVERAGE-PROPOSAL.md) are historical evidence.

@@ -13,7 +13,7 @@ from fontTools.ttLib.tables import otTables
 from fontTools.ttLib.tables.otBase import ValueRecord
 
 
-FEATURE_SOURCE = Path(__file__).resolve().parent / "sources" / "features.fea"
+FEATURE_SOURCE = Path(__file__).resolve().parent / "features.fea"
 
 
 def compile_features(font, source=FEATURE_SOURCE):

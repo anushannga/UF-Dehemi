@@ -1,0 +1,26 @@
+{
+  "build_collection_v12.py": {
+    "sha256": "5150cc2c277911461ee74cc4a27545c874b6dcc448223ac94067d23c7fb30885",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  },
+  "build_design12_production.py": {
+    "sha256": "306c135d953fb8453391ebd6e6344123fc5581aaab314daf07a76f7f7e51e541",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  },
+  "build_design12_ink.py": {
+    "sha256": "349bd19413c15e767ed54b2408dc8975e5df27cc9215eb18cc4a13bf01666ec6",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  },
+  "clean_design12_ink_fragments.py": {
+    "sha256": "8d4c3e4aa20e24a586653e9ab97d7c712fb5fd54ad70bf9bf75e4946e1b25f08",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  },
+  "remove_design12_hair_tails.py": {
+    "sha256": "fba09b00201bb08e1d35e966b50bc546abb779b1dbbd8bbb3b7a7b7173a38c04",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  },
+  "finalize_design12_metrics.py": {
+    "sha256": "072250244af016ec5d409db5556ce3126dd9b6d30cbfa98e69927dba4d1d32fc",
+    "role": "Recovered historical script snapshot; acquisition/execution date not certified"
+  }
+}

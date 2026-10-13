@@ -1,0 +1,18 @@
+{
+  "version": "2.441",
+  "fontspector": "fontspector 1.9.0\ntag:fontspector-v1.9.0\ncommit_hash:d9d0f7b0\nbuild_time:2026-10-09 13:34:20 +00:00\nbuild_env:rustc 1.99.0 (b940084d7 2026-09-28),stable-x86_64-pc-windows-msvc",
+  "inputs": [
+    "fonts/ttf/dehemi/Dehemi-Regular.ttf",
+    "fonts/ttf/dehemi/Dehemi-Italic.ttf",
+    "fonts/ttf/dehemi/OFL.txt"
+  ],
+  "profile": "googlefonts",
+  "excluded_checks": [],
+  "summary": {
+    "SKIP": 133,
+    "PASS": 213,
+    "INFO": 15,
+    "WARN": 8
+  },
+  "required_licensing_checks_pass": true
+}

@@ -1,0 +1,22 @@
+{
+  "version": "2.441",
+  "glyphsets_commit": "432104e3ecb119c44b3cc29d7209d7b54bf41017",
+  "reference_url": "https://github.com/googlefonts/glyphsets/blob/432104e3ecb119c44b3cc29d7209d7b54bf41017/data/results/nam/GF_Latin_Core.nam",
+  "required_codepoints": 319,
+  "styles": {
+    "Regular": {
+      "missing_codepoints": [],
+      "font_sha256": "c4de26513c1ede47a187a824475cbb54bfcd567a1428bf19b174cd326adb853e",
+      "family": "Dehemi",
+      "style": "Regular",
+      "license_description": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+    },
+    "Italic": {
+      "missing_codepoints": [],
+      "font_sha256": "b68f46ca124f27203012c6e348f431ea67ff628cf8510722c9a8ee4ded318c08",
+      "family": "Dehemi",
+      "style": "Italic",
+      "license_description": "This Font Software is licensed under the SIL Open Font License, Version 1.1. This license is available with a FAQ at: https://openfontlicense.org"
+    }
+  }
+}
