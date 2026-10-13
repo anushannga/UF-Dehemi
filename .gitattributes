@@ -10,3 +10,6 @@
 *.png binary
 *.html text eol=lf
 *.patch text eol=lf whitespace=-blank-at-eol
+*.sh text eol=lf
+*.txt text eol=lf
+*.ttx text eol=lf

@@ -1,10 +1,11 @@
-# Dehemi: proposed Google Fonts serving coverage review
+# Dehemi: historical serving coverage investigation
 
-Status: **proposal for curator review; not an applied Google Fonts serving fix**.
-Submitted as [draft PR 32](https://github.com/googlefonts/nam-files/pull/32). The overlap test is not green: seven new cross-subset conflicts require a maintainer policy decision. No deployment is claimed.
-The adjacent [SUBSET-COVERAGE-PROPOSAL.patch](SUBSET-COVERAGE-PROPOSAL.patch) targets
-the upstream `googlefonts/nam-files` repository. It does not modify the published
-Dehemi fonts, turn off a QA check, or claim that Google has accepted the proposal.
+Status as of 13 October 2026: [nam-files PR #32](https://github.com/googlefonts/nam-files/pull/32) is **closed, unmerged**. Simon Cozens explained that separating bases and marks into different served fonts can [break attachment](https://github.com/googlefonts/nam-files/pull/32#issuecomment-6129761200) and [advised leaving serving issues to the onboarding team](https://github.com/googlefonts/nam-files/pull/32#issuecomment-6137450860). Author-side work should focus on the font submission requirements.
+
+The following is retained as historical QA evidence. The proposed overlap test was not green: 15 baseline conflicting codepoints became 22, with seven new cross-subset conflicts. No deployment occurred through this PR.
+The adjacent [SUBSET-COVERAGE-PROPOSAL.patch](SUBSET-COVERAGE-PROPOSAL.patch) records
+the rejected upstream `googlefonts/nam-files` proposal. It is not an active merge
+request. It does not modify the published Dehemi fonts or suppress the raw QA warning.
 
 ## What the baseline check actually examined
 
@@ -55,9 +56,9 @@ the family.
 | U+0331 | COMBINING MACRON BELOW |
 | U+2219 | BULLET OPERATOR |
 
-The proposed patch adds these to the editable Latin Extended serving definition.
+The historical patch proposed adding these to the editable Latin Extended serving definition.
 Dehemi 2.440 also supplies U+2010 HYPHEN for application discretionary line
-breaking; the current checker lists that character outside the inferred Latin
+breaking; the 2.440 checker lists that character outside the inferred Latin
 subsets too. The adjacent patch therefore covers 18 characters: the 17 baseline
 characters above plus U+2010. Its addition is a typography coverage proposal,
 not a request to declare unrelated scripts or hide the warning.
@@ -66,12 +67,12 @@ block, but explicit exclusions currently remove them. The patch removes those
 three exclusions and adds the other 14 characters. U+02DA remains excluded here
 because the Latin subset already supplies it. Curators may prefer a different
 placement for U+2219, or a different general policy for the shared accent forms.
-This proposal is subject to that review.
+The Latin-Extended-only proposal was closed without merging.
 
 ## The displayed list is not exhaustive
 
 An independent comparison with the `google-fonts-subsets` 0.202602.1 data and
-the current upstream `.nam` lists found eight additional encoded characters
+the upstream `.nam` lists inspected for the proposal found eight additional encoded characters
 outside the union of the four inferred subsets:
 
 - U+030F COMBINING DOUBLE GRAVE ACCENT;
@@ -84,8 +85,8 @@ outside the union of the four inferred subsets:
 The check's bullet-generation loop skips a codepoint if it is absent from every
 compiled subset. The codepoint can still be in the unreachable set that triggers
 the warning. Consequently, resolving the 17 displayed codepoints alone is not
-evidence that the full check will pass. The adjacent patch is deliberately limited
-to those 17, and the additional eight need a separate policy decision. Private-use
+evidence that the full check will pass. The adjacent patch covers those 17 plus
+U+2010; the additional eight were outside its scope. Private-use
 characters and formatting controls in particular should not be added globally
 to a Latin subset without curator agreement.
 
@@ -107,15 +108,10 @@ placement; do not delete required accents merely to reduce the check's warning
 count. A local subset experiment is useful evidence, but is not proof that Google
 has deployed those definitions.
 
-## Requested maintainer actions
+## Current handling
 
-1. Confirm the intended `METADATA.pb` subsets for Dehemi during onboarding.
-2. Review the 17-character patch and decide how to handle the eight additional
-   codepoints, including private-use and control characters.
-3. If accepted, regenerate the machine-readable `.nam` files using the upstream
-   preprocessing workflow and publish/update the corresponding subset data.
-4. Re-run the unmodified Fontspector profile with the updated data and metadata,
-   then test actual generated subsets and the Google Fonts API serving output.
-
-Until those steps occur, keep the raw subsetting warning and this proposal in the
-audit record. No Fontspector result has been relabeled as a pass.
+Leave the raw inferred-subsetting warnings in the font audit and retain this
+investigation for the onboarding maintainers. Do not retry the closed proposal or
+remove useful encoded characters to hide the warnings. Google Fonts maintainers
+handle subset generation, CSS selection and attachment during onboarding. No
+Fontspector result has been relabeled as a pass.

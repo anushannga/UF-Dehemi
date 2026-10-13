@@ -1,0 +1,7 @@
+# Contributors and their recorded roles, distinct from copyright authors.
+# The release preparer name and AI assistance below are recorded in README.md.
+
+ANUSHANGA K P (release preparation; https://github.com/anushannga)
+
+# AI assistance: OpenAI Codex assisted with technical adjustments, the upright
+# transformation, source preparation, quality assurance and submission preparation.

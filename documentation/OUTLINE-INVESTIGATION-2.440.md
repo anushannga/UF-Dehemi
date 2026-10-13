@@ -1,6 +1,8 @@
-# Remaining warning investigation, 2026-10-12
+# Historical warning investigation, 2026-10-12
 
 Production remains Dehemi 2.440: **207 PASS, 8 WARN, 0 FAIL** with the unmodified Fontspector 1.9.0 Google Fonts profile. None of the experimental fonts was released or installed. These experiments did not eliminate the eight warnings safely.
+
+Status updated on 13 October 2026: the unreleased 2.441 candidate addresses license metadata and repository build/documentation, with a separate complete audit recorded in [WARNING-REVIEW.md](WARNING-REVIEW.md). Drawing, hinting, layout and metric table bytes are unchanged. The serving PR below is now closed unmerged; this document records the earlier experiments.
 
 Three isolated candidates were tested:
 
@@ -14,6 +16,6 @@ The original hinted Italic cannot safely retain point-indexed hint programs afte
 
 All 81 encoded glyphs flagged by contour_count now have current-release, 112-pixel Regular/Italic proofs: [page 1](review-2.440/contour-atlas-1.png), [page 2](review-2.440/contour-atlas-2.png), [page 3](review-2.440/contour-atlas-3.png), [page 4](review-2.440/contour-atlas-4.png), [page 5](review-2.440/contour-atlas-5.png). The five pages were visually inspected for legibility and labels. Visible ink cuts explain some disconnected contours; this is evidence for design review, not certification of every segment or curator approval. Exact font hashes are in [the atlas record](../qa/contour-review-atlas-2.440.json).
 
-The serving coverage proposal is now submitted as [googlefonts/nam-files draft PR 32](https://github.com/googlefonts/nam-files/pull/32). It proposes 18 additions with regenerated data. Its overlap test is **not green**: the baseline has 15 conflicting codepoints, and the proposal has 22, including seven new cross-subset conflicts. Tests and exceptions were not altered. Maintainers must decide the shared-character policy; this is not ready to merge, does not resolve the eight additional aliases/controls/PUA entries, and has not changed Google's serving system.
+The serving coverage proposal was submitted as [googlefonts/nam-files PR 32](https://github.com/googlefonts/nam-files/pull/32) and is now **closed, unmerged**. It proposed 18 additions with regenerated data. Its overlap test was **not green**: the baseline had 15 conflicting codepoints and the proposal had 22, including seven new cross-subset conflicts. Tests and exceptions were not altered. Simon Cozens explained the additional base/mark attachment risk across separate served fonts and directed serving-subset handling to the Google Fonts onboarding team. The retained [patch and investigation](SUBSET-COVERAGE-PROPOSAL.md) are historical evidence, not an active author-side repair request or deployed fix.
 
-Next required work is targeted hint-aware outline/design review and upstream serving policy review. There is no new font binary, release, warning-zero claim, or Google acceptance claim in this update.
+Targeted hint-aware outline/design review remains. Google Fonts maintainers handle serving during onboarding. These experiments did not produce a new release, warning-zero result or Google Fonts acceptance.

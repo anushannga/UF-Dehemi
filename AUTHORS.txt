@@ -1,0 +1,9 @@
+# Copyright authors identified in the retained project attribution.
+# Maname attribution is retained in OFL.txt; its public AUTHORS.txt identifies
+# Pathum Egodawatta: https://github.com/mooniak/maname-font/blob/main/AUTHORS.txt
+# Dehemi modifications are credited to Pasan Anushanga in OFL.txt and README.md.
+
+Pathum Egodawatta <pathum@mooniak.com> (Maname)
+Pasan Anushanga (Dehemi modifications; https://github.com/anushannga)
+
+# Dehemi project contact: https://github.com/anushannga/UF-Dehemi
