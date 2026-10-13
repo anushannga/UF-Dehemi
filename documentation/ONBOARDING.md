@@ -2,14 +2,14 @@
 
 Published release: **2.440**. The unreleased **2.441 candidate** corrects embedded OFL metadata and repository build/documentation. Full-profile QA reports **213 PASS, 8 WARN, 0 FAIL, 133 SKIP, 15 INFO**, with the OFL file supplied explicitly and all four required licensing results passing. [Audit context](../qa/audit-context-2.441.json). [Three-platform CI](https://github.com/anushannga/UF-Dehemi/actions/runs/38353650647) passes at `23d68dde8facfc8cd7187e07ee5d9abd5fb64b1f`. Continue [google/fonts#11099](https://github.com/google/fonts/issues/11099), rather than opening a duplicate submission.
 
-The author should personally read the [Google Fonts Guide](https://googlefonts.github.io/gf-guide/) and review the [official Add Font template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md), as [requested by the maintainer](https://github.com/google/fonts/issues/11099#issuecomment-6137696893). The prepared [submission draft](SUBMISSION-DRAFT.md) keeps personal declarations unchecked. Repository repairs and automated checks cannot supply those declarations.
+The author confirmed reading and agreeing to the [Google Fonts Guide](https://googlefonts.github.io/gf-guide/onboarding.html) and confirmed that the old restricted edition is no longer sold or offered. These are author statements recorded on 13 October 2026. The [submission draft](SUBMISSION-DRAFT.md) retains the unconfirmed author-rights item; automated checks do not certify the complete historical rights chain.
 
 ## Author confirmations
 
 The following cover the official template's requirements, shortened for this checklist. Checked facts have evidence or an author confirmation; unchecked items remain unconfirmed rather than automatically failed. See the [item-by-item verification](CHECKLIST-VERIFICATION.md) for scope and limits.
 
 - [x] Confirm the current public repository contains the offered two-style font project under OFL; the author agrees to OFL.
-- [ ] Confirm no larger retail, plus or pro version exists elsewhere.
+- [x] Author confirms the identified old restricted edition is no longer sold or offered; no active larger retail/pro offering was identified.
 - [x] Confirm maintained source/build inputs are available in the repository.
 - [ ] Confirm all relevant authors' contributions are covered by OFL and disclose AI assistance.
 - [x] Confirm inspected current/upstream license headers contain no Reserved Font Name declaration.
@@ -17,7 +17,7 @@ The following cover the official template's requirements, shortened for this che
 - [x] Confirm **Dehemi** as the definitive app-menu family name, with Regular and Italic styles.
 - [x] Confirm both candidate styles map all 319 required [Latin Core codepoints](../qa/latin-core-2.441.json) to non-.notdef glyphs.
 - [x] Confirm the listed [upstream structure](https://googlefonts.github.io/gf-guide/upstream.html) elements, including the one-command source build and README specimen.
-- [ ] Personally read, agree to and comply with the full contributing requirements.
+- [x] Author confirms personally reading and agreeing to follow the contributing requirements.
 - [x] Author agrees to maintenance and community participation during onboarding.
 
 Verified repository facts: maintained source/build inputs are present; reverse-export and acquisition limits are disclosed in [SOURCE-HISTORY.md](SOURCE-HISTORY.md). Current app-menu naming is Dehemi. AI assistance and upstream Maname attribution are disclosed. Current Dehemi and inspected Maname license notices contain no RFN declaration. These facts do not fill the author's personal confirmations.

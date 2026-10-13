@@ -12,10 +12,10 @@ Dehemi is a Maname-derived Sinhala display family in Regular and Italic, with La
 
 **Requirements:**
 
-The checklist maps the [official template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md) with shortened wording. Checked items have recorded evidence or author confirmation. Three items remain unconfirmed; known upstream OFL and AI disclosure do not independently certify the complete earlier author-rights chain.
+The checklist maps the [official template](https://github.com/google/fonts/blob/main/.github/ISSUE_TEMPLATE/1_add-font.md) with shortened wording. Ten items have recorded evidence or author confirmation. The complete earlier author-rights chain remains unconfirmed; known upstream OFL and AI disclosure do not independently certify that chain.
 
 - [x] The current two-style project is publicly available under OFL, and the author agrees to OFL.
-- [ ] No larger retail, plus or pro version exists elsewhere.
+- [x] The author confirms the identified old restricted edition is no longer sold or offered; no active larger retail/pro offering was identified.
 - [x] Source/build inputs are available, with reverse-export and acquisition limits disclosed.
 - [ ] Every relevant author's work is covered by OFL; AI use is clearly disclosed.
 - [x] No RFN declaration was found in the inspected current and Maname license headers.
@@ -23,7 +23,7 @@ The checklist maps the [official template](https://github.com/google/fonts/blob/
 - [x] The definitive app-menu family name is **Dehemi**, with Regular and Italic styles.
 - [x] Both candidate styles support all 319 required Latin Core Unicode codepoints.
 - [x] The listed preferred upstream repository structure elements are present.
-- [ ] I personally read, agree to and comply with all contributing requirements.
+- [x] The author confirms personally reading and agreeing to follow the contributing requirements.
 - [x] The author agrees to maintenance and community participation during onboarding.
 
 **Image:**
